@@ -1,0 +1,904 @@
+{
+  "headerMenu": [
+    {
+      "title": "Стулья",
+      "icon": "chairs",
+      "img": "images/temp/catalog-sm-1.jpg",
+      "submenu": [
+        {
+          "url": "",
+          "title": "Все стулья"
+        },
+        {
+          "url": "",
+          "title": "Стулья в стиле лофт",
+          "offers": true,
+          "img": "images/temp/menu-1.jpg",
+          "link": "Eames Style DSW Brown",
+          "price": "6 190"
+        },
+        {
+          "url": "",
+          "title": "Кресла Eames",
+          "offers": true,
+          "img": "images/temp/menu-2.jpg",
+          "link": "Стул Jerry Soft серый",
+          "price": "4 990"
+        },
+        {
+          "url": "",
+          "title": "Стулья Eames"
+        },
+        {
+          "url": "",
+          "title": "Дизайнерские кресла"
+        },
+        {
+          "url": "",
+          "title": "Детские стулья"
+        },
+        {
+          "url": "",
+          "title": "Прозрачные стулья",
+          "offers": true,
+          "img": "images/temp/menu-3.jpg",
+          "link": "Стул Chiavari прозрачный",
+          "price": "2 990"
+        },
+        {
+          "url": "",
+          "title": "Стулья Patchwork",
+          "offers": true,
+          "img": "images/temp/menu-4.jpg",
+          "link": "Стул-кресло Eames Style DAW Patchwork мультиколор",
+          "price": "5 990"
+        },
+        {
+          "url": "",
+          "title": "Стулья Tolix"
+        },
+        {
+          "url": "",
+          "title": "Стулья для кафе"
+        },
+        {
+          "url": "",
+          "title": "Стулья для ресторанов"
+        },
+        {
+          "url": "",
+          "title": "Другие модели"
+        }
+      ]
+    },
+    {
+      "title": "Столы",
+      "icon": "tables",
+      "img": "images/temp/catalog-sm-12.jpg",
+      "submenu": [
+        {
+          "url": "",
+          "title": "Все столы"
+        },
+        {
+          "url": "",
+          "title": "Журнальные"
+        },
+        {
+          "url": "",
+          "title": "Консоли"
+        },
+        {
+          "url": "",
+          "title": "Кофейные"
+        },
+        {
+          "url": "",
+          "title": "Обеденные"
+        },
+        {
+          "url": "",
+          "title": "Письменные"
+        },
+        {
+          "url": "",
+          "title": "Приставные"
+        },
+        {
+          "url": "",
+          "title": "Сервировочные"
+        },
+        {
+          "url": "",
+          "title": "Туалетные"
+        },
+        {
+          "url": "",
+          "title": "Другие модели"
+        }
+      ]
+    },
+    {
+      "title": "Свет",
+      "img": "images/temp/catalog-sm-9.jpg",
+      "icon": "lamps",
+      "submenu": [
+        {
+          "url": "",
+          "title": "Весь свет"
+        },
+        {
+          "url": "",
+          "title": "Торшеры"
+        },
+        {
+          "url": "",
+          "title": "Настольные лампы"
+        },
+        {
+          "url": "",
+          "title": "Люстры"
+        },
+        {
+          "url": "",
+          "title": "Светильники"
+        },
+        {
+          "url": "",
+          "title": "Бра"
+        }
+      ]
+    },
+    {
+      "title": "Декор",
+      "icon": "decor",
+      "img": "images/temp/catalog-sm-11.jpg",
+      "active": true,
+      "submenu": [
+        {
+          "url": "",
+          "title": "Весь декор"
+        },
+        {
+          "url": "",
+          "title": "Подсвечники"
+        },
+        {
+          "url": "",
+          "title": "Статуэтки"
+        },
+        {
+          "url": "",
+          "title": "Картины и панно"
+        },
+        {
+          "url": "",
+          "title": "Фоторамки"
+        },
+        {
+          "url": "",
+          "title": "Зеркала"
+        },
+        {
+          "url": "",
+          "title": "Часы"
+        },
+        {
+          "url": "",
+          "title": "Вазы"
+        },
+        {
+          "url": "",
+          "title": "Указатели и таблички"
+        },
+        {
+          "url": "",
+          "title": "Предметы декора"
+        }
+      ]
+    },
+    {
+      "title": "Посуда",
+      "icon": "dishware",
+      "img": "images/temp/catalog-sm-13.jpg",
+      "submenu": [
+        {
+          "url": "",
+          "title": "Вся посуда"
+        },
+        {
+          "url": "",
+          "title": "Пиалы"
+        },
+        {
+          "url": "",
+          "title": "Подносы"
+        },
+        {
+          "url": "",
+          "title": "Подставки"
+        },
+        {
+          "url": "",
+          "title": "Разделочные доски"
+        },
+        {
+          "url": "",
+          "title": "Чайники"
+        },
+        {
+          "url": "",
+          "title": "Чашки"
+        },
+        {
+          "url": "",
+          "title": "Блюдца"
+        },
+        {
+          "url": "",
+          "title": "Тарелки"
+        },
+        {
+          "url": "",
+          "title": "Солонки и перечницы"
+        },
+        {
+          "url": "",
+          "title": "Банки"
+        },
+        {
+          "url": "",
+          "title": "Бокалы"
+        },
+        {
+          "url": "",
+          "title": "Графины"
+        },
+        {
+          "url": "",
+          "title": "Кувшины"
+        },
+        {
+          "url": "",
+          "title": "Стаканы"
+        },
+        {
+          "url": "",
+          "title": "Столовые приборы"
+        },
+        {
+          "url": "",
+          "title": "Шейкеры"
+        }
+      ]
+    },
+    {
+      "title": "Текстиль",
+      "icon": "textile",
+      "img": "images/temp/catalog-sm-10.jpg",
+      "submenu": [
+        {
+          "url": "",
+          "title": "Весь текстиль"
+        },
+        {
+          "url": "",
+          "title": "Подушки"
+        },
+        {
+          "url": "",
+          "title": "Ковры"
+        },
+        {
+          "url": "",
+          "title": "Занавески"
+        },
+        {
+          "url": "",
+          "title": "Пледы"
+        },
+        {
+          "url": "",
+          "title": "Скатерти и салфетки"
+        },
+        {
+          "url": "",
+          "title": "Одеяла"
+        },
+        {
+          "url": "",
+          "title": "Полотенца"
+        },
+        {
+          "url": "",
+          "title": "Шторы"
+        }
+      ]
+    }
+  ],
+
+  "catalogItems":  [
+    {
+      "status": "Дешевле от 2 шт.",
+      "statusClass": "cheaper",
+      "name": "Стул Jerry Soft",
+      "vendor": "0207",
+      "img": "images/temp/catalog-sm-1.jpg",
+      "addInfo": "5 цветов",
+      "price": "2 990"
+    },
+    {
+      "status": "Дешевле от 2 шт.",
+      "statusClass": "cheaper",
+      "name": "Стул Bonnie",
+      "vendor": "C78",
+      "img": "images/temp/catalog-sm-2.jpg",
+      "addInfo": "7 цветов",
+      "price": "2 590"
+    },
+    {
+      "status": "Новинка",
+      "statusClass": "new",
+      "name": "Пуф Koopman Wood",
+      "vendor": "C85",
+      "img": "images/temp/catalog-sm-3.jpg",
+      "addInfo": "8 цветов",
+      "price": "5 990"
+    },
+    {
+      "status": "",
+      "statusClass": "",
+      "name": "Стул Libra Soft барный",
+      "vendor": "C84",
+      "img": "images/temp/catalog-sm-4.jpg",
+      "favorites": true,
+      "addInfo": "8 цветов",
+      "price": "6 690"
+    },
+    {
+      "status": "Скидка 10%",
+      "statusClass": "discount",
+      "name": "Стул Ruda",
+      "vendor": "C77",
+      "img": "images/temp/catalog-sm-5.jpg",
+      "addInfo": "2 цвета",
+      "price": "4 890"
+    },
+    {
+      "status": "Успей купить!",
+      "statusClass": "hurry-up",
+      "name": "Стул Piggy детский",
+      "vendor": "C82",
+      "img": "images/temp/catalog-sm-6.jpg",
+      "addInfo": "1 цвет",
+      "price": "2 490"
+    },
+    {
+      "status": "Предзаказ",
+      "statusClass": "pre-order",
+      "name": "Стул-кресло Krise",
+      "vendor": "C81",
+      "img": "images/temp/catalog-sm-7.jpg",
+      "addInfo": "8 цветов",
+      "price": "5 790"
+    },
+    {
+      "status": "Успей купить!",
+      "name": "Подвесной светильник Macaron Cone MC",
+      "vendor": "L071M",
+      "img": "images/temp/catalog-sm-8.jpg",
+      "addInfo": "8 цветов",
+      "price": "5 290"
+    },
+    {
+      "status": "Успей купить!",
+      "name": "Подвесной светильник Denham",
+      "vendor": "L057",
+      "img": "images/temp/catalog-sm-9.jpg",
+      "addInfo": "2 цвета",
+      "price": "2 790"
+    },
+    {
+      "status": "Успей купить!",
+      "name": "Подушка декоративная Lanes",
+      "vendor": "PI10",
+      "img": "images/temp/catalog-sm-10.jpg",
+      "addInfo": "8 цветов",
+      "price": "990"
+    },
+    {
+      "status": "Успей купить!",
+      "name": "Панно настенное Перо TC набор",
+      "vendor": "D157",
+      "img": "images/temp/catalog-sm-11.jpg",
+      "addInfo": "в наборе 2 шт.",
+      "price": "25 780"
+    },
+    {
+      "status": "",
+      "name": "Стол Oslo Square WT",
+      "vendor": "0324-WT",
+      "img": "images/temp/catalog-sm-12.jpg",
+      "addInfo": "на 4 персоны",
+      "price": "9 890"
+    }
+  ],
+
+  "catalogColors": [
+    {
+      "title": "аквамарин",
+      "code": "83,144,129"
+    },
+    {
+      "title": "бежевый",
+      "code": "191,188,76"
+    },
+    {
+      "title": "бежевый+серый",
+      "code": "191,188,76"
+    },
+    {
+      "title": "белый",
+      "code": "255,255,255"
+    },
+    {
+      "title": "белый+серый",
+      "code": "255,255,255"
+    },
+    {
+      "title": "гальванизированный",
+      "code": "133,133,133"
+    },
+    {
+      "title": "голубой",
+      "code": "168,211,245"
+    },
+    {
+      "title": "горчичный",
+      "code": "183,206,49"
+    },
+    {
+      "title": "графит",
+      "code": "100,107,118"
+    },
+    {
+      "title": "жёлтый",
+      "code": "249,253,45"
+    },
+    {
+      "title": "зеленый",
+      "code": "139,164,74"
+    },
+    {
+      "title": "золотой",
+      "code": "205,164,52"
+    },{
+      "title": "имбирь",
+      "code": "59,46,20"
+    },
+    {
+      "title": "коричневый рустик",
+      "code": "65,25,0"
+    },
+    {
+      "title": "коричневый",
+      "code": "65,25,0"
+    },
+    {
+      "title": "красный",
+      "code": "170,38,44"
+    },
+    {
+      "title": "кремовый",
+      "code": "250,241,223"
+    },
+    {
+      "title": "матовый коричневый",
+      "code": "65,25,0"
+    },
+    {
+      "title": "матовый черный",
+      "code": "0,0,0"
+    },
+    {
+      "title": "мультиколор",
+      "code": "0,0,0"
+    },
+    {
+      "title": "мягкий серый",
+      "code": "66,58,62"
+    },
+    {
+      "title": "мятно-зеленый",
+      "code": "190,224,199"
+    },
+    {
+      "title": "нежно-голубой",
+      "code": "206,235,243"
+    },
+    {
+      "title": "оловянный серый",
+      "code": "49,53,54"
+    },
+    {
+      "title": "оранжевый",
+      "code": "215,92,50"
+    },
+    {
+      "title": "прозрачный серый",
+      "code": "153,147,133"
+    },
+    {
+      "title": "прозрачный синий",
+      "code": "75,86,148"
+    },
+    {
+      "title": "прозрачный",
+      "code": "246,246,246"
+    },
+    {
+      "title": "розовый",
+      "code": "255,173,188"
+    },
+    {
+      "title": "рустик",
+      "code": "151,132,128"
+    },
+    {
+      "title": "серый",
+      "code": "160,160,160"
+    },
+    {
+      "title": "синий",
+      "code": "0,77,255"
+    },
+    {
+      "title": "стальной",
+      "code": "177,164,169"
+    },
+    {
+      "title": "темно-синий",
+      "code": "0,33,55"
+    },
+    {
+      "title": "холодный синий",
+      "code": "58,66,72"
+    },
+    {
+      "title": "черно-серый",
+      "code": "20,20,24"
+    },
+    {
+      "title": "черный рустик",
+      "code": "0,0,0"
+    },
+    {
+      "title": "черный",
+      "code": "0,0,0"
+    },
+    {
+      "title": "янтарный",
+      "code": "91,83,74"
+    }
+  ],
+
+  "catalogMaterial": [
+    {
+      "title": "Пластик"
+    },
+    {
+      "title": "Искусственная кожа"
+    },
+    {
+      "title": "Дерево"
+    },
+    {
+      "title": "Стекло"
+    },
+    {
+      "title": "Аллюминий"
+    },
+    {
+      "title": "Пластик"
+    },
+    {
+      "title": "Искусственная кожа"
+    },
+    {
+      "title": "Дерево"
+    },
+    {
+      "title": "Стекло"
+    },
+    {
+      "title": "Аллюминий"
+    }
+  ],
+
+  "catalogSize": [
+    {
+      "title": "90см"
+    },
+    {
+      "title": "100см"
+    },
+    {
+      "title": "120см"
+    }
+  ],
+
+  "catalogAvailability": [
+    {
+      "title": "В наличии"
+    },
+    {
+      "title": "Успей купить"
+    },
+    {
+      "title": "Предзаказ"
+    }
+  ],
+
+  "actualOffers": [
+    {
+      "img": "images/temp/offer-1.jpg",
+      "title": "Выбираем стол для кухни"
+    },
+    {
+      "img": "images/temp/offer-2.jpg",
+      "title": "История стула Eames. Всё об основателях бренда"
+    },
+    {
+      "img": "images/temp/offer-3.jpg",
+      "title": "Выбираем пуф"
+    },
+    {
+      "img": "images/temp/offer-4.jpg",
+      "title": "Идеальный свет для вашей кухни"
+    },
+    {
+      "img": "images/temp/offer-5.jpg",
+      "title": "Покупаем стол"
+    },
+    {
+      "img": "images/temp/offer-6.jpg",
+      "title": "Как украсить свой дом быстро и просто используя подручные средства"
+    },
+    {
+      "img": "images/temp/offer-7.jpg",
+      "title": "Качественный рабочий стол"
+    },
+    {
+      "img": "images/temp/offer-1.jpg",
+      "title": "Выбираем стол для кухни"
+    },
+    {
+      "img": "images/temp/offer-2.jpg",
+      "title": "История стула Eames. Всё об основателях бренда"
+    },
+    {
+      "img": "images/temp/offer-3.jpg",
+      "title": "Выбираем пуф"
+    },
+    {
+      "img": "images/temp/offer-4.jpg",
+      "title": "Идеальный свет для вашей кухни"
+    },
+    {
+      "img": "images/temp/offer-5.jpg",
+      "title": "Покупаем стол"
+    },
+    {
+      "img": "images/temp/offer-6.jpg",
+      "title": "Как украсить свой дом быстро и просто используя подручные средства"
+    },
+    {
+      "img": "images/temp/offer-7.jpg",
+      "title": "Качественный рабочий стол"
+    }
+
+
+
+  ],
+
+  "miniGoodsList": [
+    {
+      "img": "images/temp/basket-1.jpg",
+      "title": "Стул Wire Bertoia черный",
+      "quantity": "1 шт.",
+      "price": "990"
+    },
+    {
+      "img": "images/temp/basket-2.jpg",
+      "title": "Стул Wire Bertoia черный",
+      "quantity": "1 шт.",
+      "price": "990"
+    },
+    {
+      "img": "images/temp/basket-3.jpg",
+      "title": "Стул Wire Bertoia черный фыва фыва фыва ",
+      "quantity": "1 шт.",
+      "price": "5 990"
+    },
+    {
+      "img": "images/temp/basket-4.jpg",
+      "title": "Стул Wire Bertoia черный",
+      "quantity": "1 шт.",
+      "price": "990"
+    },
+    {
+      "img": "images/temp/basket-5.jpg",
+      "title": "Подушка декоративная",
+      "quantity": "1 шт.",
+      "price": "990"
+    },
+    {
+      "img": "images/temp/basket-6.jpg",
+      "title": "Eames Daw Patchwork",
+      "quantity": "1 шт.",
+      "price": "14 990"
+    }
+
+  ],
+
+  "goodItem": [
+    {
+      "id": "item-105",
+      "img": "images/temp/basket-1.jpg",
+      "priceDiscount": "1 800",
+      "priceGood": "2 000",
+      "priceOne": "1 000",
+      "title": "Комплект Avanti Round + Кресло Мартин Крутящееся 4 шт. (3 варианта).",
+      "color": "Графитовый",
+      "vendorCode": "SET-38",
+      "warranty": "Стандартная гарантия",
+      "count": "1"
+    },
+    {
+      "id": "item-15",
+      "img": "images/temp/basket-2.jpg",
+      "priceGood": "1 000",
+      "priceOne": "1 000",
+      "title": "Стул Eames Style DSW.",
+      "color": "Белый",
+      "vendorCode": "0100",
+      "warranty": "Стандартная гарантия",
+      "count": "2"
+    },
+    {
+      "id": "item-2105",
+      "img": "images/temp/basket-3.jpg",
+      "priceGood": "3 000",
+      "priceOne": "1 000",
+      "title": "Подвесной Светильник Alba.",
+      "color": "Белый",
+      "vendorCode": "L059",
+      "order": true,
+      "serviceInfo": "Предзаказ",
+      "warranty": "Стандартная гарантия",
+      "count": "3"
+    },
+    {
+      "id": "item-155",
+      "img": "images/temp/basket-4.jpg",
+      "priceDiscount": "3 600",
+      "priceGood": "4 000",
+      "priceOne": "1 000",
+      "title": "Стул Eames Style DSW.",
+      "color": "Белый",
+      "vendorCode": "0100",
+      "warranty": "Стандартная гарантия",
+      "count": "4"
+    },
+    {
+      "id": "item-505",
+      "img": "images/temp/basket-5.jpg",
+      "priceDiscount": "2 700",
+      "priceGood": "3 000",
+      "priceOne": "1 000",
+      "title": "Стул Eames Style DSW.",
+      "color": "Белый",
+      "vendorCode": "0100",
+      "warranty": "Стандартная гарантия",
+      "count": "3"
+    }
+  ],
+
+  "totalPrice": [
+    {
+      "title": "Товары",
+      "quantity": " 4 шт",
+      "weight": " 64 кг",
+      "price": "174 836"
+    },
+    {
+      "title": "Скидка",
+      "addClass": true,
+      "price": "26 025"
+    },
+    {
+      "addClass": "hidden",
+      "title": "Гарантия",
+      "quantity": " 4 шт",
+      "price": "15 453"
+    },
+    {
+      "delivery": true,
+      "title": "Доставка",
+      "price": "900"
+    },
+    {
+      "title": "Итого без доставки",
+      "totalPrice": true,
+      "price": "148 811"
+    }
+  ],
+
+  "sliderRecommend": [
+    {
+      "img": "basket-7.jpg",
+      "title": "Носки для стульев Santa красный",
+      "price": "190"
+    },
+    {
+      "img": "basket-6.jpg",
+      "title": "Подвесной Светильник Delta...",
+      "price": "4 290"
+    },
+    {
+      "img": "basket-8.jpg",
+      "title": "Стул Butterfly коричневый",
+      "price": "5 990"
+    },
+    {
+      "img": "basket-9.jpg",
+      "title": "Стул-кресло Double Range",
+      "price": "3 990"
+    },
+    {
+      "img": "basket-10.jpg",
+      "title": "Стул-кресло Double Range",
+      "price": "3 990"
+    },
+    {
+      "img": "basket-11.jpg",
+      "title": "Стул-кресло Double Range",
+      "price": "3 990"
+    },
+    {
+      "img": "basket-7.jpg",
+      "title": "Носки для стульев Santa красный",
+      "price": "190"
+    },
+    {
+      "img": "basket-6.jpg",
+      "title": "Подвесной Светильник Delta...",
+      "price": "4 290"
+    },
+    {
+      "img": "basket-8.jpg",
+      "title": "Стул Butterfly коричневый",
+      "price": "5 990"
+    },
+    {
+      "img": "basket-9.jpg",
+      "title": "Стул-кресло Double Range",
+      "price": "3 990"
+    },
+    {
+      "img": "basket-10.jpg",
+      "title": "Стул-кресло Double Range",
+      "price": "3 990"
+    },
+    {
+      "img": "basket-11.jpg",
+      "title": "Стул-кресло Double Range",
+      "price": "3 990"
+    }
+
+  ]
+
+}
+
+
+

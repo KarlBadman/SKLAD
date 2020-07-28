@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>standard / Cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8.08421053,7.13147718 L11.6499491,3.56573859 C11.9130392,3.30264854 12.3395924,3.30264854 12.6026825,3.56573859 C12.8657725,3.82882864 12.8657725,4.25538189 12.6026825,4.51847194 L9.03694387,8.08421053 L12.6026825,11.6499491 C12.8657725,11.9130392 12.8657725,12.3395924 12.6026825,12.6026825 C12.3395924,12.8657725 11.9130392,12.8657725 11.6499491,12.6026825 L8.08421053,9.03694387 L4.51847194,12.6026825 C4.25538189,12.8657725 3.82882864,12.8657725 3.56573859,12.6026825 C3.30264854,12.3395924 3.30264854,11.9130392 3.56573859,11.6499491 L7.13147718,8.08421053 L3.56573859,4.51847194 C3.30264854,4.25538189 3.30264854,3.82882864 3.56573859,3.56573859 C3.82882864,3.30264854 4.25538189,3.30264854 4.51847194,3.56573859 L8.08421053,7.13147718 Z" id="path-1"></path>
+    </defs>
+    <g id="Mini---Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Upper_banner" transform="translate(-1483.000000, -7.000000)">
+            <g id="standard-/-Cross" transform="translate(1480.000000, 4.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#42526E" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="Neutral-/-N0" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
+                    <rect id="N0" x="0" y="0" width="16" height="16"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

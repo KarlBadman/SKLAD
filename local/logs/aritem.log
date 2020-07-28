@@ -1,0 +1,211 @@
+arItem:
+array(1) {
+  [0]=>
+  string(3) "tst"
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+
+arItem:
+array(6) {
+  ["description"]=>
+  string(0) ""
+  ["name"]=>
+  string(16) "Доставка"
+  ["price"]=>
+  float(0)
+  ["quantity"]=>
+  int(1)
+  ["vatTag"]=>
+  int(1102)
+  ["discSum"]=>
+  int(0)
+}
+
+

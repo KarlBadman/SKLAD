@@ -1,0 +1,90 @@
+IMPORT Complete:
+Array
+(
+    [Дата] => 19.09.2018 00:10:04
+    [Сообщение] => 
+        Time start: 2018.09.19 00:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1552 cities
+        Deleted: 1552 cities,
+        Added: 1546 cities
+        Time end: 2018.09.04 00:10:04
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+IMPORT Complete:
+Array
+(
+    [Дата] => 19.09.2018 04:10:04
+    [Сообщение] => 
+        Time start: 2018.09.19 04:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1546 cities
+        Deleted: 1546 cities,
+        Added: 1546 cities
+        Time end: 2018.09.04 04:10:04
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+IMPORT Complete:
+Array
+(
+    [Дата] => 19.09.2018 08:10:04
+    [Сообщение] => 
+        Time start: 2018.09.19 08:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1549 cities
+        Deleted: 1549 cities,
+        Added: 1546 cities
+        Time end: 2018.09.04 08:10:04
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+IMPORT Complete:
+Array
+(
+    [Дата] => 19.09.2018 12:10:05
+    [Сообщение] => 
+        Time start: 2018.09.19 12:10:02
+        Taked : 1546 cities,
+        Loaded from Database: 1551 cities
+        Deleted: 1551 cities,
+        Added: 1546 cities
+        Time end: 2018.09.05 12:10:05
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+IMPORT Complete:
+Array
+(
+    [Дата] => 19.09.2018 16:10:05
+    [Сообщение] => 
+        Time start: 2018.09.19 16:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1553 cities
+        Deleted: 1553 cities,
+        Added: 1546 cities
+        Time end: 2018.09.05 16:10:05
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+

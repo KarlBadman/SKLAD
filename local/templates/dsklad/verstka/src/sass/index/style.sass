@@ -1,0 +1,202 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+@import "../actual-offers/style"
+
+
+.furniture-list
+  padding: 40px 0
+
+  h1
+    margin: 0 0 8px
+  
+  p
+    margin-bottom: 16px
+
+  &__content
+    display: grid
+
+    +responsive(mobiletablet)
+      margin: 0 -6px
+      grid-template-areas: "tables chairs" "sale chairs" "lamps textile" "lamps decor" "dishes saleBig"
+      -ms-grid-columns: 1fr 1fr
+      grid-template-columns: 1fr 1fr
+
+    +responsive(tabletdesktop)
+      grid-template-areas: "tables chairs sale" "lamps chairs decor" "lamps textile dishes"
+      -ms-grid-columns: 1fr 1fr 1fr
+      grid-template-columns: 1fr 1fr 1fr
+      margin: 0 -10px
+
+
+.furniture-item
+  +radius()
+  background-color: $neutral-50
+  box-sizing: border-box
+  position: relative
+  display: flex
+  flex-flow: column
+  justify-content: flex-end
+  overflow: hidden
+  border: 0
+  
+  &:before
+    content: ''
+    position: absolute
+    z-index: 1
+    width: 100%
+    height: 100%
+    border: 1px solid rgba($neutral-800, .12)
+    +radius()
+    box-sizing: border-box
+
+  +responsive(tiny)
+    min-height: 144px
+
+  +responsive(mobile)
+    min-height: 190px
+
+  +responsive(tablet)
+    min-height: 230px
+
+  +responsive(desktop)
+    min-height: 300px
+
+  +responsive(mobiletablet)
+    margin: 6px
+  
+  +responsive(tabletdesktop)
+    margin: 10px
+
+  h3
+    margin: 0
+    
+    +responsive(tiny)
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
+
+    +responsive(device)
+      +rem(24)
+
+    +responsive(desktop)
+      +rem(28)
+
+  &__header
+    position: absolute
+    width: 100%
+    padding: 12px
+    box-sizing: border-box
+    top: 0
+
+    p
+      color: $neutral-800
+  
+      +responsive(device)
+        display: none
+  
+  
+  picture,
+  img
+    max-width: 100%
+    width: 100%
+    height: auto
+    display: block
+    overflow: hidden
+
+    &.img-desktop
+      +responsive(mobiletablet)
+        display: none
+
+    &.img-mobile
+      +responsive(tabletdesktop)
+        display: none
+  
+  &--tables
+    grid-area: tables
+
+  &--chairs
+    grid-area: chairs
+
+  &--lamps
+    grid-area: lamps
+
+  &--decor
+    grid-area: decor
+
+  &--sale
+    grid-area: sale
+
+  &--dishes
+    grid-area: dishes
+
+  &--textile
+    grid-area: textile
+
+  &--sale-big
+    grid-area: saleBig
+  
+  &--sale-sm
+    grid-area: saleSm
+    
+    +responsive(tiny)
+      max-height: 144px
+    
+    +responsive(mobile)
+      max-height: 190px
+
+.advantage-list
+  padding: 0 0 40px
+
+  +responsive(mobiletablet)
+    display: none
+
+  &__header
+    h2
+      margin: 0
+
+  &__content
+    display: flex
+    flex-flow: wrap
+    margin: 0 -16px
+
+
+.advantage-item
+  padding: 0 16px
+  box-sizing: border-box
+  margin-top: 20px
+
+  +responsive(tablet)
+    width: 50%
+
+  +responsive(desktop)
+    width: 25%
+
+  p
+    margin-bottom: 0
+
+  h4
+    +rem(20)
+    margin-bottom: 12px
+    line-height: 1.3
+
+  &__icon
+    width: 48px
+    height: 48px
+    +radius(50%)
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 24px
+
+    &--list
+      background-color: $green-400
+
+    &--price
+      background-color: $red-400
+
+    &--payment
+      background-color: $yellow-400
+
+    &--quality
+      background-color: $sky-blue-500
+

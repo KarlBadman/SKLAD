@@ -1,0 +1,33 @@
+.ds-catalog__filter
+  .ds-filter
+    .ds-filter__list
+      .ds-filter__item
+        .ds-filter__item-select
+          span Битриксовый фильтр цены
+      .ds-filter__item
+        .ds-filter__item-select.ds-select
+          select(multiple class="js-chosen-select")
+            option(value="") Выберите цвет
+            each item in catalogColors
+              option(value= item.title)= item.title
+
+      .ds-filter__item
+        .ds-filter__item-select.ds-select
+          select(multiple class="js-chosen-select")
+            option(value="") Выберите размер
+              option(value="70") 70 см
+              option(value="90") 90 см
+              option(value="100") 100 см
+              option(value="110") 110 см
+
+
+    .ds-filter__buttons
+      button(type="reset").ds-btn.ds-btn--light Сбросить фильтр
+  .ds-sorting.ds-select
+    select(class="js-chosen-select")
+      option(value="") Сортировать по:
+      option(value="Сначала дешевые") Сначала дешевые
+      option(value="Сначала дорогие") Сначала дорогие
+      option(value="Популярные") Популярные
+      option(value="Новинки") Новинки
+      option(value="Скидки") Скидки

@@ -1,0 +1,30 @@
+extends kit-layout
+
+block content
+
+	section.d-system__item
+		h1 Организация проекта
+
+		ol
+			li Исходники лежат в папке
+				strong  verstka/src/
+				<br><br>
+				ul
+					li data/ (json, где лежит контент).
+					li images/ (картинки), тестовые картинки лежат в папке temp, их можно удалять, иконки лежат в папке svg/, из них формируется свг-спрайт.
+					li js/ делится на libs/, где лежат сторонние библиотеки (slick, sly и т.д) и файл dsklad-init.js, где подключаются эти файлы.
+					li pug/ В корне лежат страницы - index.pug, basket.pug. <br>
+						| Cлужебные шаблоны лежат в папке templates, это основной шаблон layout.pug, инклюды - incl-header.pug, incl-footer.pug и т.д.
+					li папка pug/kit/ - страницы для кита
+					li папка sass/ состоит из main-styles.sass, куда подключаются разбитые по блокам стили. В templates/ хранятся переменные с цветами, размерами - _variables.sass, _colors.sass, _mixin.sass, _grid-system.sass, _sprite_template.sass
+
+			<br><br>
+			li Устройство gulpfile.js, таски
+				ul
+					li pug - запускает сборку html, данные тянутся из data/data.json, либо лежат в файлах pug
+					li style - сборка стилей, подключен автопрефиксер, стили с медиа запросами помещаются в конец файла
+					li js - перекладывание js в папку build
+					li svg - формирует спрайт и стили для спрайта. Иконки должны лежать в папке images/svg, стили подключаются с помощью классов .icon-svg.ic-имя_иконки. В стилях иконка располагается в :before
+					li img - оптимизация картинок
+					li clean - очистка папки build
+

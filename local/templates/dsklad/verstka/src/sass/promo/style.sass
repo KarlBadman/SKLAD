@@ -1,0 +1,104 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+
+.ds-form-promo
+  height: 100%
+  width: 100%
+  display: flex
+  justify-content: center
+
+.ds-promo
+  background: url(../../images/promo-bg.jpg) 50% 50% / cover no-repeat
+  min-height: 100%
+  padding: 40px 20px 50px
+  box-sizing: border-box
+  position: relative
+  
+  +responsive(tabletdesktop)
+    display: flex
+    align-items: center
+    justify-content: center
+  
+  &:after
+    @media (min-width: 640px) and (min-height: 560px)
+      content: ''
+      position: absolute
+      width: 280px
+      height: 110px
+      bottom: 0
+      right: 5%
+      background: url(../../images/svg/promo-card.svg) 0 0 no-repeat
+  
+  &__content
+    max-width: 520px
+    
+    h1
+      font-weight: 600
+      font-size: 33px
+      color: $neutral-1000
+      line-height: 1.12em
+      letter-spacing: -.8px
+    
+    p
+      color: rgba($neutral-1000, .4)
+      font-size: .8175rem
+      margin-bottom: 10px
+  
+  &__form
+    margin: 20px 0 40px
+    display: flex
+    
+    +responsive(mobile)
+      flex-flow: column
+  
+  &__form-tel
+    width: 100%
+    
+    +responsive(tabletdesktop)
+      margin-right: 20px
+    
+    .inp-info
+      color: $neutral-500
+  
+  &__form-btn
+
+    .ds-btn
+      margin-top: 20px
+      min-width: 180px
+
+
+.ds-promo-result
+  width: 310px
+  text-align: center
+  
+  h4
+    color: rgba($neutral-600, .5)
+    letter-spacing: -.2px
+    font-weight: 600
+  
+  span
+    color: $neutral-400
+    font-size: .8175rem
+    display: block
+
+.ds-promocode
+  border: 1px dashed rgba($neutral-1000, .5)
+  +radius()
+  box-sizing: border-box
+  margin: 20px 0 4px
+  padding: 8px 60px
+  font-size: 42px
+  font-weight: 700
+  color: $neutral-600
+
+.ds-link
+  display: block
+  color: $blue-400
+  font-weight: 600
+  text-decoration: none
+  margin-top: 40px
+  position: relative
+  
+  &:after
+    content: ''
+    background: url(../../images/svg/) 0 0 no-repeat

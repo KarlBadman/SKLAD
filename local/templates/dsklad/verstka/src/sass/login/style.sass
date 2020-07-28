@@ -1,0 +1,62 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+
+.section-login
+  display: flex
+  
+  +responsive(device)
+    padding: 20px 0 40px
+    flex-flow: column
+
+  +responsive(desktop)
+    flex-flow: row
+    padding: 100px 0
+  
+  h1
+    margin-bottom: 20px
+    text-align: center
+
+  
+  &__form
+    +responsive(desktop)
+      width: 50%
+      padding: 0 80px
+      box-sizing: border-box
+  
+  &__info
+    +responsive(device)
+      margin-top: 42px
+
+    +responsive(desktop)
+      width: 50%
+      padding: 0 80px
+      box-sizing: border-box
+
+  &__btn
+    margin: 12px 0
+
+.login-info
+  
+  &__item
+    display: flex
+    align-items: center
+    line-height: 1.25
+    margin-top: 16px
+
+    .icon-svg
+      min-width: 56px
+      height: 56px
+      margin-right: 20px
+      +radius(50%)
+    
+    &--cart
+      .icon-svg
+        background-color: $green-400
+
+    &--favorite
+      .icon-svg
+        background-color: $red-400
+
+    &--online
+      .icon-svg
+        background-color: $yellow-400

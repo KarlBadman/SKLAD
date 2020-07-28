@@ -1,0 +1,917 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+
+
+.ds-catalog-detail
+  +responsive(device)
+    display: flex
+    flex-flow: column
+
+  +responsive(desktop)
+    display: grid
+    grid-template-areas: "header goodInfo" "slider goodInfo" "recommend goodInfo" "descr goodInfo" "why goodInfo" "opinions goodInfo"
+    -ms-grid-columns: calc(100% - 340px) 340px
+    grid-template-columns: calc(100% - 340px) 340px
+
+  h4
+    margin-bottom: 20px
+    +rem(22)
+
+  &__header
+    +responsive(desktop)
+      grid-area: header
+
+    h1
+      +responsive(device)
+        font-weight: 600 !important
+        margin-bottom: 12px
+
+  &__slider
+    min-height: 300px
+    width: 100%
+
+    +responsive(device)
+      order: -1
+    
+    +responsive(tablet)
+      margin-bottom: 20px
+
+    +responsive(desktop)
+      min-height: 585px
+      grid-area: slider
+
+    &:hover
+      +responsive(desktop)
+        .ds-slider-arrows
+          visibility: visible
+          opacity: 1
+  
+  &__good-info
+    +responsive(desktop)
+      grid-area: goodInfo
+      padding-left: 40px
+
+  &__recommend
+    +responsive(desktop)
+      grid-area: recommend
+
+  &__descr
+    +responsive(desktop)
+      grid-area: descr
+
+    .ds-btn
+      display: block
+      margin: 10px auto 0
+      
+      &[hidden]
+        display: none
+
+  &__why
+    +responsive(desktop)
+      grid-area: why
+  
+  &__opinions
+    +responsive(desktop)
+      grid-area: opinions
+
+.good-info
+  +responsive(device)
+    padding-bottom: 40px
+  
+  +responsive(desktop)
+    position: sticky
+    top: 40px
+    height: 100vh
+    overflow: hidden
+  
+  &__scroll
+    +responsive(device)
+      width: 100% !important
+    
+    +responsive(desktop)
+      overflow-y: scroll
+      height: 100%
+      width: calc(100% + 17px)
+      padding-bottom: 40px
+      box-sizing: border-box
+
+  &__purchase
+    margin-bottom: 28px
+
+  &__ya-credit
+    min-height: 52px
+    
+    button
+      min-height: 44px
+      padding: 9px 20px
+    
+    span
+      color: $neutral-600 !important
+
+  &--availability
+    font-weight: 700
+    position: relative
+
+    .many
+      color: $green-400
+
+    .middle
+      color: $yellow-400
+
+    .few
+      color: $red-400
+    
+    .question
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      background: $red-400
+      display: inline-block
+      color: #fff
+      text-align: center
+      font-weight: 400
+      line-height: 1.2
+      margin-left: 10px
+      margin-top: -2px
+      cursor: pointer
+      
+      span
+        display: block
+        padding-bottom: 10px
+
+      &:after
+        content: ''
+        position: absolute
+        display: none
+        width: 10px
+        height: 10px
+        background-color: #fff
+        border-left: 1px solid $neutral-400
+        border-top: 1px solid $neutral-400
+        transform: rotate(45deg)
+        bottom: -14px
+        left: 50%
+        margin-left: -16px
+        z-index: 10
+
+      &:hover
+        &:after
+          display: block
+
+        .question-info
+          display: block
+
+    .question-info
+      display: none
+      position: absolute
+      width: 100%
+      left: 0
+      z-index: 9
+      background-color: #fff
+      color: $neutral-800
+      font-weight: 400
+      font-size: 14px
+      +radius()
+      padding: 8px
+      border: 1px solid $neutral-400
+      box-sizing: border-box
+      text-align: left
+
+  &--waiting
+    font-size: .8175em
+    font-weight: 700
+
+    span
+      color: $red-400
+
+  &--border
+    padding-top: 20px
+    margin-top: 20px
+    border-top: 1px solid $neutral-100
+    box-sizing: border-box
+  
+  &--price
+    display: flex
+    align-items: baseline
+    
+    +responsive(mobile)
+      margin-top: 20px
+    
+    .ds-price
+      font-size: 35px
+      font-weight: 700
+      color: $neutral-800
+      
+      &--old
+        margin-left: 4px
+        font-size: 22px !important
+        font-weight: 400
+        color: $neutral-400
+        
+        &:before
+          margin-top: 2px
+  
+  &--btn
+    .ds-btn--default-big
+      padding: 12px 20px 14px
+
+  &--color
+    margin-top: 20px
+    padding-top: 20px
+  
+  &--share
+    margin-top: 20px
+    padding-top: 20px
+    
+    +responsive(desktop)
+      padding-bottom: 40px
+  
+  &--instagram
+    margin-top: 20px
+    padding-top: 20px
+  
+  &--count
+    border-top: 1px solid $neutral-100
+    border-bottom: 1px solid $neutral-100
+    margin: 12px 0
+    padding: 12px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    min-height: 36px
+    
+    .count-title
+      font-weight: 600
+      color: $neutral-600
+    
+    .count-title-sale
+      display: flex
+      align-items: center
+      
+      &[hidden]
+        display: none
+      
+      &__icon
+        min-width: 34px
+        height: 34px
+        +radius(50%)
+        margin-right: 12px
+        background-color: rgba($green-500, .3)
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        
+        &:before
+          content: ''
+          position: absolute
+          width: 14px
+          height: 14px
+          background: url(/local/assets/images/svg/percent.svg) 50% 50% no-repeat
+      
+      span
+        font-size: .8175rem
+        color: $green-400
+        font-weight: 700
+      
+      &.success
+        opacity: .5
+        
+        .count-title-sale__icon
+          &:before
+            background: url(/local/assets/images/svg/check-discount.svg) 50% 50% no-repeat
+  
+  &__title-link
+    position: relative
+    padding-left: 12px
+    margin-left: 12px
+    
+    &:before
+      content: ''
+      width: 1px
+      height: 15px
+      background-color: $neutral-600
+      left: 1px
+      top: 3px
+      position: absolute
+  
+  &__title
+    font-size: 1rem
+    color: $neutral-600
+    display: flex
+    align-items: center
+
+    span
+      font-weight: 600
+
+    a
+      color: $blue-400
+      text-decoration: none
+  
+  .ds-info-btn
+    display: flex
+
+
+.ds-favorite-btn
+  min-width: 48px !important
+  height: 48px !important
+  +radius()
+  border: 1px solid $neutral-300 !important
+  box-sizing: border-box
+  margin: 4px 0 4px 8px
+  cursor: pointer
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &:hover
+    background-color: $neutral-50
+
+  &.added
+    &:before
+      background: url(/local/assets/images/svg/favorite_on.svg) 50% 50% no-repeat
+
+
+.header-rating-vendor
+  display: flex
+  margin-top: 12px
+  
+  .ya-rating
+    padding-left: 100px
+    color: $neutral-400
+
+  .header-vendor
+    color: $neutral-600
+    margin-left: 12px
+
+
+.ds-double-slider-for-arrows
+  position: relative
+
+.ds-double-slider-for
+  width: 100%
+  overflow: hidden
+  margin: 20px 0
+
+  +responsive(mobile)
+    max-height: 560px
+
+  +responsive(desktop)
+    min-height: 550px
+    max-height: 550px
+
+  &__item
+    display: flex !important
+    align-items: flex-start
+
+    img
+      max-width: 100%
+      margin: 0 auto
+      height: auto
+
+  .ds-slider-arrows
+    visibility: hidden
+    opacity: 0
+    top: 50%
+    margin-top: -18px
+    +transition()
+    
+    &.prev
+      left: 4px !important
+      right: auto
+  
+  .ds-slider-dots
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 10px
+
+    li
+      width: 4px
+      height: 4px
+      +radius(50%)
+      background-color: $neutral-300
+      margin: 0 2px
+      +transition()
+      
+      &.slick-active
+        width: 6px
+        height: 6px
+        background-color: $neutral-600
+    
+    button
+      display: none
+
+.ds-double-slider-nav
+  +responsive(mobiletablet)
+    display: none !important
+  
+  +responsive(tabletdesktop)
+    height: 80px
+    max-width: 540px
+    overflow: hidden
+    margin: 0 auto
+
+  &__item
+    width: 80px !important
+    margin: 0 auto
+    height: 80px
+    cursor: pointer
+    +radius()
+    border: 1px solid $neutral-100
+    box-sizing: border-box
+    display: flex !important
+    justify-content: center
+    align-items: center
+    +transition()
+
+    img
+      max-width: 64px
+
+  .slick-slide
+    height: 80px
+    overflow: hidden
+
+  .slick-track
+    margin: 0 auto
+
+  .slick-current
+    .ds-double-slider-nav__item
+      border: 2px solid $blue-400
+
+.ds-catalog-recommend
+  margin: 0 -10px
+
+  &__item
+    width: 50%
+    margin: 20px auto
+    float: left
+    display: flex
+    flex-flow: column
+    padding: 0 10px
+    box-sizing: border-box
+    
+    @media (min-width: 640px) and (max-width: 799px)
+      width: 33.33333%
+      
+      &:nth-child(4n)
+        display: none
+    
+    @media (min-width: 800px) and (max-width: 999px)
+      width: 25%
+    
+    @media (min-width: 1000px) and (max-width: 1199px)
+      width: 33.33333%
+      
+      &:nth-child(4n)
+        display: none
+    
+    @media (min-width: 1200px)
+      width: 25%
+    
+    .ds-price
+      font-size: 22px
+      color: $neutral-800
+  
+  a
+    display: block
+    text-decoration: none
+    margin: 0 auto
+  
+  p
+    overflow: hidden
+    +rem(18)
+    height: 50px
+  
+  img
+    max-width: 100%
+  
+  &__btn
+    width: 100%
+    text-align: center
+    margin-top: 20px
+    max-width: 240px
+    margin-left: auto
+    margin-right: auto
+
+.ds-catalog-descr
+  min-height: 150px
+  max-height: 260px
+  overflow: hidden
+  position: relative
+
+  p
+    margin-bottom: 8px !important
+
+  h6
+    margin: 24px 0 8px !important
+    
+    &:first-child
+      margin-top: 0 !important
+
+.device-border
+  position: relative
+  padding: 50px 0 40px
+  
+  &:before
+    +responsive(mobiletablet)
+      right: -12px
+      left: -12px
+
+    +responsive(tablet)
+      right: -20px
+      left: -20px
+
+    +responsive(device)
+      content: ''
+      position: absolute
+      height: 8px
+      background-color: $neutral-50
+      border-top: 1px solid $neutral-100
+      border-bottom: 1px solid $neutral-100
+  
+  &:before
+    +responsive(device)
+      top: 0
+
+.ds-catalog-why
+  &__item
+    +radius(5px)
+    border: 1px solid rgba($neutral-1000, .2)
+    min-height: 176px
+    box-sizing: border-box
+    margin-top: 20px
+    display: flex
+    flex-flow: column
+    
+    +responsive(tabletdesktop)
+      flex-flow: row-reverse
+  
+  &__img
+    background-color: $neutral-50
+    
+    +responsive(mobile)
+      height: 184px
+      border-bottom: 1px solid rgba($neutral-200, .2)
+      +radius(5px 5px 0 0)
+    
+    +responsive(tabletdesktop)
+      min-width: 200px
+      +radius(0 5px 5px 0)
+  
+  &__content
+    display: flex
+    flex-flow: column
+    padding: 32px 40px 32px 20px
+    margin-right: auto
+    justify-content: center
+
+.goods-specification
+  max-width: 400px
+  max-height: 260px
+  overflow: hidden
+
+  &__row
+    display: flex
+    flex-wrap: wrap
+    flex-flow: column
+    margin-top: 12px
+    line-height: 1.3
+  
+  &__key
+    +rem(15)
+
+  &__value
+    font-weight: 600
+
+.goods-color
+  display: flex
+  flex-wrap: wrap
+  margin-top: 4px
+  
+  &__item
+    margin: 12px 12px 0 0
+    +radius()
+    border: 1px solid $neutral-100
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 60px
+    height: 60px
+    cursor: pointer
+    +transition()
+    box-sizing: border-box
+    
+    &.active
+      border: 2px solid $blue-400
+    
+    &:hover
+      border-color: $blue-200
+    
+    img
+      display: block
+      width: 44px
+
+.goods-size,
+.goods-sort
+  display: flex
+  flex-wrap: wrap
+  margin-top: 4px
+  
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 60px
+    height: 40px
+    padding: 0 12px
+    border: 1px solid rgba($neutral-600, .2)
+    +radius()
+    box-sizing: border-box
+    margin: 12px 12px 0 0
+    color: $neutral-600
+    cursor: pointer
+    
+    &.active
+      background-color: $blue-400
+      border-color: rgba($neutral-1000, .1)
+      color: $neutral-0
+
+.goods-insta
+  display: flex
+  position: relative
+  
+  +responsive(mobile)
+    padding-right: 16px
+  
+  +responsive(tabletdesktop)
+    padding-right: 36px
+  
+  &__content
+    display: flex
+    flex-flow: wrap
+    overflow: hidden
+    width: auto
+    
+    +responsive(device)
+      height: 112px
+    
+    +responsive(desktop)
+      height: 92px
+
+  &__content-last
+    width: 80px
+
+  &__item
+    +radius()
+    box-sizing: border-box
+    margin: 12px 12px 0 0
+    cursor: pointer
+    overflow: hidden
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    @media (max-width: 413px)
+      height: 80px
+      width: 80px
+
+    @media (min-width: 414px)
+      height: 100px
+      width: 100px
+
+    +responsive(desktop)
+      width: 80px
+      height: 80px
+
+    &:before
+      content: ''
+      position: absolute
+      height: 100%
+      width: 100%
+      +transition()
+    
+    &:nth-child(n+3)
+      
+      @media (max-width: 472px)
+        display: none
+
+      +responsive(desktop)
+        display: none
+
+    &:nth-child(n+4)
+        @media (min-width: 473px) and (max-width: 583px)
+          display: none
+
+    &:nth-child(n+5)
+        @media (min-width: 584px) and (max-width: 716px)
+          display: none
+
+    &:hover
+      +responsive(desktop)
+        &:before
+          background-color: rgba($neutral-1000, .15)
+    
+    &--last
+      +responsive(desktop)
+        &:before
+          background-color: rgba($neutral-1000, .5)
+      
+      &:hover
+        &:before
+          background-color: rgba($neutral-1000, .65) !important
+    
+    &--last
+      &:before
+        background-color: rgba($neutral-1000, .5)
+    
+    img
+      border: 1px solid rgba($neutral-1000, .08)
+      max-width: 100%
+    
+    .quantity
+      font-size: 1em
+      font-weight: 700
+      position: absolute
+      display: block
+      color: $neutral-0
+
+.insta-slider
+  position: relative
+  box-sizing: border-box
+  
+  +responsive(desktop)
+    padding: 30px 80px 25px
+  
+  .ds-modal-close
+    top: 0 !important
+    background-color: $neutral-0
+    
+  img
+    max-width: 100%
+  
+  .ds-slider-arrows
+    top: 50%
+    transform: translateX(-50%)
+    
+    &.prev
+      left: 30px !important
+      right: auto
+    
+    &.next
+      right: 0
+
+.ds-count
+  display: flex
+  
+  +responsive(device)
+    justify-content: flex-end
+  
+  .icon-svg
+    min-width: 40px
+    height: 40px
+    text-align: center
+    padding: 0
+    cursor: pointer
+    +radius()
+    background-color: transparent
+    border: 1px solid transparent
+    transition: all .2s linear
+    
+    &:focus
+      outline: none
+
+.inp-count
+  +responsive(desktop)
+    border-color: $neutral-300 !important
+
+.ds-btn
+  
+  &.active[disabled]
+    border: 1px solid rgba($neutral-1000, .1)
+    background-color: $green-400 !important
+    color: $neutral-0 !important
+    cursor: default
+    animation: addToBasket, 5s forwards
+
+@keyframes addToBasket
+  from
+    background-color: $blue-400
+  to
+    background-color: $green-400
+
+
+.ds-reviews
+  .ds-btn-more
+    +responsive(desktop)
+      display: none !important
+    
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    +responsive(tabletdesktop)
+      border-bottom: 1px solid $neutral-100
+      padding-bottom: 20px
+
+    .counter
+      color: $neutral-400
+      font-size: .75rem
+      font-weight: 600
+      vertical-align: super
+      margin-left: 4px
+  
+  &__rating
+    display: flex
+    padding-top: 8px
+  
+  .ds-btn
+    +responsive(mobile)
+      margin: 20px 0 0
+      display: block
+      width: 100%
+      line-height: 1
+    
+    +responsive(tabletdesktop)
+      margin: 0 auto
+      display: block
+      max-width: 180px
+  
+  &__list
+    +responsive(device)
+      max-height: 812px
+      overflow: hidden
+  
+  &__item
+    margin: 40px 0 20px
+  
+  &__person
+    display: flex
+    align-items: center
+  
+  &__img
+    width: 28px
+    height: 28px
+    +radius(50%)
+    margin-right: 8px
+    overflow: hidden
+    
+    img
+      max-width: 100%
+  
+  &__text-item
+    margin-top: 20px
+  
+  &__geo
+    margin-top: 4px
+    
+    span
+      color: $neutral-400
+      +rem(15)
+  
+  h4
+    margin-bottom: 0
+
+.ds-rating-stars
+  display: flex
+  align-items: center
+  
+  &[data-rate="1"]
+    span
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5)
+        background-image: url(/local/assets/images/svg/star-gray.svg)
+  
+  &[data-rate="2"]
+    span
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5)
+        background-image: url(/local/assets/images/svg/star-gray.svg)
+  
+  &[data-rate="3"]
+    span
+      &:nth-child(4),
+      &:nth-child(5)
+        background-image: url(/local/assets/images/svg/star-gray.svg)
+  
+  &[data-rate="4"]
+    span
+      &:nth-child(5)
+        background-image: url(/local/assets/images/svg/star-gray.svg)
+  
+  span
+    width: 16px
+    height: 16px
+    cursor: pointer
+    background: url(/local/assets/images/svg/star.svg) 0 0 no-repeat
+    
+
+.ds-rating-label
+  color: $neutral-400
+  margin-left: 4px

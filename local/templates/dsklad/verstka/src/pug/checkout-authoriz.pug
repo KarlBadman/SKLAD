@@ -1,0 +1,41 @@
+extends templates/layout
+
+block csslibs
+	link(rel="stylesheet" href="css/checkout/style.css")
+
+
+block jslibs
+	script(src="js/libs/parsley.min.js")
+	script(src="js/parsley-ru.js")
+
+block nav
+	-var isAuthorized = true
+	-var isCity = true
+
+block content
+
+	include templates/incl-basket-header
+
+	.ds-wrapper
+		.ds-checkout
+			.ds-back
+				a(href="basket.html") В корзину
+
+			.ds-checkout__header
+				h1 Оформление заказа
+
+			include templates/incl-basket-city
+
+			form(action="#" data-parsley-validate)
+				.ds-checkout__content
+					.ds-checkout__form
+						include templates/incl-checkout
+
+					.ds-checkout__total-price
+						include templates/incl-total-price
+
+
+	// эти два скрипта есть на основном сайте
+	script(src="https://www.dsklad.ru/local/templates/dsklad/js/isMobile.min.js")
+
+	script(src="js/checkout-init.js")

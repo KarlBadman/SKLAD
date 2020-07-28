@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="82px" viewBox="0 0 82 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DSKLAD-/-Mobile-/-Vertical-/-Basket-/-Thankyoupage" transform="translate(-119.000000, -147.000000)" stroke="#44BB6E" stroke-width="1.5">
+            <g id="check" transform="translate(120.000000, 148.000000)">
+                <path d="M0,40 C0,62.0933333 17.9066667,80 40,80 C62.0933333,80 80,62.0933333 80,40 C80,17.9066667 62.0933333,0 40,0 C17.9066667,0 0,17.9066667 0,40 Z" id="Clip-2" fill-rule="nonzero"></path>
+                <polyline id="Path-2" stroke-linecap="round" stroke-linejoin="round" points="20 41.8864173 33.8079203 56 60 26"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

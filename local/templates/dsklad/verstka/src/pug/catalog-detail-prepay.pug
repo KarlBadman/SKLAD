@@ -1,0 +1,16 @@
+extends templates/layout
+include templates/_mixins
+
+block csslibs
+	link(rel="stylesheet" href="https://www.dsklad.ru/local/assets/css/purepopup.css")
+	link(rel="stylesheet" href="css/catalog-detail/style.css")
+
+block nav
+	-var isPrepay = true
+
+block content
+
+	include templates/incl-catalog-detail
+
+	script(src="https://www.dsklad.ru/local/assets/js/purepopup.js")
+	script(src="js/catalog-detail-init.js")

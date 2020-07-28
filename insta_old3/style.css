@@ -1,0 +1,503 @@
+.insta_po_centru {
+    margin: 0 auto;
+    display: table;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom:64px;
+}
+
+.flex_insta{
+    display: flex;
+
+}
+
+.laiki_bigfoto{
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.cop_insta{
+    float: right;
+    font-size: 12px;
+	font-family: "PT Sans", sans-serif;
+	border: 1px solid rgba(255, 255, 255, 1);
+    padding: 5px 12px;
+    border-radius: 5px;
+	margin-top: -3px;
+	display: table;
+	opacity: 0.8;
+}
+
+.ssil_nacopir{
+    text-decoration: none;
+}
+
+
+.ssil_nacopir:hover .cop_insta{
+opacity: 1;
+}
+
+.numb_laik_inst{
+    color: #fff;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: -7px;
+    opacity: 0.8;
+}
+
+.big_foto_insta{
+    position: relative;
+    width: 457px;
+    max-height: 457px;
+    overflow: hidden;
+}
+
+.big_foto_insta img{
+    width: 100%;
+}
+
+.cop_insta{
+    color: #fff;
+}
+
+.cop_insta a{
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.opacity_insta{
+    opacity: 0.8;
+}
+
+.cop_insta a:hover{
+    opacity: 1;
+}
+
+
+.foto_vtor_urov{
+    width: 457px;
+    max-height: 457px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.foto_vtor_urov img{
+    width: 100%;
+}
+
+.foto1_insta{
+    margin-right: 15px;
+}
+
+.vtor_urov_insta{
+    margin-top: 15px;
+}
+
+.foto_mez_treh_insta{
+    margin: 0 15px;
+}
+
+.chislo_fanov_instagrama{
+    font-size:  41px;
+    font-weight: bold;
+}
+
+.statist_numb_insta{
+width: 457px;
+    font-size: 15px;
+	    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.fani_string_inst{
+    margin-top: -6px;
+}
+
+.prisoedinilos_insta{
+    margin-top: 24px;
+	    justify-content: center;
+}
+
+.prisoedinilos_insta a{
+    text-decoration: none;
+    border-bottom: 1px solid#c2c2c2;
+    padding-bottom: 1px;
+	font-family: "PT Sans", sans-serif;
+}
+
+.pochit_otz_insta{
+    margin-top: 32px;
+	margin-right: -5px;
+}
+
+.prisoedinilos_insta{
+    display: flex;
+    align-items: center;
+}
+
+.pochit_otz_insta a{
+    text-decoration: none;
+    border-bottom: 1px solid#c2c2c2;
+    padding-bottom: 1px;
+	font-family: "PT Sans", sans-serif;
+}
+
+.serdc_laik_inst{
+    margin-bottom: -4px;
+}
+
+.serdc_laik_inst img{
+    width: 22px;
+    opacity: 0.7;
+}
+
+.dsklad_insta{
+    letter-spacing: 1px;
+}
+
+.laiki_i_diz_vtor_ur_inst{
+    position: absolute;
+    bottom: 27px;
+    width: 100%;
+    z-index: 9;
+}
+
+.laki_cop_centr_inst{
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.swiper-containerinst .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-containerinst div.swiper-slide:nth-child(1){
+    margin-left: -40px;
+}
+
+
+.swiper-containerinst .swiper-slide .vstavlenfot_insta{
+    width: 100%;
+}
+
+.swiper-containerinst {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    margin-left: 22px;
+}
+
+.sedsl_insta{
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+}
+
+.fani_insta_mobile{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 20px;
+}
+
+.zagolovok_inst_gl{
+display: flex;
+font-size: 28px;
+}
+
+.prisoed_heshteg{
+margin-right: 5px;
+}
+
+.mig_cursor{
+width: 1px;
+background: #000;
+margin-left:3px;
+
+}
+
+.heshtegpocentr{
+display: table;
+margin: 0 auto;
+}
+
+.zagolovo_insta{
+    font-weight: bold;
+    color: #000;
+	text-decoration: none;
+}
+
+.zagol_insta_pocentru{
+    display: table;
+    margin: 0 auto;
+	margin-bottom: 24px;
+    width: 615px;
+}
+
+.ssilka_prisoed{
+    margin-right: 5px;
+}
+
+.ssilka_prisoed:hover{
+    color: #1769ff;
+    border-bottom: 1px solid#1769ff;
+}
+
+.strel_vssilke{
+    background: url("/insta/strelka.png");
+    width: 12px;
+    height: 10px;
+    background-position: 0 -30px;
+}
+
+.prisoedinilos_insta:hover .strel_vssilke{
+    background-position: top;
+}
+
+#insta_mobile{
+	font-family: "Open Sans", sans-serif;
+}
+
+#insta_mobile .laki_cop_centr_inst{
+    padding-left: 70px;
+}
+
+#insta_mobile .fani_insta_mobile{
+    margin-bottom: 65px;
+}
+
+#insta_mobile .zagolovok_inst_gl{
+    display: block;
+}
+
+#insta_mobile .zagolovok_inst_gl{
+    font-size: 20px;
+    text-align: center;
+}
+
+#insta_mobile .zagol_insta_pocentru{
+    width: 100%;
+}
+
+#insta_mobile .zagol_insta_pocentru{
+    margin-bottom: 32px;
+}
+
+.statist_numb_insta_pocent{
+width: 100%;
+text-align: center;
+    margin-top: -20px;
+}
+
+.text_copir{
+margin-top:-1px;
+}
+
+.oknodannih{
+    position: absolute;
+    background-color: #fff;
+    padding: 7px;
+    display: block;
+    z-index: 10;
+    font-size: 12px;
+    opacity: 0.9;
+    padding-right: 25px;
+}
+
+div.oknodannih:nth-child(4){
+
+}
+
+.ssilka_blok{
+    margin-top: 10px;
+}
+
+.ssilka_blok a{
+    text-decoration: none;
+    color: #1769ff;
+    font-size: 13px;
+}
+
+.ssilka_blok a:hover{
+    color: #1769ff;
+}
+
+.oknodannih i {
+    position: absolute;
+    z-index: 9;
+    display: block;
+    width: 17px;
+    height: 17px;
+    font: 0/0 a;
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    bottom: -8px;
+    left: 10%;
+}
+
+.oknodannih i:after {
+    background: #FFF;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    content: '';
+    bottom: 1px;
+    left: 1px;
+}
+
+.opac{
+    opacity: 0;
+}
+
+.vstavlenfot_insta:hover{
+    opacity: 0.90;
+    cursor: pointer;
+}
+
+.oblach{
+    max-width: none;
+}
+
+.old_cena{
+    text-decoration: line-through;
+    color: #929292;
+    padding-right: 5px;
+}
+
+.price_cloud{
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 1474px), only screen and (max-device-width: 1474px) {
+    .insta_po_centru{
+        width: 94.5545%;
+    }
+
+    .big_foto_insta{
+        width: 100%;
+        max-height: inherit;
+    }
+	
+	.statist_numb_insta{
+	width: 100%;
+	}
+
+    .foto_vtor_urov{
+        width: 100%;
+    }
+
+    .oknodannih{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1000px), only screen and (max-device-width: 1000px) {
+
+    .oknodannih{
+        padding: 4px;
+        font-size: 9px;
+    }
+
+    .oblach {
+        max-width: fit-content;
+    }
+
+    .ssilka_blok{
+        margin-top: 3px;
+    }
+
+    .oknodannih i:after{
+        width: 10px;
+        height: 10px;
+    }
+
+    .price_cloud{
+        font-size: 12px;
+    }
+
+    .ssilka_blok a{
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 940px), only screen and (max-device-width: 940px) {
+    .laiki_bigfoto{
+        float: none;
+    }
+
+    .cop_insta{
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+
+    .urovni_insta{
+        display: block;
+        height: inherit!important;
+    }
+
+    .big_foto_insta{
+        display: none;
+    }
+
+    .foto1_insta{
+        display: block;
+    }
+
+    .vtor_urov_insta{
+        display: none;
+    }
+
+    .statist_numb_insta{
+        margin-bottom: 20px;
+    }
+
+    .big_foto_insta{
+        height: 100%;
+    }
+
+    .big_foto_insta img{
+        max-width: 100%;
+    }
+
+    .insta_po_centru{
+        display: none;
+    }
+
+    .oknodannih{
+        padding: 7px;
+        padding-right: 25px;
+        font-size: 12px;
+    }
+
+    .price_cloud{
+        font-size: 14px;
+    }
+
+    .ssilka_blok {
+        margin-top: 10px;
+    }
+
+    .ssilka_blok a {
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (max-width: 639px), only screen and (max-device-width: 639px) {
+    .insta_po_centru{
+        width: 90%;
+    }
+}

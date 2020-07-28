@@ -1,0 +1,733 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+
+@import "../templates/basket-city"
+@import "../templates/total-price-in-basket"
+
+
+.ds-checkout-header
+  margin-bottom: 20px
+  position: relative
+
+  &__content
+    min-height: 70px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &:after
+    content: ''
+    position: absolute
+    height: 1px
+    background-color: $neutral-200
+    left: 0
+    right: 0
+    bottom: 0
+
+  &__logo
+    width: 150px
+
+    img
+      +responsive(mobile)
+        max-width: 110px
+
+  &__phone
+    display: flex
+    flex-flow: column
+    align-items: center
+    
+    span
+      color: $neutral-500
+      font-size: .8175em
+
+    p
+      margin: 4px 0 0
+      font-weight: 600
+
+    a
+      color: $neutral-1000
+
+.ds-checkout
+  +responsive(device)
+    margin: 0 -12px
+  
+  +responsive(tablet)
+    margin: 0 -20px
+
+  h1
+    margin-top: 20px
+    
+    +responsive(device)
+      padding: 0 12px
+
+    +responsive(tablet)
+      padding: 0 20px
+  
+  +responsive(desktop)
+    max-width: 800px
+    margin: 0 auto 200px
+  
+  &__content
+    +responsive(device)
+    display: flex
+    flex-flow: column
+    
+    +responsive(desktop)
+      display: grid
+      grid-template-areas: "form totalPrice"
+      -ms-grid-columns: calc(100% - 240px) 240px
+      grid-template-columns: calc(100% - 240px) 240px
+  
+  &__form
+    grid-area: form
+    box-sizing: border-box
+    
+    +responsive(desktop)
+      padding: 0 40px 0 0
+  
+  &__total-price
+    width: 100%
+    grid-area: totalPrice
+    
+    +responsive(desktop)
+      width: 240px
+      position: relative
+
+
+.block-delivery-name
+  color: $green-400
+  margin-top: 12px
+  
+  p
+    margin-bottom: 0
+
+.block-delivery-name-link
+  text-decoration: underline
+  cursor: pointer
+
+
+.ds-checkout-form
+  counter-reset: item
+
+  +responsive(device)
+    background-color: $neutral-50
+  
+  &__item
+    padding: 20px
+    margin-top: 20px
+    border-top: 1px solid $neutral-200
+    border-bottom: 1px solid $neutral-200
+    background-color: $neutral-0
+    
+    +responsive(desktop)
+      border: 1px solid $neutral-200
+      +radius(10px)
+    
+    > label
+      font-weight: 500
+      margin-bottom: 4px
+      display: block
+      color: $neutral-800
+   
+    h4
+      margin: 0
+    
+    .form-group
+      &:not(.hidden)
+        margin-top: 12px
+    
+    &.error
+      border-color: $red-400
+  
+  &__header
+    margin-bottom: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    
+    @media (max-width: 359px)
+      flex-flow: column
+    
+    label
+      align-self: flex-end
+    
+    h4
+      position: relative
+      padding-left: 32px
+      
+      @media (max-width: 359px)
+        align-self: flex-start
+      
+      &:before
+        content: counter(item)
+        counter-increment: item
+        position: absolute
+        width: 24px
+        height: 24px
+        background-color: $neutral-1000
+        color: $neutral-0
+        +radius(50%)
+        left: 0
+        display: flex
+        align-items: center
+        justify-content: center
+    
+    span
+      @media (max-width: 359px)
+        align-self: flex-end
+
+.reciever-content
+  position: relative
+  margin-top: 20px
+  padding-top: 16px
+  
+  &:before
+    content: ''
+    position: absolute
+    height: 1px
+    left: 0
+    right: 0
+    top: 0
+    background-color: $neutral-400
+
+  &__btn
+    .small-text
+      display: block
+      margin-top: 4px
+
+  &__info
+    h5
+      margin: 0
+
+  &__info-header
+    display: flex
+    flex-flow: wrap
+    align-items: center
+    justify-content: space-between
+
+    .icon-svg
+      cursor: pointer
+
+    .subheader
+      width: 100%
+      color: $yellow-400
+
+.delivery-info
+
+  &__item
+    margin-top: 12px
+    box-shadow: 0 0 0 1px $neutral-50, 0 0 0 2px rgba($neutral-600, .2)
+    background-color: $neutral-50
+    box-sizing: border-box
+    +radius(3px)
+
+    &.active
+      background-color: $neutral-0
+      box-shadow: 0 0 0 2px $blue-400
+
+      label:before
+        border: 6px solid $blue-400
+
+      .ds-price-free
+        color: $green-400
+
+      .ds-price-warning
+        color: $yellow-400
+        text-align: right
+        font-size: 13px
+        line-height: 1.2
+        position: absolute
+        right: 16px
+        padding-top: 4px
+        width: 120px
+
+  &__header
+
+    input[type="radio"]
+      position: absolute
+
+    label
+      padding: 16px 12px 16px 60px !important
+
+      &:before
+        left: 16px !important
+
+    span
+      display: block
+    
+    .ds-price
+      color: $blue-400
+      
+      &--discount
+        color: $red-400
+
+    .header
+      font-weight: 600
+      color: $neutral-600
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+    .subheader
+      color: $neutral-500
+      line-height: 1.38
+    
+    &.parsley-error
+      border-color: $red-400
+
+  .delivery-info-result
+    padding: 0 16px 12px 60px
+
+    &.hidden
+      padding: 0
+
+.ds-price-free
+  color: $neutral-600
+
+.delivery-info-result
+  .ds-btn
+    display: inline-flex
+
+  &--modal
+    .delivery-result-header
+      font-size: .75rem
+      color: $neutral-500
+
+.delivery-result-header
+  color: $green-400
+  display: block
+  font-weight: 500
+
+.delivery-result-address,
+.delivery-result-price
+  display: block
+  margin-top: 4px
+
+.delivery-result-add-info
+  color: $neutral-500
+  margin: 4px 0 8px
+  
+  span
+    display: block
+    margin-bottom: 4px
+  
+  .header
+    font-weight: 600
+    margin-bottom: 0
+  
+  .ds-btn
+    padding: 9px 20px
+
+.courier-services
+  margin: 24px 0 12px
+
+  h5
+    margin: 0
+
+  &__item
+    margin-top: 20px
+
+    p
+      margin-bottom: 4px
+
+    span
+      display: block
+
+  &__price-btn
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 8px
+
+    .ds-btn--light
+      +responsive(mobile)
+        padding: 9px 20px
+
+      &.active
+        color: $neutral-300 !important
+        background-color: $neutral-0
+        border: 1px solid rgba($neutral-600, .2)
+
+.delivery-date-info
+  display: flex
+  align-items: center
+
+.add-info
+  color: $neutral-500
+  margin-top: 2px
+
+
+.delivery-modal-map
+  overflow: hidden
+  margin: 44px -20px -20px
+
+  .ymaps-2-1-71-balloon__close+.ymaps-2-1-71-balloon__content
+    margin-right: 0
+    padding: 16px 16px 12px
+  
+  .ymaps-2-1-71-balloon__close
+    position: absolute
+    right: 0
+
+.delivery-option
+  position: relative
+  margin-top: 16px
+  padding-top: 6px
+  
+  &:before
+    content: ''
+    position: absolute
+    height: 1px
+    left: 0
+    right: 0
+    top: 0
+    background-color: $neutral-200
+  
+  span
+    display: block
+    margin-top: 8px
+  
+  .hidden
+    display: none
+  
+  a
+    text-decoration: none
+    color: $blue-400
+
+
+.payment-info
+
+  &__btn
+    cursor: pointer
+    margin-top: 12px
+    color: $blue-400
+    font-weight: 600
+    font-family: $defaultFF
+    text-align: center
+    position: relative
+    padding-bottom: 24px
+
+    &:after
+      content: ''
+      position: absolute
+      width: 24px
+      height: 24px
+      bottom: 0
+      left: 50%
+      margin-left: -12px
+      background: url(/local/assets/css/../images/svg/arrow-down.svg) 50% 50% no-repeat
+      transform: rotate(180deg)
+      transition: transform .3s linear
+
+    &.more
+      padding-top: 12px
+
+      &:after
+        transform: rotate(0)
+
+  &__secondary
+    display: none
+    
+    &.open
+      display: block
+
+  &__item
+    margin: 12px 2px 0
+    box-shadow: 0 0 0 1px rgba($neutral-600, .2), 0 0 0 2px $neutral-0
+    background-color: $neutral-50
+    box-sizing: border-box
+    +radius(3px)
+    min-height: 92px
+    padding: 16px
+    cursor: pointer
+    display: flex
+    
+    &.active
+      background-color: $neutral-0
+      box-shadow: 0 0 0 2px $blue-400
+      
+      .payment-info__other-person
+        height: auto
+        visibility: visible
+        opacity: 1
+        transition: all .3s ease-in-out
+      
+      .subheader
+        color: $neutral-600
+      
+      .icon-svg
+        opacity: 1 !important
+
+    
+    &.active-bonus
+      background-color: $neutral-0
+      box-shadow: 0 0 0 2px $blue-400
+      
+      .subheader
+        color: $neutral-600
+      
+      .payment-info__input
+        visibility: visible
+        opacity: 1
+        
+        +responsive(mobile)
+          height: auto
+          margin-top: 12px
+      
+      .pseudo-checkbox
+        border-color: $blue-400
+        background: $blue-400 url(../images/svg/check-white.svg) 50% 50% no-repeat
+
+    &.hidden
+      padding: 0
+      min-height: auto
+      margin: 0
+
+    &--bonus
+      cursor: default
+      
+      .payment-info__icon,
+      .payment-info__text
+        cursor: pointer
+
+  &__icon
+    width: 60px
+    display: flex
+    align-items: center
+    
+    .icon-svg:not(.ic-yandex_installments)
+      opacity: .3
+
+  &__info
+    display: flex
+    flex-flow: column
+    justify-content: center
+    width: calc(100% - 60px)
+
+    &.parsley-error
+      border-color: $red-400
+
+  &__info-row
+    display: flex
+    width: calc(100% - 60px)
+    justify-content: space-between
+    
+    +responsive(mobile)
+      flex-flow: column
+    
+    +responsive(tabletdesktop)
+      flex-flow: row
+      align-items: center
+  
+  &__input
+    width: 120px
+    border: 1px solid $neutral-200
+    +radius()
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $neutral-0
+    padding-left: 8px
+    height: 40px
+    visibility: hidden
+    opacity: 0
+    
+    +responsive(mobile)
+      height: 0
+    
+    span
+      color: $neutral-300
+    
+    input
+      border: 0
+      min-width: 60px
+      text-align: right
+      color: $neutral-600
+      font-weight: 700
+  
+  &__info-text
+    display: flex
+    flex-flow: column
+  
+  &__other-person
+    height: 0
+    visibility: hidden
+    opacity: 0
+  
+  .header
+    font-weight: 600
+    color: $neutral-600
+    line-height: 1.44
+    display: block
+    margin-bottom: 8px
+  
+  .subheader
+    color: $neutral-500
+    display: flex
+    flex-flow: column
+
+  .green-400
+    color: $green-400
+
+.pseudo-checkbox
+  width: 16px
+  height: 16px
+  +radius(2px)
+  border: 1px solid $neutral-300
+  background-color: $neutral-0
+  box-sizing: border-box
+  margin-left: 4px
+
+.ds-checkout-consist
+  padding: 20px
+  margin-top: 20px
+  background-color: $neutral-0
+  
+  +responsive(device)
+    border-top: 1px solid $neutral-200
+    border-bottom: 1px solid $neutral-200
+
+  +responsive(desktop)
+    +radius(10px)
+    border: 1px solid $neutral-200
+  
+  h5
+    margin: 0
+  
+  p
+    margin: 4px 0 0
+    color: $neutral-500
+
+.total-weight
+  position: relative
+  margin-left: 8px
+  padding-left: 8px
+  
+  &:before
+    content: ''
+    position: absolute
+    width: 4px
+    height: 4px
+    +radius(50%)
+    background-color: $neutral-500
+    top: 50%
+    margin-top: -2px
+    left: 0
+
+
+.ds-checkout-slider
+  overflow: hidden
+  max-height: 120px
+  margin-top: 32px
+
+  &__item
+    text-align: center
+    
+    img
+      max-width: 84px
+      margin: 0 auto
+    
+    span
+      font-size: .8175em
+      color: $neutral-500
+
+
+.ds-checkout-slider-arrows
+  position: relative
+
+  .ds-slider-arrows
+    +responsive(mobile)
+      margin-top: -10px
+
+    &[aria-disabled=true]
+      opacity: .4
+
+    &:before
+      content: ''
+      position: absolute
+      width: 20px
+      height: 20px
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: .6
+      +transition()
+
+    &:hover
+      &:before
+        opacity: 1
+
+    &.next
+
+      +responsive(mobile)
+        right: 0
+
+      +responsive(tabletdesktop)
+        right: 4px
+        top: 30px
+
+    &.prev
+
+      +responsive(mobile)
+        right: 50px
+
+      +responsive(tabletdesktop)
+        left: 4px !important
+        top: 30px
+
+.all-pay-btn
+  text-align: center
+  color: $blue-400
+  margin-top: 20px
+
+.tnx-page
+  width: 100%
+  padding: 0 20px
+  box-sizing: border-box
+  max-width: 480px
+
+  +responsive(device)
+    margin: 50px auto 0
+
+  +responsive(desktop)
+    margin: 200px auto 0
+
+  &__content
+    text-align: center
+
+    h1
+      text-align: center
+      margin-bottom: 32px
+  
+      +responsive(device)
+        font-size: 30px
+
+    p
+      color: $neutral-500
+      margin-bottom: 0
+  
+    .tnx-link
+      font-weight: 700
+      text-decoration: underline
+    
+    &--success
+      h1
+        color: $green-400
+
+    &--error
+      h1
+        color: $red-400
+
+  &__btn
+    text-align: center
+    
+    +responsive(device)
+      margin-top: 24px
+
+    +responsive(desktop)
+      margin-top: 48px
+
+    .ds-btn
+      +responsive(mobile)
+        width: 100%
+

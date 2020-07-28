@@ -1,0 +1,40 @@
+
+<div class="signup__popup">
+  <h2>Вход</h2>
+  <form action="" novalidate="novalidate">
+    <div class="field__widget type-block field-email">
+      <label for="input-signin-email" class="label">Эл.почта:</label>
+      <div class="field">
+        <div class="input">
+          <!--<div class="placeholder">name@domain.ru</div>-->
+          <input type="email" id="input-signin-email" autocomplete="off" name="email" placeholder="name@domain.ru"/>
+        </div>
+      </div>
+    </div>
+    <div class="field__widget type-block field-password-signin">
+      <label for="input-signin-password" class="label">Пароль:</label>
+      <div class="field">
+        <div class="input">
+          <input type="password" id="input-signin-password" autocomplete="off" name="password"/>
+        </div>
+        <p class="restore"><a href="/bitrix/templates/dsklad/ajax/restore.html" data-fancybox-type="ajax" class="fancybox">Напомнить пароль</a></p>
+      </div>
+    </div>
+    <div class="field__widget type-block field-openid">
+      <div class="label">Войдите, используя <br/>профиль соцсети:</div>
+      <div class="field"><a href=""><span class="icon__share-facebook2">
+            <svg>
+              <use xlink:href="/bitrix/templates/dsklad/images/sprite.svg#share-facebook2"></use>
+            </svg></span></a><a href=""><span class="icon__share-vk2">
+            <svg>
+              <use xlink:href="/bitrix/templates/dsklad/images/sprite.svg#share-vk2"></use>
+            </svg></span></a></div>
+    </div>
+    <div class="field__widget type-block field-submit">
+      <div class="field">
+        <button type="submit" class="button type-blue fill size-41">Войти</button>
+        <p>Новый пользователь? <a href="/bitrix/templates/dsklad/ajax/signup.html" data-fancybox-type="ajax" class="fancybox">Зарегистрируйтесь</a></p>
+      </div>
+    </div>
+  </form>
+</div>

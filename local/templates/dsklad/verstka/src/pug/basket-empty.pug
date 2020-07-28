@@ -1,0 +1,25 @@
+extends templates/layout
+
+block csslibs
+	link(rel="stylesheet" href="css/basket/style.css")
+
+block nav
+	-var isCity = false
+
+block content
+
+	.ds-wrapper
+
+		.ds-basket-empty
+
+			h1 Корзина пуста
+
+			p Воспользуйтесь каталогом чтобы найти всё, что нужно.
+
+			a(href="#" class="ds-btn ds-btn--default-big") Перейти в каталог
+
+	.alert.alert--empty-basket
+		span Корзина
+		p Ваша корзина пуста!
+
+	script(src="js/dsklad-init.js")

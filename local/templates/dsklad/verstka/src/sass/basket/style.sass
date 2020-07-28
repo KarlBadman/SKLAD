@@ -1,0 +1,602 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+
+@import "../templates/recommend"
+@import "../templates/total-price-in-basket"
+@import "../templates/basket-city"
+
+
+.ds-basket-header
+  display: flex
+  justify-content: space-between
+  box-sizing: border-box
+
+  h1
+    margin-top: 20px
+
+.ds-basket
+  +responsive(device)
+    display: flex
+    flex-flow: column
+  
+  +responsive(desktop)
+    display: grid
+    grid-template-areas: "goodsInfo totalPrice" "recommend totalPrice"
+    -ms-grid-columns: calc(100% - 240px) 240px
+    grid-template-columns: calc(100% - 240px) 240px
+    +transition()
+
+  &__header
+    width: 100%
+    h1
+      margin: 16px 0 20px
+  
+  &__goods-info
+    +transition()
+
+    +responsive(desktop)
+      grid-area: goodsInfo
+      padding: 0 40px 40px 0
+      box-sizing: border-box
+  
+  &__order-btn-top
+    margin-top: 12px
+    
+    +responsive(desktop)
+      display: none
+    
+    .ds-btn
+      justify-content: center
+  
+  &__goods-recommend
+    grid-area: recommend
+    +transition()
+
+    +responsive(desktop)
+      padding-right: 40px
+
+    &.border
+      position: relative
+
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        right: 40px
+        height: 1px
+        background-color: $neutral-100
+        top: 20px
+
+  &__total-price
+    width: 100%
+    grid-area: totalPrice
+    
+    +responsive(desktop)
+      width: 240px
+      position: relative
+  
+  &__goods-list
+    padding-top: 4px
+
+
+@keyframes render
+  from
+    opacity: .8
+  to
+    opacity: 1
+
+
+.ds-basket-good
+  display: grid
+  margin-top: 20px
+  padding-top: 20px
+  min-height: 165px
+  box-sizing: border-box
+  position: relative
+  grid-template-areas: "img descr" "img serviceInfo" "img addInfo" "priceOne price" "del count"
+  -ms-grid-columns: 100px 1fr
+  grid-template-columns: 100px 1fr
+  animation: render 1s forwards
+  
+  +responsive(tablet)
+    grid-template-areas: "img priceOne count price" "img addInfo addInfo price" "img descr descr price" "img serviceInfo serviceInfo del"
+    -ms-grid-columns: 140px 1fr 120px 100px
+    grid-template-columns: 140px 1fr 120px 100px
+  
+  +responsive(desktop)
+    grid-template-areas: "img priceOne count price" "img addInfo count price" "img descr count price" "img serviceInfo serviceInfo del"
+    -ms-grid-columns: 140px 1fr 120px 100px
+    grid-template-columns: 140px 1fr 120px 100px
+  
+  &:before
+    content: ''
+    position: absolute
+    height: 1px
+    background-color: $neutral-100
+    
+    +responsive(mobiletablet)
+      left: -12px
+      right: -12px
+
+    +responsive(tabletdesktop)
+      left: -20px
+      right: -20px
+    
+    +responsive(desktop)
+      right: 0
+      left: 0
+  
+  &:first-child
+    margin-top: 0
+    
+    &:before
+      content: none
+  
+  &:hover
+    +responsive(desktop)
+      .ds-basket-del
+        opacity: 1
+        visibility: visible
+      
+      .inp-count
+        border-color: $neutral-300 !important
+  
+  &__img
+    grid-area: img
+    
+    img
+      width: 100%
+  
+  &__price-one
+    grid-area: priceOne
+    
+    +responsive(device)
+      padding: 20px 0
+    
+    +responsive(tablet)
+      padding-left: 20px
+    
+    +responsive(desktop)
+      padding-left: 28px
+  
+  &__count
+    grid-area: count
+    
+    +responsive(device)
+      text-align: right
+  
+  &__price
+    grid-area: price
+    display: flex
+    flex-flow: column
+    align-items: flex-end
+  
+    +responsive(device)
+      padding: 20px 0
+    
+    .ds-price
+      color: $neutral-800
+      
+      &:first-child
+        font-weight: 700
+        line-height: 1.44
+        margin-bottom: 4px
+        +rem(18)
+  
+  &__add-info
+    grid-area: addInfo
+    padding-left: 20px
+    
+    +responsive(mobile)
+      min-height: 44px
+    
+    +responsive(tablet)
+      padding-top: 12px
+      min-height: 26px
+    
+    +responsive(desktop)
+      min-height: 26px
+      padding-left: 28px
+    
+    span
+      color: $green-400
+      font-weight: 600
+      font-size: .8125rem
+      line-height: 18px
+  
+  &__descr
+    grid-area: descr
+    padding-left: 20px
+    
+    +responsive(desktop)
+      padding-left: 28px
+      min-height: 52px
+    
+    a
+      color: $neutral-600
+      text-decoration: none !important
+      
+      &:hover,
+      &:focus
+        color: $neutral-600
+  
+  &__service-info
+    grid-area: serviceInfo
+    display: flex
+    flex-flow: wrap
+    align-items: flex-end
+    padding-left: 16px
+    padding-top: 8px
+    
+    +responsive(desktop)
+      padding-left: 24px
+  
+  &__del
+    grid-area: del
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    +responsive(desktop)
+      text-align: right
+
+
+
+.ds-service-info
+  font-size: .8125rem
+  position: relative
+  padding: 2px 8px
+  color: $neutral-600
+  background-color: $neutral-50
+  +radius(25px)
+  margin: 0 4px 4px
+  
+  
+  &.quantity-order
+    background-color: $red-500
+    color: $neutral-0
+  
+  &.warranty-full
+    background-color: rgba($green-500, .3)
+    color: $green-500
+
+.quantity
+  font-size: .75rem
+
+.ds-basket-count-price
+  width: 128px
+  display: flex
+  flex-flow: column
+  position: relative
+  
+  +responsive(mobile)
+    margin-bottom: 4px
+
+.ds-basket-count
+  display: flex
+  
+  +responsive(device)
+    justify-content: flex-end
+  
+  +responsive(tabletdesktop)
+    margin-top: -8px
+  
+  .icon-svg
+    min-width: 40px
+    height: 40px
+    text-align: center
+    padding: 0
+    cursor: pointer
+    +radius()
+    background-color: transparent
+    border: 1px solid transparent
+    transition: all .2s linear
+    
+    &:focus
+      outline: none
+  
+  &.spinner
+    position: relative
+    
+    &:before
+      content: ''
+      position: absolute
+      z-index: 1
+      left: 0
+      right: 0
+      height: 100%
+
+
+html
+  &.desktop
+    .ic-count-plus,
+    .ic-count-minus
+      &:hover
+        border-color: rgba($neutral-600, .2)
+        background-color: $neutral-50
+      
+      &:active
+        +responsive(desktop)
+          border-color: rgba($neutral-600, .2)
+          background-color: $neutral-100
+
+
+.price-item-total
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: 600
+  
+  +responsive(mobile)
+    height: 20px
+  
+  +responsive(tabletdesktop)
+    position: absolute
+    z-index: -1
+    bottom: -20px
+    visibility: visible
+    opacity: 1
+    left: 50%
+    transform: translateX(-50%)
+  
+  &.fadein
+    visibility: visible
+    opacity: 1
+    
+    +responsive(mobile)
+      height: 20px
+      transition: opacity, height .2s linear
+    
+    +responsive(tabletdesktop)
+      bottom: -20px
+  
+  &.fadeout
+    visibility: hidden
+    opacity: 0
+    
+    +responsive(mobile)
+      height: 0
+      transition: visibility 0s .2s, opacity .2s linear, height .2s linear
+    
+    +responsive(tabletdesktop)
+      bottom: 0
+  
+  .ds-price
+    font-size: .75rem
+    font-weight: 600
+    
+    &:after
+      font-size: .875rem
+  
+  .quantity
+    font-size: .75rem
+    position: relative
+    padding-left: 8px
+    margin-left: 4px
+    
+    &:before
+      content: ''
+      position: absolute
+      height: 10px
+      width: 1px
+      top: 50%
+      left: 0
+      background-color: $neutral-400
+      transform: rotate(15deg) translateY(-50%)
+
+.ds-basket-del
+  display: flex
+  align-items: center
+  cursor: pointer
+  
+  .ic-basket-remove
+    margin-top: -1px
+  
+  +responsive(desktop)
+    opacity: 0
+    visibility: hidden
+    +transition()
+  
+  span
+    +responsive(mobile)
+      display: none
+    
+    +responsive(tabletdesktop)
+      color: $neutral-600
+      font-size: .8125rem
+      line-height: 1
+      margin-left: 4px
+
+.ds-basket-add-more
+  
+  &.fadein
+    opacity: 1
+  
+  &.fadeout
+    opacity: 0
+
+.ds-basket__warranty
+  margin: 20px -12px 0
+  
+  +responsive(tablet)
+    margin: 20px -20px 0
+  
+  +responsive(desktop)
+    margin: 40px 0 0
+
+.warranty-sm
+  padding: 20px 20px 16px
+  box-sizing: border-box
+  background-color: $neutral-50
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-items: flex-start
+  
+  +responsive(desktop)
+    +radius()
+  
+  &__img
+    width: 60px
+    position: relative
+    
+    img
+      max-width: 100%
+  
+  &__info
+    width: calc(100% - 80px)
+    margin-bottom: 12px
+    
+    h5
+      margin: 0 0 16px
+    
+    p
+      line-height: 1.42
+      margin-bottom: 8px
+  
+  .ds-btn
+    white-space: nowrap
+    
+    +responsive(mobile)
+      width: 100%
+  
+  .ds-price
+    margin-left: 6px
+    padding-left: 8px
+    
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      width: 4px
+      height: 4px
+      +radius(3px)
+      background-color: $neutral-600
+      top: 50%
+      transform: translateY(-50%)
+
+
+.quick-order-modal
+  
+  &__header
+    position: relative
+    margin: -20px 0 20px
+    min-height: 64px
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: -20px
+      right: -20px
+      height: 1px
+      background-color: $neutral-200
+  
+  h5
+    font-size: 1rem
+    font-weight: 600
+    color: $neutral-600
+    margin: 0
+    display: flex
+    justify-content: center
+  
+  .form-group
+    margin-top: 20px
+  
+  input
+    width: 100%
+  
+  &__text
+    margin: 12px 0
+    +rem(14)
+  
+  &__info
+    display: flex
+    flex-flow: column wrap
+    align-items: center
+    justify-content: center
+    margin-top: 16px
+    
+    a
+      font-weight: 600
+
+  &__btn
+    display: flex
+    justify-content: center
+
+  a
+    color: $blue-400
+    text-decoration: none
+    
+    &:hover
+      color: $blue-500
+
+
+.ds-price-sale
+  .ds-price
+    margin-right: 16px
+
+.ds-basket-slider-arrows
+  position: relative
+  
+  .ds-slider-arrows
+    width: 36px
+    height: 36px
+    position: absolute
+    z-index: 9
+    cursor: pointer
+    box-sizing: border-box
+    +radius(50%)
+    background-color: rgba($neutral-0, .9)
+    box-shadow: 0 0 10px 0 rgba($neutral-1000, .1)
+    border: 1px solid rgba($neutral-1000, .08)
+    
+    &[aria-disabled=true]
+      display: none !important
+    
+    &:before
+      content: ''
+      position: absolute
+      width: 20px
+      height: 20px
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: .6
+      +transition()
+    
+    &:hover
+      &:before
+        opacity: 1
+    
+    &.next
+      +responsive(device)
+        top: -60px
+        right: 0
+      
+      +responsive(desktop)
+        right: 14px
+        top: 160px
+      
+      &:before
+        background: url(../../images/svg/arrow-right.svg) 50% 50% no-repeat
+    
+    &.prev
+      +responsive(device)
+        top: -60px
+        right: 50px
+      
+      +responsive(desktop)
+        left: 14px !important
+        top: 160px
+      
+      &:before
+        background: url(../../images/svg/arrow-left.svg) 50% 50% no-repeat
+
+
+.inp-count
+  +responsive(desktop)
+    border-color: transparent !important

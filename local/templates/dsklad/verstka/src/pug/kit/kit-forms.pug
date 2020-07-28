@@ -1,0 +1,90 @@
+extends kit-layout
+
+block jslibs
+	script(src="../js/libs/parsley.js")
+	script(src="../js/parsley-ru.js")
+
+block content
+
+	section.d-system__item
+		.header-page
+			h1 Формы
+
+		form(action='#')
+			.buttons-list
+				.grid
+					.grid__col-6 Default
+					.grid__col-6 Disabled
+
+				.grid
+					.grid__col-6
+						.form-group#form-name
+							label(for="user-name") Имя и фамилия
+							input(type="text" id="user-name" class="inp-big" placeholder="Константин Константинопольский" required data-parsley-errors-container="#form-name")
+					.grid__col-6
+						.form-group
+							label(for="user-name") Имя и фамилия
+							span.inp-success
+								input(type="text" id="user-name1" class="inp-big" placeholder="Константин Константинопольский" value="Константин Константинопольский" disabled)
+
+				.grid
+					.grid__col-6
+						.form-group
+							label эл.почта получателя счёта:
+							input(type="email" placeholder="mail@domain.ru" class="inp-big")
+					.grid__col-6
+						.form-group
+							label эл.почта получателя счёта:
+							input(type="email" placeholder="mail@domain.ru" class="inp-big" disabled)
+
+				.grid
+					.grid__col-6
+						.form-group#phone-number
+							label(for="tel") Номер телефона
+							input(type="tel" id="tel" name="tel" placeholder="+7 916 123-45-67" class="inp-big" data-parsley-error-message="Сначала введите телефон" data-parsley-errors-container="#phone-number")
+					.grid__col-6
+						.form-group
+							label(for="tel") Номер телефона
+							input(type="tel" id="tel1" name="tel" placeholder="+7 916 123-45-67" class="inp-big" disabled)
+
+				.grid
+					.grid__col-6
+						.form-group
+							input(type="checkbox" id="confirm-called0")
+							label(for="confirm-called0") Не звонить для подтверждения заказа
+						.form-group
+							input(type="checkbox" id="confirm-called" checked)
+							label(for="confirm-called") Не звонить для подтверждения заказа
+					.grid__col-6
+						.form-group
+							input(type="checkbox" id="confirm-called2" disabled)
+							label(for="confirm-called2") Не звонить для подтверждения заказа
+						.form-group
+							input(type="checkbox" id="confirm-called1" checked disabled)
+							label(for="confirm-called1") Не звонить для подтверждения заказа
+				.grid
+					.grid__col-6
+						.form-group
+							input(type="radio" name="checkout-delivery" id="station" checked)
+							label(for="station") Пример радиобаттона checked
+						.form-group
+							input(type="radio" name="checkout-delivery" id="station1")
+							label(for="station1") Пример радиобаттона
+
+					.grid__col-6
+						.form-group
+							input(type="radio" name="checkout-delivery1" id="station2" checked disabled)
+							label(for="station2") Пример радиобаттона checked
+						.form-group
+							input(type="radio" name="checkout-delivery1" id="station3" disabled)
+							label(for="station3") Пример радиобаттона
+
+				.grid
+					.grid__col-6
+						textarea.inp-big(placeholder="Поле для комментария")
+					.grid__col-6
+						textarea.inp-big(placeholder="Поле для комментария" disabled)
+
+				.grid
+					.grid__col-6
+						input(type="submit" class="ds-btn ds-btn--big" value="Оформить заказ")

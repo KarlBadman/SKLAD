@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d623e9cd-7720-4175-80c5-fdb210212f44" name="task-12865" comment="">
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/ajax/add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/ajax/del.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/ajax/quantity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/ajax/sendReview.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/ajax/wish.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/component_epilog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/result_modifier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index/result_modifier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_bestsellers/result_modifier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_bestsellers/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_bestsellers/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_custom/result_modifier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_custom/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_custom/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_custom_similar/result_modifier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_custom_similar/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_custom_similar/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_recommend/result_modifier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_recommend/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_recommend/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_recommend_last_viewed/result_modifier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_recommend_last_viewed/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section/index_recommend_last_viewed/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.smart.filter/catalog/.parameters.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.smart.filter/catalog/ajax.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.smart.filter/catalog/component_epilog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.smart.filter/catalog/result_modifier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.smart.filter/catalog/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.smart.filter/catalog/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.smart.filter/catalog/xml.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/menu/menu_footer/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/menu/menu_footer_mob/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/menu/menu_order_footer/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/.parameters.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/component_epilog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/confirm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/delivery.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/delivery_extra_params.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/functions_lang.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/images/alert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/images/logo-default-d.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/images/logo-default-ps.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/images/no_photo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/images/no_store.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/lang/de/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/lang/en/.parameters.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/lang/en/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/lang/ru/.parameters.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/lang/ru/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/lang/ua/.parameters.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/lang/ua/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/order_hiden_prop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/paysystem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/person_type.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/props.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/props_format.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/related_props.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/summary.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/sale.order.ajax/old_template/total.php" beforeDir="false" />
+    </list>
+    <list id="cd985cf4-0eb5-4147-8f93-7e2182c4c24c" name="Revert &quot;fix map select ver. 1.1&quot;" comment="Revert &quot;fix map select ver. 1.1&quot;&#10;&#10;This reverts commit cf2d307b" />
+    <list id="acfd0448-9d3f-4786-acb4-8f62b1639aa7" name="Revert &quot;marge commit&quot;" comment="Revert &quot;marge commit&quot;&#10;&#10;This reverts commit d659d3f9" />
+    <list id="51c6f93f-7082-4540-b35a-d7496b2107e4" name="Revert &quot;Revert &quot;Php interface rebasing into local&quot;&quot;" comment="№3934 refactor init.php #4" />
+    <list id="81ee0209-84d9-4c7e-b242-cd455f08817a" name="task-10054" comment="When clearing the search, return the default state" />
+    <list id="0503244b-424e-4f19-b02c-1bbe694339d6" name="task-11363" comment="menu section" />
+    <list id="43321fab-cfdf-403e-9ce2-62d545af692a" name="task-11518" comment="When clearing the search, return the default state" />
+    <list id="0e9bd973-b91d-4a8d-ac70-7e4fe8929aeb" name="task-11678" comment="catalog section and pagenavigation" />
+    <list id="7ac3345e-1db0-4266-86db-8dff00430363" name="task-11786" comment="Change the withdrawal conditions in the personal account of the Pay button when the order is canceled" />
+    <list id="36c3b65d-d346-496d-8754-ce1a273e9d43" name="task-11846-ya_feed" comment="Excluded goods which are &quot;out of stock and no date of receipt&quot;." />
+    <list id="73fb4205-919a-4814-8c12-7a2034627b73" name="task-11904" comment="bag fix count element">
+      <change beforePath="$PROJECT_DIR$/local/templates/dsklad/verstka" beforeDir="false" afterPath="$PROJECT_DIR$/local/templates/dsklad/verstka" afterDir="false" />
+    </list>
+    <list id="9a5f243e-b324-4d7e-aa49-ea4a01dc684d" name="task-11905" comment="" />
+    <list id="e627285f-b951-45db-a3af-808c498850c9" name="task-11905-one-click-btn от dev" comment="" />
+    <list id="f96c48ca-6232-4649-ae72-fc5b47078e68" name="task-11992" comment="Remove rounding of shipping prices in the basket" />
+    <list id="257eaf81-05d4-43bd-a9e2-ec664884bd90" name="task-12038_profile" comment="menu profile" />
+    <list id="ce692146-f97a-402b-826a-75f87513eadd" name="task-12044" comment="add page feedback, help, return." />
+    <list id="52723d90-59bd-44bb-a7e6-16130f109a0a" name="task-12171" comment="catalog.section fix button show" />
+    <list id="a53074db-bb90-4a9f-bb69-9aa1bb35374e" name="task-12173" comment="task-12173 Understand what happens with rounding delivery at checkout" />
+    <list id="7844be87-b9ee-4825-98a6-1faf7316713e" name="task-12225" comment="button pay system personal.order.detail" />
+    <list id="7978d932-25d6-400d-9683-675d6ed08ff4" name="task-12286" comment="task-12286 Optimize top menu fix" />
+    <list id="81a5174a-8516-4c9f-a9e1-63585ff7509f" name="task-12329" comment="task-12329 Fix delivery error in Yuzhno-Sakhalinsk" />
+    <list id="1377cba0-eac6-4fbb-9103-b0796073c1f7" name="task-12399" comment="" />
+    <list id="fe60a3cd-cb75-466d-a702-b99f243cb7fa" name="task-12401" comment="task-12401 Fixed a bug when different product offers in the catalog and on the card" />
+    <list id="bf6596a8-7191-4c6b-9fe7-4c4fa90c9460" name="task-12403" comment="" />
+    <list id="b65a2ad0-918e-4a8b-8804-69fd639b8bdc" name="task-12444" comment="task-12448 Fixed link to the product link from the menu" />
+    <list id="08798309-bb08-4160-8331-9d4dcbb46be7" name="task-12446" comment="task" />
+    <list id="0f07b6e7-f091-434c-9e7d-97e2098fc502" name="task-12448" comment="" />
+    <list id="e0121e72-812c-4d79-88ca-5a9c4aebce9a" name="task-12449" comment="bag fix count element" />
+    <list id="3b99634a-d45f-4353-9fc4-51193d94bfd6" name="task-12477" comment="filter catalog.section.list inner" />
+    <list id="09bb092e-bdda-44e4-ad57-284f3928c739" name="task-12512" comment="add function rrAddToFavorite" />
+    <list id="391a9d8b-8d90-4cd7-8275-d82dea804660" name="task-12514" comment="task-12514 Remove double by double clicking on the &quot;show more&quot; button" />
+    <list id="b56a6254-55a6-459b-b917-523896378907" name="task-12515" comment="task-12515 Correct the conclusion of prices on the product card" />
+    <list id="35baaecc-ad60-4cbb-aeaa-e5eea4e796dd" name="task-12547" comment="fix error personal" />
+    <list id="b3c99e84-4353-4375-ac35-0f404306b4f3" name="task-12548" comment=" Add info for users about 50% of pre-order" />
+    <list id="359addff-b9a7-40c1-8c39-786ae624ccaf" name="task-12550" comment="bag fix count element catalog section v2" />
+    <list id="ac91956c-b3ec-46aa-8c4a-7e2b27050a87" name="task-12551" comment="add Dsklad\Tools\Helpers wordProducts for the whole template" />
+    <list id="0953f016-48f5-44e0-8c79-e988cdb619d9" name="task-12597" comment="" />
+    <list id="b85e8219-aae5-484a-8b00-79ee9c22fcdb" name="task-12598" comment="Fixed multiple keyup event call" />
+    <list id="45bf1cd0-0a38-4cee-88bf-e6a6231584db" name="task-12637" comment="task-12550 search page failure" />
+    <list id="4732e92c-51c3-41cd-9d9c-ec5cde762fbf" name="task-12802" comment="Changed the display of a product group through merging into RR groups" />
+    <list id="8cd28669-5e3f-43c7-b799-b98029b69617" name="task-12802-new" comment="Modified RetailRocket feed" />
+    <list id="fbcf0cbc-8555-4a41-aef4-5931f3ea1b29" name="task-12805" comment="" />
+    <list id="60ed1af1-a6cd-4e57-a174-0d8abfac6f91" name="task-12869" comment="Displayed the number of products found in the search results" />
+    <list id="8852c281-9f4c-499a-a42f-6ba8f661f3db" name="task-12869-new" comment="Displayed the number of products found in the search results" />
+    <list id="55893bf4-37ae-4e19-b635-56a214387b26" name="task-12870" comment="" />
+    <list id="653b3458-92ea-4a6b-aa79-aae4ac609419" name="task-12985" comment="Changed the menu active, add component help menu, fix bag new order, remove track button" />
+    <list id="1dc049ab-99c8-4e45-bfe9-c98c6c7c7fe9" name="task-13046" comment="bag fix tracking code DPD" />
+    <list id="8f3f2d90-cab7-4911-b556-6592e5261b9a" name="task-8118" comment="The track works when empty email" />
+    <list id="ef3ac7dd-7ede-49a3-9efa-ddf9fee1247f" name="task-8953" comment="Share price with TrackAd feeds excluding NDS" />
+    <list id="baf75d4d-c8db-46b6-969a-48da4f66f7d2" name="task-9207" comment="catalog detail price bag fix" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="true" />
+    <option name="SORT_POSITIONED" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="true" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="true" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="dsklad-new-main-repository" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="XSLT Stylesheet" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="kir" />
+                <branch-info repo="$PROJECT_DIR$" source="basket" />
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="muve" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="task-12038-personal" />
+        <entry key="$PROJECT_DIR$/local/templates/dsklad/verstka" value="task-12286" />
+      </map>
+    </option>
+    <option name="RECENT_COMMON_BRANCH" value="task-12038" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1Og9RnnDbbPeiEhLff0vWSQdLR5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="Project Files" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/menu" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="start.from.branch" value="dev" />
+    <property name="vcs.patch.to.clipboard" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/menu" />
+      <recent name="$PROJECT_DIR$/personal" />
+      <recent name="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.section" />
+      <recent name="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog" />
+      <recent name="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog/catalogDsklad" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/personal/order" />
+      <recent name="$PROJECT_DIR$/personal" />
+      <recent name="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/main.profile" />
+      <recent name="$PROJECT_DIR$/local/templates/dsklad/components/bitrix/main.profile/template" />
+      <recent name="$PROJECT_DIR$/local/components/dsklad/personal.order.history" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="script.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/local/components/dsklad/map.yandex/templates/.default/script.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.script.js" />
+        <item itemvalue="Node.js.script.js" />
+        <item itemvalue="Node.js.script.js" />
+        <item itemvalue="Node.js.script.js" />
+        <item itemvalue="Node.js.script.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task id="Default" summary="Default task">
+      <branch name="dev" repository="$PROJECT_DIR$" />
+      <created>1542027955865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565346506332</updated>
+      <workItem from="1542027956944" duration="20227000" />
+      <workItem from="1542095359973" duration="26890000" />
+      <workItem from="1542183881762" duration="24117000" />
+      <workItem from="1542269989982" duration="27467000" />
+      <workItem from="1542354411999" duration="21944000" />
+      <workItem from="1542615483949" duration="17896000" />
+      <workItem from="1542702129404" duration="13324000" />
+      <workItem from="1542718266271" duration="13822000" />
+      <workItem from="1542788378050" duration="28899000" />
+      <workItem from="1542875016592" duration="18240000" />
+      <workItem from="1542897901526" duration="5704000" />
+      <workItem from="1542960545164" duration="27139000" />
+      <workItem from="1543221109012" duration="21672000" />
+      <workItem from="1543308171783" duration="29050000" />
+      <workItem from="1543393165353" duration="28052000" />
+      <workItem from="1543478538061" duration="26045000" />
+      <workItem from="1543565768425" duration="16615000" />
+      <workItem from="1543825356944" duration="30251000" />
+      <workItem from="1543911243362" duration="24132000" />
+      <workItem from="1543997344281" duration="15086000" />
+      <workItem from="1544019328897" duration="2455000" />
+      <workItem from="1544022612054" duration="7826000" />
+      <workItem from="1544083831969" duration="22696000" />
+      <workItem from="1544169949237" duration="27011000" />
+      <workItem from="1544429790714" duration="27043000" />
+      <workItem from="1544516496763" duration="16338000" />
+      <workItem from="1544535923315" duration="9947000" />
+      <workItem from="1544601642597" duration="22218000" />
+      <workItem from="1544689074391" duration="10556000" />
+      <workItem from="1544774963451" duration="14618000" />
+      <workItem from="1545034270393" duration="16322000" />
+      <workItem from="1545120519023" duration="21327000" />
+      <workItem from="1545206584981" duration="16519000" />
+      <workItem from="1545292447294" duration="24972000" />
+      <workItem from="1545378497475" duration="1654000" />
+      <workItem from="1545380376806" duration="28092000" />
+      <workItem from="1545466627831" duration="25057000" />
+      <workItem from="1545639957963" duration="21542000" />
+      <workItem from="1545718532645" duration="26653000" />
+      <workItem from="1545812964503" duration="23310000" />
+      <workItem from="1545898217684" duration="26086000" />
+      <workItem from="1545984347576" duration="26984000" />
+      <workItem from="1546071016437" duration="24941000" />
+      <workItem from="1547023282879" duration="25460000" />
+      <workItem from="1547108751127" duration="27265000" />
+      <workItem from="1547194215135" duration="23766000" />
+      <workItem from="1547453002673" duration="25860000" />
+      <workItem from="1547539929206" duration="25533000" />
+      <workItem from="1547620487731" duration="9658000" />
+      <workItem from="1547640578078" duration="8998000" />
+      <workItem from="1547713054871" duration="27856000" />
+      <workItem from="1547799254576" duration="27464000" />
+      <workItem from="1548060096285" duration="25530000" />
+      <workItem from="1548145540707" duration="23192000" />
+      <workItem from="1548231454375" duration="25089000" />
+      <workItem from="1548317865477" duration="25866000" />
+      <workItem from="1548404172879" duration="24018000" />
+      <workItem from="1548491643294" duration="20008000" />
+      <workItem from="1548663320843" duration="10743000" />
+      <workItem from="1548750446810" duration="73654000" />
+      <workItem from="1549268630972" duration="67403000" />
+      <workItem from="1549533069280" duration="39814000" />
+      <workItem from="1549871657433" duration="21178000" />
+      <workItem from="1549958904172" duration="243525000" />
+      <workItem from="1551164951773" duration="130911000" />
+      <workItem from="1552042451022" duration="361655000" />
+      <workItem from="1554367262976" duration="188201000" />
+      <workItem from="1556010521786" duration="92431000" />
+      <workItem from="1557144903471" duration="239967000" />
+      <workItem from="1558451774943" duration="149923000" />
+      <workItem from="1559231263635" duration="240943000" />
+      <workItem from="1560782914205" duration="345739000" />
+      <workItem from="1562829634612" duration="137967000" />
+      <workItem from="1563875850868" duration="38662000" />
+      <workItem from="1564044324867" duration="42598000" />
+      <workItem from="1564388390474" duration="168792000" />
+    </task>
+    <task id="LOCAL-00497" summary="task-12551">
+      <branch name="task-12547" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12551" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12551" repository="$PROJECT_DIR$" />
+      <changelist id="ac91956c-b3ec-46aa-8c4a-7e2b27050a87" name="task-12551" comment="" />
+      <created>1572595980518</created>
+      <option name="number" value="00497" />
+      <option name="presentableId" value="LOCAL-00497" />
+      <option name="project" value="LOCAL" />
+      <updated>1574064146589</updated>
+      <workItem from="1572596018869" duration="15716000" />
+      <workItem from="1573803923899" duration="14679000" />
+    </task>
+    <task id="LOCAL-00503" summary="task-12550">
+      <branch name="task-12548" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12550" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12550" repository="$PROJECT_DIR$" />
+      <changelist id="359addff-b9a7-40c1-8c39-786ae624ccaf" name="task-12550" comment="" />
+      <created>1573026890085</created>
+      <option name="number" value="00503" />
+      <option name="presentableId" value="LOCAL-00503" />
+      <option name="project" value="LOCAL" />
+      <updated>1573478489843</updated>
+      <workItem from="1573026892092" duration="2890000" />
+      <workItem from="1573460812629" duration="11506000" />
+    </task>
+    <task id="LOCAL-00519" summary="task-12749">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12600" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12749" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12749" repository="$PROJECT_DIR$" />
+      <changelist id="" name="task-12749" comment="" />
+      <created>1573223326601</created>
+      <option name="number" value="00519" />
+      <option name="presentableId" value="LOCAL-00519" />
+      <option name="project" value="LOCAL" />
+      <updated>1573227049526</updated>
+      <workItem from="1573223332328" duration="3133000" />
+    </task>
+    <task id="LOCAL-00521" summary="task-12449">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12749" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12449" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12449" repository="$PROJECT_DIR$" />
+      <changelist id="e0121e72-812c-4d79-88ca-5a9c4aebce9a" name="task-12449" comment="" />
+      <created>1573227046542</created>
+      <option name="number" value="00521" />
+      <option name="presentableId" value="LOCAL-00521" />
+      <option name="project" value="LOCAL" />
+      <updated>1573460812089</updated>
+      <workItem from="1573227049618" duration="19843000" />
+    </task>
+    <task id="LOCAL-00522" summary="Remove phone spoofing for Kazakhstan and Belarus">
+      <created>1573227125712</created>
+      <option name="number" value="00522" />
+      <option name="presentableId" value="LOCAL-00522" />
+      <option name="project" value="LOCAL" />
+      <updated>1573227125712</updated>
+    </task>
+    <task id="LOCAL-00523" summary="catalog section list corrected graduation">
+      <created>1573290029315</created>
+      <option name="number" value="00523" />
+      <option name="presentableId" value="LOCAL-00523" />
+      <option name="project" value="LOCAL" />
+      <updated>1573290029315</updated>
+    </task>
+    <task id="LOCAL-00524" summary="task-12045 add page favorite">
+      <created>1573313937462</created>
+      <option name="number" value="00524" />
+      <option name="presentableId" value="LOCAL-00524" />
+      <option name="project" value="LOCAL" />
+      <updated>1573313937462</updated>
+    </task>
+    <task id="LOCAL-00525" summary="bag fix count element catalog section">
+      <created>1573461525133</created>
+      <option name="number" value="00525" />
+      <option name="presentableId" value="LOCAL-00525" />
+      <option name="project" value="LOCAL" />
+      <updated>1573461525133</updated>
+    </task>
+    <task id="LOCAL-00526" summary="bag fix count element catalog section">
+      <created>1573464029986</created>
+      <option name="number" value="00526" />
+      <option name="presentableId" value="LOCAL-00526" />
+      <option name="project" value="LOCAL" />
+      <updated>1573464029986</updated>
+    </task>
+    <task id="LOCAL-00527" summary="bag fix count element catalog section v2">
+      <created>1573472243646</created>
+      <option name="number" value="00527" />
+      <option name="presentableId" value="LOCAL-00527" />
+      <option name="project" value="LOCAL" />
+      <updated>1573472243646</updated>
+    </task>
+    <task id="LOCAL-00528" summary="task-12044">
+      <branch name="task-12550" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12044" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12044" repository="$PROJECT_DIR$" />
+      <changelist id="ce692146-f97a-402b-826a-75f87513eadd" name="task-12044" comment="" />
+      <created>1573478452574</created>
+      <option name="number" value="00528" />
+      <option name="presentableId" value="LOCAL-00528" />
+      <option name="project" value="LOCAL" />
+      <updated>1573803923582</updated>
+      <workItem from="1573478490776" duration="51607000" />
+    </task>
+    <task id="LOCAL-00529" summary="Collect page Profile">
+      <created>1573558663896</created>
+      <option name="number" value="00529" />
+      <option name="presentableId" value="LOCAL-00529" />
+      <option name="project" value="LOCAL" />
+      <updated>1573558663900</updated>
+    </task>
+    <task id="LOCAL-00530" summary="bag fix sort catalog">
+      <created>1573634921246</created>
+      <option name="number" value="00530" />
+      <option name="presentableId" value="LOCAL-00530" />
+      <option name="project" value="LOCAL" />
+      <updated>1573634921261</updated>
+    </task>
+    <task id="LOCAL-00531" summary="bag fix sort catalog v2">
+      <created>1573636875068</created>
+      <option name="number" value="00531" />
+      <option name="presentableId" value="LOCAL-00531" />
+      <option name="project" value="LOCAL" />
+      <updated>1573636875068</updated>
+    </task>
+    <task id="LOCAL-00532" summary="bag fix sort catalog v3">
+      <created>1573637414216</created>
+      <option name="number" value="00532" />
+      <option name="presentableId" value="LOCAL-00532" />
+      <option name="project" value="LOCAL" />
+      <updated>1573637414219</updated>
+    </task>
+    <task id="LOCAL-00533" summary="bag fix sort catalog v4">
+      <created>1573637504387</created>
+      <option name="number" value="00533" />
+      <option name="presentableId" value="LOCAL-00533" />
+      <option name="project" value="LOCAL" />
+      <updated>1573637504387</updated>
+    </task>
+    <task id="LOCAL-00534" summary="bag fix the ending &gt; 0">
+      <created>1573640264599</created>
+      <option name="number" value="00534" />
+      <option name="presentableId" value="LOCAL-00534" />
+      <option name="project" value="LOCAL" />
+      <updated>1573640264599</updated>
+    </task>
+    <task id="LOCAL-00535" summary="bag fix">
+      <created>1573655698087</created>
+      <option name="number" value="00535" />
+      <option name="presentableId" value="LOCAL-00535" />
+      <option name="project" value="LOCAL" />
+      <updated>1573655698087</updated>
+    </task>
+    <task id="LOCAL-00536" summary="bag fix 2">
+      <created>1573660935576</created>
+      <option name="number" value="00536" />
+      <option name="presentableId" value="LOCAL-00536" />
+      <option name="project" value="LOCAL" />
+      <updated>1573660935577</updated>
+    </task>
+    <task id="LOCAL-00537" summary="add page feedback, help, return.">
+      <created>1573717348320</created>
+      <option name="number" value="00537" />
+      <option name="presentableId" value="LOCAL-00537" />
+      <option name="project" value="LOCAL" />
+      <updated>1573717348320</updated>
+    </task>
+    <task id="LOCAL-00538" summary="changed the sorting mechanism to reload the page">
+      <created>1573814045139</created>
+      <option name="number" value="00538" />
+      <option name="presentableId" value="LOCAL-00538" />
+      <option name="project" value="LOCAL" />
+      <updated>1573814045144</updated>
+    </task>
+    <task id="LOCAL-00539" summary="add Dsklad\Tools\Helpers wordProducts for the whole template">
+      <created>1573823912457</created>
+      <option name="number" value="00539" />
+      <option name="presentableId" value="LOCAL-00539" />
+      <option name="project" value="LOCAL" />
+      <updated>1573823912457</updated>
+    </task>
+    <task id="LOCAL-00540" summary="task-12805">
+      <branch name="task-12551" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12805" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12805" repository="$PROJECT_DIR$" />
+      <changelist id="fbcf0cbc-8555-4a41-aef4-5931f3ea1b29" name="task-12805" comment="" />
+      <created>1574064076616</created>
+      <option name="number" value="00540" />
+      <option name="presentableId" value="LOCAL-00540" />
+      <option name="project" value="LOCAL" />
+      <updated>1574064919847</updated>
+      <workItem from="1574064147081" duration="670000" />
+    </task>
+    <task id="LOCAL-00541" summary="task-12802">
+      <branch name="task-12805" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12802" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12802" repository="$PROJECT_DIR$" />
+      <changelist id="4732e92c-51c3-41cd-9d9c-ec5cde762fbf" name="task-12802" comment="" />
+      <created>1574064916367</created>
+      <option name="number" value="00541" />
+      <option name="presentableId" value="LOCAL-00541" />
+      <option name="project" value="LOCAL" />
+      <updated>1574071431892</updated>
+      <workItem from="1574064920258" duration="6001000" />
+    </task>
+    <task id="LOCAL-00542" summary="Changed the availability label RR">
+      <created>1574067111192</created>
+      <option name="number" value="00542" />
+      <option name="presentableId" value="LOCAL-00542" />
+      <option name="project" value="LOCAL" />
+      <updated>1574067111192</updated>
+    </task>
+    <task id="LOCAL-00543" summary="Changed the display of a product group through merging into RR groups">
+      <created>1574068325936</created>
+      <option name="number" value="00543" />
+      <option name="presentableId" value="LOCAL-00543" />
+      <option name="project" value="LOCAL" />
+      <updated>1574068325936</updated>
+    </task>
+    <task id="LOCAL-00544" summary="task-12869">
+      <branch name="task-12802" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12869" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12869" repository="$PROJECT_DIR$" />
+      <changelist id="60ed1af1-a6cd-4e57-a174-0d8abfac6f91" name="task-12869" comment="" />
+      <created>1574071430275</created>
+      <option name="number" value="00544" />
+      <option name="presentableId" value="LOCAL-00544" />
+      <option name="project" value="LOCAL" />
+      <updated>1574076749065</updated>
+      <workItem from="1574071431964" duration="3668000" />
+    </task>
+    <task id="LOCAL-00545" summary="Displayed the number of products found in the search results">
+      <created>1574073151921</created>
+      <option name="number" value="00545" />
+      <option name="presentableId" value="LOCAL-00545" />
+      <option name="project" value="LOCAL" />
+      <updated>1574073151921</updated>
+    </task>
+    <task id="LOCAL-00546" summary="task-12869-new">
+      <branch name="task-12869" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12869-new" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12869-new" repository="$PROJECT_DIR$" />
+      <changelist id="8852c281-9f4c-499a-a42f-6ba8f661f3db" name="task-12869-new" comment="" />
+      <created>1574076722010</created>
+      <option name="number" value="00546" />
+      <option name="presentableId" value="LOCAL-00546" />
+      <option name="project" value="LOCAL" />
+      <updated>1574077152938</updated>
+      <workItem from="1574076749818" duration="403000" />
+    </task>
+    <task id="LOCAL-00547" summary="Displayed the number of products found in the search results">
+      <created>1574076996158</created>
+      <option name="number" value="00547" />
+      <option name="presentableId" value="LOCAL-00547" />
+      <option name="project" value="LOCAL" />
+      <updated>1574076996158</updated>
+    </task>
+    <task id="LOCAL-00548" summary="task-12802-new">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12869-new" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12802-new" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12802-new" repository="$PROJECT_DIR$" />
+      <changelist id="8cd28669-5e3f-43c7-b799-b98029b69617" name="task-12802-new" comment="" />
+      <created>1574077142403</created>
+      <option name="number" value="00548" />
+      <option name="presentableId" value="LOCAL-00548" />
+      <option name="project" value="LOCAL" />
+      <updated>1574083147839</updated>
+      <workItem from="1574077152989" duration="1411000" />
+    </task>
+    <task id="LOCAL-00549" summary="Modified RetailRocket feed">
+      <created>1574077337998</created>
+      <option name="number" value="00549" />
+      <option name="presentableId" value="LOCAL-00549" />
+      <option name="project" value="LOCAL" />
+      <updated>1574077337998</updated>
+    </task>
+    <task id="LOCAL-00550" summary="task-12870">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12802-new" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12870" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12870" repository="$PROJECT_DIR$" />
+      <changelist id="55893bf4-37ae-4e19-b635-56a214387b26" name="task-12870" comment="" />
+      <created>1574083145659</created>
+      <option name="number" value="00550" />
+      <option name="presentableId" value="LOCAL-00550" />
+      <option name="project" value="LOCAL" />
+      <updated>1574084365200</updated>
+      <workItem from="1574083148290" duration="655000" />
+    </task>
+    <task id="LOCAL-00551" summary="task-12921-minicards">
+      <branch name="task-12870" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12921-minicards" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12921-minicards" repository="$PROJECT_DIR$" />
+      <changelist id="" name="task-12921-minicards" comment="" />
+      <created>1574084362906</created>
+      <option name="number" value="00551" />
+      <option name="presentableId" value="LOCAL-00551" />
+      <option name="project" value="LOCAL" />
+      <updated>1574149304606</updated>
+      <workItem from="1574084366037" duration="4860000" />
+    </task>
+    <task id="LOCAL-00552" summary="add new template components for AB test">
+      <created>1574086211919</created>
+      <option name="number" value="00552" />
+      <option name="presentableId" value="LOCAL-00552" />
+      <option name="project" value="LOCAL" />
+      <updated>1574086211919</updated>
+    </task>
+    <task id="LOCAL-00553" summary="task-12983">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12921-minicards" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12983" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12983" repository="$PROJECT_DIR$" />
+      <changelist id="" name="task-12983" comment="" />
+      <created>1574149301830</created>
+      <option name="number" value="00553" />
+      <option name="presentableId" value="LOCAL-00553" />
+      <option name="project" value="LOCAL" />
+      <updated>1574157314619</updated>
+      <workItem from="1574149304631" duration="3819000" />
+    </task>
+    <task id="LOCAL-00554" summary="reverse input no call">
+      <created>1574150867591</created>
+      <option name="number" value="00554" />
+      <option name="presentableId" value="LOCAL-00554" />
+      <option name="project" value="LOCAL" />
+      <updated>1574150867591</updated>
+    </task>
+    <task id="LOCAL-00555" summary="task-12985">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12983" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12985" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12985" repository="$PROJECT_DIR$" />
+      <changelist id="653b3458-92ea-4a6b-aa79-aae4ac609419" name="task-12985" comment="" />
+      <created>1574157311360</created>
+      <option name="number" value="00555" />
+      <option name="presentableId" value="LOCAL-00555" />
+      <option name="project" value="LOCAL" />
+      <updated>1574327945378</updated>
+      <workItem from="1574157314701" duration="32425000" />
+    </task>
+    <task id="LOCAL-00556" summary="Duplicated submenu on the third level pages">
+      <created>1574159935745</created>
+      <option name="number" value="00556" />
+      <option name="presentableId" value="LOCAL-00556" />
+      <option name="project" value="LOCAL" />
+      <updated>1574159935745</updated>
+    </task>
+    <task id="LOCAL-00557" summary="cron search index.">
+      <created>1574164940635</created>
+      <option name="number" value="00557" />
+      <option name="presentableId" value="LOCAL-00557" />
+      <option name="project" value="LOCAL" />
+      <updated>1574164940635</updated>
+    </task>
+    <task id="LOCAL-00558" summary="add class current">
+      <created>1574165514259</created>
+      <option name="number" value="00558" />
+      <option name="presentableId" value="LOCAL-00558" />
+      <option name="project" value="LOCAL" />
+      <updated>1574165514259</updated>
+    </task>
+    <task id="LOCAL-00559" summary="add cron search index">
+      <created>1574172074358</created>
+      <option name="number" value="00559" />
+      <option name="presentableId" value="LOCAL-00559" />
+      <option name="project" value="LOCAL" />
+      <updated>1574172074358</updated>
+    </task>
+    <task id="LOCAL-00560" summary="fix input no call">
+      <created>1574238362145</created>
+      <option name="number" value="00560" />
+      <option name="presentableId" value="LOCAL-00560" />
+      <option name="project" value="LOCAL" />
+      <updated>1574238362145</updated>
+    </task>
+    <task id="LOCAL-00561" summary="added template change depending on AB test">
+      <created>1574257700458</created>
+      <option name="number" value="00561" />
+      <option name="presentableId" value="LOCAL-00561" />
+      <option name="project" value="LOCAL" />
+      <updated>1574257700458</updated>
+    </task>
+    <task id="LOCAL-00562" summary="Changed the menu active, add component help menu, fix bag new order, remove track button">
+      <created>1574325617627</created>
+      <option name="number" value="00562" />
+      <option name="presentableId" value="LOCAL-00562" />
+      <option name="project" value="LOCAL" />
+      <updated>1574325617627</updated>
+    </task>
+    <task id="LOCAL-00563" summary="task-13046">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-12985" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-13046" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-13046" repository="$PROJECT_DIR$" />
+      <changelist id="1dc049ab-99c8-4e45-bfe9-c98c6c7c7fe9" name="task-13046" comment="" />
+      <created>1574327941643</created>
+      <option name="number" value="00563" />
+      <option name="presentableId" value="LOCAL-00563" />
+      <option name="project" value="LOCAL" />
+      <updated>1574343991094</updated>
+      <workItem from="1574327946270" duration="5456000" />
+    </task>
+    <task id="LOCAL-00564" summary="Eliminate the reasons for the same old and new prices for glasses">
+      <created>1574329350953</created>
+      <option name="number" value="00564" />
+      <option name="presentableId" value="LOCAL-00564" />
+      <option name="project" value="LOCAL" />
+      <updated>1574329350953</updated>
+    </task>
+    <task id="LOCAL-00565" summary="bag fix tracking code DPD">
+      <created>1574343715750</created>
+      <option name="number" value="00565" />
+      <option name="presentableId" value="LOCAL-00565" />
+      <option name="project" value="LOCAL" />
+      <updated>1574343715750</updated>
+    </task>
+    <task active="true" id="LOCAL-00566" summary="task-12865">
+      <branch name="dev" repository="$PROJECT_DIR$" original="true" />
+      <branch name="task-13046" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" original="true" />
+      <branch name="task-12865" repository="$PROJECT_DIR$/local/templates/dsklad/verstka" />
+      <branch name="task-12865" repository="$PROJECT_DIR$" />
+      <changelist id="d623e9cd-7720-4175-80c5-fdb210212f44" name="task-12865" comment="" />
+      <created>1574343989533</created>
+      <option name="number" value="00566" />
+      <option name="presentableId" value="LOCAL-00566" />
+      <option name="project" value="LOCAL" />
+      <updated>1574343991101</updated>
+      <workItem from="1574343991328" duration="3523000" />
+    </task>
+    <option name="localTasksCounter" value="567" />
+    <option name="clearContext" value="false" />
+    <option name="commitChanges" value="false" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/dsklad-new-main-repository" />
+    </ignored-roots>
+    <MESSAGE value="bag fix sort catalog" />
+    <MESSAGE value="bag fix sort catalog v2" />
+    <MESSAGE value="bag fix sort catalog v3" />
+    <MESSAGE value="bag fix sort catalog v4" />
+    <MESSAGE value="bag fix the ending &gt; 0" />
+    <MESSAGE value="bag fix" />
+    <MESSAGE value="bag fix 2" />
+    <MESSAGE value="add page feedback, help, return." />
+    <MESSAGE value="changed the sorting mechanism to reload the page" />
+    <MESSAGE value="add Dsklad\Tools\Helpers wordProducts for the whole template" />
+    <MESSAGE value="Changed the availability label RR" />
+    <MESSAGE value="Changed the display of a product group through merging into RR groups" />
+    <MESSAGE value="Displayed the number of products found in the search results" />
+    <MESSAGE value="Modified RetailRocket feed" />
+    <MESSAGE value="add new template components for AB test" />
+    <MESSAGE value="reverse input no call" />
+    <MESSAGE value="Duplicated submenu on the third level pages" />
+    <MESSAGE value="cron search index." />
+    <MESSAGE value="add class current" />
+    <MESSAGE value="add cron search index" />
+    <MESSAGE value="fix input no call" />
+    <MESSAGE value="added template change depending on AB test" />
+    <MESSAGE value="Changed the menu active, add component help menu, fix bag new order, remove track button" />
+    <MESSAGE value="Eliminate the reasons for the same old and new prices for glasses" />
+    <MESSAGE value="bag fix tracking code DPD" />
+    <option name="LAST_COMMIT_MESSAGE" value="bag fix tracking code DPD" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/local/components/swebs/order/ajax/add.php</url>
+          <line>6</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/ajax/preorder.php</url>
+          <line>45</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/local/components/dsklad/map.yandex/lang/ru/.parameters.php</url>
+          <line>14</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$USER_HOME$/Рабочий стол/class.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/local/php_interface/include/sale_delivery/dpdcustom/handler.php</url>
+          <line>104</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/local/templates/dsklad/components/bitrix/catalog.element/catalog/result_modifier.php</url>
+          <line>198</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/local/components/dsklad/map.yandex/templates/.default/script.js</url>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

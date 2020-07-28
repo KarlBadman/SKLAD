@@ -1,0 +1,38 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+@import "../templates/region-popup"
+
+.ds-basket-city
+  display: flex
+  flex-flow: wrap
+  margin-top: 20px
+  
+  +responsive(mobiletablet)
+    margin: 20px 12px 0
+  
+  +responsive(tablet)
+    margin: 20px 20px 0
+  
+  &__item
+    font-weight: 600
+    color: $neutral-600
+    
+    @media (max-width: 360px)
+      max-width: 190px
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+  
+  &__btn
+    cursor: pointer
+    margin-left: 20px
+    
+    a
+      color: $blue-400 !important
+      text-decoration: none !important
+
+  &__text
+    width: 100%
+    margin-top: 8px
+    +rem(14)
+    color: $neutral-500

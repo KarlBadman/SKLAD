@@ -1,0 +1,41 @@
+.ds-modal__header
+	h5 Курьерская доставка
+.ds-modal__body
+	.form-group
+		label(for="courier-delivery-city") Населенный пункт
+		input(id="courier-delivery-city" type="text" class="inp-big" placeholder="Напишите город")
+	.form-group.form-group--date
+		span.delivery-date-info Примерная дата доставки:&nbsp;
+			strong.delivery-date 3-6 сентября
+		.add-info Точная дата зависит от загруженности транспортной компании.
+	.form-group
+		label(for="courier-delivery-address") Адрес доставки
+		input(id="courier-delivery-address" type="text" class="inp-big" placeholder="Напишите улицу и номер дома")
+	.form-group.form-group--mt-20
+		label(for="courier-delivery-office") Квартира / офис
+		input(id="courier-delivery-office" type="number" placeholder="Например, 145" class="inp-small")
+
+	.courier-services
+		h5 Услуги
+		.courier-services__item
+			p Подъём на этаж
+			span.small-text Получите заказ у дверей своей квартиры.
+			span.small-text  Услуга доступна только при наличии исправного лифта.
+			.courier-services__price-btn
+				span.ds-price 1 500
+				span.ds-btn.ds-btn--light.js-courier-delivery-add Добавить
+		.courier-services__item
+			p Доставка в выходной день
+			span.small-text Получайте заказ в выходной или праздничный день.
+			span.small-text  День доставки будет согласован с предствителем транспортной компании после оформления заказа.
+			.courier-services__price-btn
+				span.ds-price 500
+				span.ds-btn.ds-btn--light.js-courier-delivery-add Добавить
+		.courier-services__item
+			p Доставка в вечернее время
+			span.small-text Получайте заказ после 18:00 в будние дни.
+			.courier-services__price-btn
+				span.ds-price 500
+				span.ds-btn.ds-btn--light.js-courier-delivery-add Добавить
+
+	span(class="ds-btn ds-btn--default ds-btn--full js-delivery-here") Привезти сюда

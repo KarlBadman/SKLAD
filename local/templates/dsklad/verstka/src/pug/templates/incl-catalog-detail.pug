@@ -1,0 +1,346 @@
+include _mixins
+
+.ds-wrapper
+	.ds-catalog-detail
+		.ds-catalog-detail__header
+			h1 Комплект Avanti Round + Кресло Мартин Крутящееся 4&nbsp;шт
+			.header-rating-vendor
+				+rating('4', 'на Я.Маркете')
+				.header-vendor Арт.: 0338
+
+
+		.ds-catalog-detail__slider
+			.ds-double-slider-for-arrows.js-double-slider-for-arrows
+			.ds-double-slider-for.js-double-slider-for
+				.ds-double-slider-for__item
+					img(src="images/temp/catalog-detail-1.jpg" alt="")
+				.ds-double-slider-for__item
+					img(data-lazy="images/temp/catalog-detail-2.jpg" alt="")
+				.ds-double-slider-for__item
+					img(data-lazy="images/temp/catalog-detail-3.jpg" alt="")
+				.ds-double-slider-for__item
+					img(data-lazy="images/temp/catalog-detail-4.jpg" alt="")
+				.ds-double-slider-for__item
+					img(data-lazy="images/temp/catalog-detail-5.jpg" alt="")
+				.ds-double-slider-for__item
+					img(data-lazy="images/temp/catalog-detail-1.jpg" alt="")
+				.ds-double-slider-for__item
+					img(data-lazy="images/temp/catalog-detail-2.jpg" alt="")
+				.ds-double-slider-for__item
+					img(data-lazy="images/temp/catalog-detail-3.jpg" alt="")
+				.ds-double-slider-for__item
+					img(data-lazy="images/temp/catalog-detail-4.jpg" alt="")
+				.ds-double-slider-for__item
+					img(data-lazy="images/temp/catalog-detail-5.jpg" alt="")
+
+
+			.ds-double-slider-nav-arrows.js-double-slider-nav-arrows
+			.ds-double-slider-nav.js-double-slider-nav
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-1.jpg" alt="")
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-2.jpg" alt="")
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-3.jpg" alt="")
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-4.jpg" alt="")
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-5.jpg" alt="")
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-1.jpg" alt="")
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-2.jpg" alt="")
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-3.jpg" alt="")
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-4.jpg" alt="")
+				.ds-double-slider-nav__item
+					img(src="images/temp/catalog-detail-5.jpg" alt="")
+
+
+		.ds-catalog-detail__good-info
+			.good-info
+				.good-info__scroll
+					.good-info__item.good-info--price
+						.ds-price 2 590
+						.ds-price.ds-price--old 3 200
+					if (!isPrepay)
+						.good-info__item.good-info--availability В наличии —&nbsp;
+							span.many Много
+							span.few(hidden) Мало
+
+					if (isPrepay)
+						.good-info__item.good-info--waiting
+							span Ожидается 25.06.2019
+					.good-info__item.good-info--count
+						if (isPrepay)
+							span.count-title количество:
+						else
+							span.count-title-sale.success(hidden)
+								.count-title-sale__icon
+								span Скидка на 4 шт. применена
+							.count-title-sale
+								.count-title-sale__icon
+								span Скидка при заказе <br>кратном 4 шт.
+						.ds-count
+							button.icon-svg.ic-count-minus.js-count-minus
+							input(type="number" class="inp-count js-number" min="1" name="quantity" value="2")
+							button.icon-svg.ic-count-plus.js-count-plus
+					.good-info__item.good-info--btn
+						if (isPrepay)
+							.ds-info-btn
+								button.ds-btn.ds-btn--default-big.ds-btn--full.js-add-to-basket Предоплата 50%
+								.icon-svg.ic-favorite_off.ds-favorite-btn.js-add-to-favorite
+							button.ds-btn.ds-btn--light.ds-btn--full.js-ds-modal(data-href="templates/incl-prepay.html" data-ds-modal-width="520") Почему по предоплате
+								span.ds-price  1295
+						else
+							.ds-info-btn
+								button.ds-btn.ds-btn--default-big.ds-btn--full.js-add-to-basket В корзину
+								.icon-svg.ic-favorite_off.ds-favorite-btn.js-add-to-favorite
+							button.ds-btn.ds-btn--light.ds-btn--full В рассрочку от&nbsp;
+								span.ds-price.ds-price--month 230
+
+					.good-info__item.good-info--color
+						.good-info__title Цвет:&nbsp;
+							span белый
+						.goods-color.js-color
+							.goods-color__item(data-color="белый")
+								img(src="images/temp/catalog-detail-1.jpg" alt="")
+							.goods-color__item(data-color="синий")
+								img(src="images/temp/catalog-detail-2.jpg" alt="")
+							.goods-color__item(data-color="черный")
+								img(src="images/temp/catalog-detail-3.jpg" alt="")
+							.goods-color__item(data-color="зеленый")
+								img(src="images/temp/catalog-detail-4.jpg" alt="")
+							.goods-color__item(data-color="красный")
+								img(src="images/temp/catalog-detail-5.jpg" alt="")
+
+					.good-info__item.good-info--border.good-info--size
+						.good-info__title.good-info__title--size размер:&nbsp;
+							span 70
+						.goods-size.js-size
+							span.goods-size__item(data-size="60") 60
+							span.goods-size__item.active(data-size="70") 70
+							span.goods-size__item(data-size="90") 90
+							span.goods-size__item(data-size="100") 100
+							span.goods-size__item(data-size="120") 120
+
+					.good-info__item.good-info--border.good-info--sort
+						.good-info__title вид:&nbsp;
+							span B
+						.goods-sort.js-sort
+							span.goods-sort__item(data-size="A") A
+							span.goods-sort__item.active(data-size="B") B
+
+					.good-info__item.good-info--border.good-info--specification
+						.good-info__title
+							span Характеристики
+						.goods-specification
+							.goods-specification__row
+								.goods-specification__key Вес
+								.goods-specification__value 3,3 кг
+							.goods-specification__row
+								.goods-specification__key Размер (Ш х Г х В)
+								.goods-specification__value 460 х 530 х 800 мм
+							.goods-specification__row
+								.goods-specification__key Страна изготовлен.
+								.goods-specification__value Китай
+							.goods-specification__row
+								.goods-specification__key Артикул
+								.goods-specification__value 0338
+							.goods-specification__row
+								.goods-specification__key Цвет ножек
+								.goods-specification__value натуральный
+							.goods-specification__row
+								.goods-specification__key Материал седла
+								.goods-specification__value полипропилен
+							.goods-specification__row
+								.goods-specification__key Материал ножек
+								.goods-specification__value массив бука; сталь
+							.goods-specification__row
+								.goods-specification__key Макс. нагрузка
+								.goods-specification__value 140 кг
+							.goods-specification__row
+								.goods-specification__key Высота до сиденья
+								.goods-specification__value 450 мм
+
+					.good-info__item.good-info--instagram
+						.good-info__title
+							span фото покупателей
+							a(href="https://www.instagram.com/design.sklad/" target="_blank" class="good-info__title-link")  @design.sklad
+
+						.goods-insta.js-ds-modal(data-href="templates/incl-insta-modal.html" data-ds-modal-width="1100")
+							.goods-insta__content
+								.goods-insta__item
+									img(src="images/temp/insta-1.jpg" alt="")
+								.goods-insta__item
+									img(src="images/temp/insta-2.jpg" alt="")
+								.goods-insta__item
+									img(src="images/temp/insta-3.jpg" alt="")
+								.goods-insta__item
+									img(src="images/temp/insta-1.jpg" alt="")
+							.goods-insta__content-last
+								.goods-insta__item.goods-insta__item--last
+									span.quantity Ещё
+									img(src="images/temp/insta-2.jpg" alt="")
+
+
+					.good-info__item.good-info--share
+						.good-info__title
+							span  Поделиться
+						script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+						script(src="//yastatic.net/share2/share.js")
+						div(class="ya-share2 ds-ya-share2" data-services="facebook,vkontakte,twitter,odnoklassniki")
+
+
+		.ds-catalog-detail__recommend.device-border
+			h4 С этим товаром покупают
+			.ds-catalog-recommend
+				each item in sliderRecommend.slice(0,4)
+					.ds-catalog-recommend__item
+						a(href="#")
+							img(src="images/temp/" + item.img alt="")
+							p= item.title
+							.ds-price-sale
+								span.ds-price= item.price
+								span.ds-sale %
+
+				.ds-catalog-recommend__btn
+					button.ds-btn.ds-btn--light Показать ещё
+
+		.ds-catalog-detail__descr.device-border
+			h4 Описание
+			.ds-catalog-descr
+				p Стул Eames Style DSW выполнен в скандинавском стиле и считается абсолютным хитом в мире дизайна, подкупая своей универсальностью с 1948 года. Идеальная форма и комфортная посадка позволяют ему гармонично смотреться как в жилой зоне, на кухне или гостиной, так и в качестве акцента для творческой студии или общественного пространства, кафе и ресторана. Благодаря широкой цветовой палитре подобрать подходящий цвет не составит труда под любой интерьер. Материал — экологичный полипропилен и прочный массив бука, поэтому стул способен выдержать до 140 кг, устойчив к ударам и царапинам. Модель стула DSW — беспроигрышный вариант для вашего интерьера: безупречный внешний вид приравнивает стул к элементу декора, а анатомически правильное сиденье и плавный изгиб спинки делает его удобным для жизни.
+				p Стул Eames Style DSW выполнен в скандинавском стиле и считается абсолютным хитом в мире дизайна, подкупая своей универсальностью с 1948 года. Идеальная форма и комфортная посадка позволяют ему гармонично смотреться как в жилой зоне, на кухне или гостиной, так и в качестве акцента для творческой студии или общественного пространства, кафе и ресторана. Благодаря широкой цветовой палитре подобрать подходящий цвет не составит труда под любой интерьер. Материал — экологичный полипропилен и прочный массив бука, поэтому стул способен выдержать до 140 кг, устойчив к ударам и царапинам. Модель стула DSW — беспроигрышный вариант для вашего интерьера: безупречный внешний вид приравнивает стул к элементу декора, а анатомически правильное сиденье и плавный изгиб спинки делает его удобным для жизни.
+
+			button.ds-btn.ds-btn--light.js-btn-more Показать ещё
+
+
+		.ds-catalog-detail__why.device-border
+			h4 Почему Дизайн склад?
+
+			.ds-catalog-why
+				.ds-catalog-why__item
+					.ds-catalog-why__img 1
+					.ds-catalog-why__content
+						h4 Гарантия качества
+						p Даём гарантию 18 месяцев на весь ассортимент. При желании вы можете приобрести расширенную гарантию на 24 месяца.
+				.ds-catalog-why__item
+					.ds-catalog-why__img 1
+					.ds-catalog-why__content
+						h4 Оплата при получении
+						p В нашем магазине вы можете оплатить товар не только банковской картой или денежным переводом, но и при получении товара.
+				.ds-catalog-why__item
+					.ds-catalog-why__img 1
+					.ds-catalog-why__content
+						h4 Доступные цены
+						p Мы предлагаем самые лучшие цены на рынке дизайнерской мебели.
+				.ds-catalog-why__item
+					.ds-catalog-why__img 1
+					.ds-catalog-why__content
+						h4 Доставка
+						p Доставляем товар в более 250 городов России, в кратчайшие сроки.
+
+		.ds-catalog-detail__opinions.device-border
+			.ds-reviews
+				.ds-reviews__header
+					.ds-reviews__left
+						h4 Отзывы
+							span.counter 78
+						.sorting
+							span Сортировать
+							a(href="").sorting-date.desc по дате
+							a(href="").sorting-mark по оценке
+					.ds-reviews__right
+						a(href="https://market.yandex.ru/shop/312282/reviews/add?retpath=https%3A%2F%2Fmarket.yandex.ru%2Fshop--dizain-sklad%2F312282%2Freviews&track=rev_sh" target="_blank").ds-btn.ds-btn--default написать отзыв
+
+
+				.ds-reviews__item
+					.ds-reviews__person
+						.ds-reviews__img
+							img(src="//avatars.mds.yandex.net/get-yapic/47747/enc-40fb5b9bde2490338a1bbc0e1864703ad2e738b049724fcf1ca20c0bc83215c1/islands-retina-middle" alt="")
+						.ds-reviews__name
+							strong Ангелина Т.
+					.ds-reviews__rating
+						+rating('1', 'ужасный магазин')
+					.ds-reviews__text
+						.ds-reviews__text-item
+							p
+								strong Достоинства:
+							p Я в восторге! В нашем городе довольно проблематично приобрести стулья в стиле Eames, а тут заказала на сайте, через 5 дней пришли, муж собрал за 15 минут и вуаля - отличные стулья по отличной цене!
+						.ds-reviews__text-item
+							p
+								strong Недостатки:
+							p Нет
+						.ds-reviews__text-item
+							p
+								strong Комментарий:
+							p Наш первый опыт приобретения мебели в интернет-магазине. Остались очень довольны сервисом и качеством!
+
+					.ds-reviews__geo
+						span 28 мая, Самара
+
+				.ds-reviews__item
+					.ds-reviews__person
+						.ds-reviews__img
+							img(src="//avatars.mds.yandex.net/get-yapic/47747/enc-40fb5b9bde2490338a1bbc0e1864703ad2e738b049724fcf1ca20c0bc83215c1/islands-retina-middle" alt="")
+						.ds-reviews__name
+							strong Сергей Ж.
+					.ds-reviews__rating
+						+rating('4', 'хороший магазин')
+
+					.ds-reviews__text
+						.ds-reviews__text-item
+							p
+								strong Достоинства:
+							p Ножка (ножки) от этих стульев из обработанного дерева, качественные , пришли в собранном виде, слава Богу , не надо было собирать каждый элемент, прикрутила к каркасу стула и можно пользоваться! Ключи для болтов шли в комплекте! Стул качественный и стильный) Я заказывала доставку до двери, привезли достаточно большие коробки , так что если самовывоз, имейте в виду, что так как ножки собранные уже , коробы достаточно большие приедут)! Что касается качества, все очень понравилось, пользуемся, подушки заказали к этим стульям, они из кожи, ктстати.
+						.ds-reviews__text-item
+							p
+								strong Недостатки:
+							p Не нашла, честно говоря
+						.ds-reviews__text-item
+							p
+								strong Комментарий:
+							p При посадке стульчик удобный- там сделано очень правильно: более массивная часть посадочная, и более упругая спинка. Хоть конструкция и монолитная, но она немного пружинит, это оказалось удобно, откинуться можно, расслабиться.
+
+					.ds-reviews__geo
+						span вчера, Ростов-на-Дону
+
+
+				.ds-reviews__item
+					.ds-reviews__person
+						.ds-reviews__img
+							img(src="//avatars.mds.yandex.net/get-yapic/47747/enc-40fb5b9bde2490338a1bbc0e1864703ad2e738b049724fcf1ca20c0bc83215c1/islands-retina-middle" alt="")
+						.ds-reviews__name
+							strong Stanislav G.
+					.ds-reviews__rating
+						+rating('5', 'отличный магазин')
+
+					.ds-reviews__text
+						.ds-reviews__text-item
+							p
+								strong Достоинства:
+							p дизайн и удобство
+						.ds-reviews__text-item
+							p
+								strong Недостатки:
+							p не обнаружено
+						.ds-reviews__text-item
+							p
+								strong Комментарий:
+							p Отличные стулья! Они не только красивые , но и удобные. Приятный, мягкий пластик, высота стульев то , что надо! Собрали стулья быстро и легко .
+
+					.ds-reviews__geo
+						span 24 мая, Павлодар
+
+
+
+				.ds-btn.ds-btn--light показать ещё
+
+
+
+	// это нужно будет отсюда убрать, так как в футере есть этот блок, он общий для всех модалок
+	.ds-modal-overlay.closed
+	.ds-modal.closed
+		.ds-modal__inner

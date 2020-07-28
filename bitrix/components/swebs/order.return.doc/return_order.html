@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Возврат товара</title>
+    <style type="text/css">
+        .wrap_return_page {
+            font-family: Arial, sans-serif;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 30px 40px;
+            width: 960px;
+            margin: 0 auto;
+            -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+            line-height: 1.5;
+        }
+
+        .wrap_return_page p {
+            margin-top: 0;
+        }
+
+        .wrap_return_page > p {
+            margin: 0 0 15px 0;
+        }
+
+        .header_return_page {
+            margin-left: 45%;
+            margin-bottom: 50px;
+        }
+
+        .txt_return_page {
+            margin-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .txt_return_page > p {
+            display: inline;
+            padding: 0 10px 0px 0;
+            position: relative;
+            z-index: 3;
+            background: #fff;
+            font-size: 15px;
+        }
+
+        .txt_return_page > span {
+            font-size: 15px;
+            /*font-weight: bold;*/
+            /*text-decoration: underline;*/
+        }
+
+        .passport_return_page > div {
+            display: inline-block;
+            vertical-align: top;
+            width: 48%;
+        }
+
+        .passport_return_page > div:first-child {
+            margin-right: 2%;
+        }
+
+        h1 {
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .body_return_page .txt_return_page p {
+            padding-right: 5px !important;
+        }
+
+        .txt_return_page > i {
+            text-align: center;
+            display: block;
+            font-size: 14px;
+            color: #8e8c8c;
+            padding-top: 5px;
+        }
+
+        .txt_return_page.select_return_page > span {
+            text-decoration: none;
+        }
+
+        .txt_return_page.select_return_page {
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .txt_return_page.select_return_page:after {
+            top: 7px;
+            left: 0;
+            position: absolute;
+            content: '';
+            width: 4px;
+            height: 4px;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background: #333;
+        }
+
+        .under {
+            text-decoration: underline !important;
+        }
+
+        .padright {
+            padding-right: 5px !important;
+        }
+
+        .name_return_page:after {
+            content: '.';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .name_return_page > div {
+            float: left;
+        }
+
+        .name_return_page > div:last-child {
+            float: right;
+        }
+
+        .name_return_page {
+            padding-top: 50px;
+        }
+
+        .block_padding {
+            display: block !important;
+            margin-bottom: 5px !important;
+        }
+
+        .body_return_page > h4{
+            margin: 0 0 15px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .center{
+            text-align: center;
+        }
+        .block{
+            display: block;
+        }
+        .inline{
+            display: inline!important;
+        }
+        .txt_bottom_doc{
+            overflow: hidden;
+        }
+        .txt_bottom_doc > div.txt_return_page{
+            float: left;
+        }
+        .txt_bottom_doc > div.txt_return_page:first-child{
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap_return_page">
+    <div class="header_return_page">
+        <p>Главному бухгалтеру</p>
+
+        <p>ООО «Топ Трейд»</p>
+
+        <div class="txt_return_page">
+            <p>От</p>_______________________________________________
+        </div>
+        <div class="passport_return_page">
+            <div class="txt_return_page"><p>Паспорт серия</p>________</div>
+            <div class="txt_return_page"><p>№</p>____________</div>
+        </div>
+        <div class="txt_return_page"><p>Выдан</p>____________________________________________<br><br>__________________________________________________
+        </div>
+        <div class="txt_return_page"><p>Дата выдачи</p>_______________________________________</div>
+    </div>
+    <h1>Заявление</h1>
+
+    <div class="body_return_page">
+        <div class="txt_return_page">
+            <p>В Интернет-магазине Дизайн-Склад (ООО «Топ Трейд»), из каталога на сайте www.dsklad.ru был приобретен
+                Товар по заказу №</p> <span class="bold">{ORDER_ID}</span>
+
+            <p>от </p><span class="bold">{ORDER_DATE}</span>
+        </div>
+        <div class="txt_return_page">
+            <p class="block_padding bold">Прошу оформить возврат следующих товаров:</p>
+            <span>{GOODS_ITEMS}</span>
+        </div>
+
+        <div class="txt_return_page">
+            <p class="block_padding bold">Причина возврата Товара: </p>
+            <span>{RETURN_TXT}</span>
+        </div>
+        <div class="txt_return_page">
+            <p>На основании вышеизложенного, в соответствии с Законом РФ «О защите прав потребителей» № 2300-1от
+                07.02.92 г., прошу расторгнуть со мной договор купли-продажи и возвратить сумму в размере </p>
+            <span class="bold" style="top: 1px; position: relative;">{ORDER_PRICE}</span>
+            <i>(сумма цифрами и прописью)</i>
+        </div>
+
+        <h4>По следующим реквизитам:</h4>
+
+        <div class="txt_return_page">
+            <p>1. ФИО покупателя</p>- <span class="bold">{NAME_USER}</span>
+        </div>
+        <div class="txt_return_page">
+            <p>2. Наименование банка</p>- <span  class="bold">{NAME_BANK}</span>
+        </div>
+        <div class="txt_return_page">
+            <p>3. БИК банка</p>- <span  class="bold">{BIK_BANK}</span>
+        </div>
+        <div class="txt_return_page">
+            <p>4. Номер расчетного счета</p>-  <span  class="bold">{NUMBER_ORDER_BANK}</span>
+        </div>
+        <div class="txt_return_page">
+            <p>5. Номер банковской карты</p>- <span  class="bold">{NUMBER_CARD_BANK}</span>
+        </div>
+        <div class="txt_return_page">
+            <p>6. Контактный номер телефона</p>- <span  class="bold">{PHONE_USER}</span>
+        </div>
+    </div>
+    <br/>
+
+    <div class="footer_return_page">
+        <div class="txt_return_page">
+            <p>Товарный чек № ______________ от _______________________ г.  </p>
+            <i class="inline">(заполнить вручную)</i><br /><br />
+            <p>Копию кассового чека или уведомления об оплате прилагаю.</p>
+        </div>
+        <div class="name_return_page">
+            <div class="txt_return_page">
+                <span>«____»_________________20___г.</span>
+            </div>
+            <div class="txt_bottom_doc">
+                <div class="txt_return_page">
+                    <span>__________________</span>
+                    <i>(подпись)</i>
+                </div>
+                <div class="txt_return_page">
+                    <span>(______________________)</span>
+                    <i>(ФИО)</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

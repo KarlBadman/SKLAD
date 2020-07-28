@@ -1,0 +1,33 @@
+.total-price.total-price--checkout
+	.total-price__content
+		each item in totalPrice
+			if (item.totalPrice)
+				.total-price__row.total-price__row--summ
+					.total-price__col= item.title
+					.total-price__col
+						if (item.totalPrice)
+							span.ds-price.ds-price--total= item.price
+						else
+							span.ds-price= item.price
+			else
+				.total-price__row
+					.total-price__col= item.title
+					if (item.quantity)
+						.total-price__order-detail
+							span.small-text= item.quantity
+					.total-price__col
+						span.ds-price= item.price
+
+
+		.total-price__buttons
+			input(type="submit" class="ds-btn ds-btn--big js-checkout-validate" value="Оформить заказ")
+
+	.total-price__add-info
+		span.small-text Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с
+			a(href="")  Условиями
+			| , а также с
+			a(href="")  Условиями продажи.
+
+	.total-price__phone
+		a(href="tel: 8 800 777-12-74") 8 800 777-12-74
+		span Справочная служба (с 9 до 21)

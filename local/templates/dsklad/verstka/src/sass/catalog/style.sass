@@ -1,0 +1,736 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+
+@import "../actual-offers/style"
+
+.ds-catalog
+  +responsive(device)
+    padding: 20px 0 40px
+
+  +responsive(desktop)
+    padding: 0 0 60px
+
+  &__slider
+    margin-top: 32px
+
+    +responsive(mobiletablet)
+      margin: 24px -12px 0
+
+  &__menu
+    margin-top: 24px
+  
+  &__filter
+    min-height: 98px
+    background-color: $neutral-50
+    padding: 40px 20px
+    display: flex
+  
+    +responsive(mobiletablet)
+      margin: 24px -12px 0
+
+    +responsive(tablet)
+      margin: 0 -20px
+
+    +responsive(device)
+      flex-flow: column-reverse
+
+    +responsive(tabletdesktop)
+      justify-content: space-between
+      margin-top: 32px
+
+  &__list
+    display: flex
+    flex-flow: row wrap
+
+    +responsive(device)
+      margin: 8px -6px 0
+
+    +responsive(desktop)
+      margin: 8px -10px 0
+
+
+.ds-select
+  .selectize-input
+    box-shadow: none
+    
+    &.focus
+      box-shadow: none
+
+  .selectize-input.has-options
+    min-height: 40px
+
+  .selectize-control.multi
+    .selectize-input.has-items
+      padding: 6px 10px
+      display: flex
+      flex-flow: wrap
+      align-items: center
+
+    .selectize-input > div
+      background-color: $neutral-0
+      margin: 0 6px 0 0
+      padding: 0 0 2px
+      display: flex
+      align-items: center
+
+      &:hover,
+      &:active,
+      &.active
+        background-color: transparent
+  
+  .selectize-dropdown .active
+    background-color: $neutral-600
+    color: $neutral-0
+
+  .selectize-control.plugin-remove_button [data-value]
+    padding-right: 18px !important
+    +rem()
+    min-height: 22px
+  
+    .remove
+      background: url(../../images/svg/close.svg) 50% 50% / 10px no-repeat
+      font-size: 0
+      border: 0
+      margin: 0
+      
+      &:hover
+        background: url(../../images/svg/close.svg) 50% 50% / 10px no-repeat
+
+    .remove-single
+      display: none
+
+  .selectize-dropdown,
+  .selectize-input,
+  .selectize-input input
+    +rem()
+    line-height: 1
+  
+  .selectize-control.single
+    .item
+      min-height: 22px
+      display: flex
+      align-items: center
+
+.ds-filter-menu
+  height: 98px
+  display: flex
+  flex-flow: wrap
+  align-items: center
+  justify-content: space-between
+  padding: 0 20px
+  box-sizing: border-box
+
+.ds-sorting
+  margin-bottom: 20px
+  box-sizing: border-box
+  
+  +responsive(tablet)
+    width: 33%
+    padding: 0 10px
+
+  +responsive(desktop)
+    width: 200px
+
+
+.ds-filter
+  box-sizing: border-box
+  align-items: flex-start
+  
+  +responsive(desktop)
+    width: calc(100% - 260px)
+
+  +responsive(mobiletablet)
+    flex-flow: column
+
+  +responsive(tabletdesktop)
+    justify-content: center
+
+  &__name
+    height: 48px
+    width: 100%
+    background-color: $blue-500
+    color: $neutral-0
+
+    +responsive(tabletdesktop)
+      display: none
+  
+  &__list
+    display: flex
+    
+    +responsive(mobiletablet)
+      flex-flow: column
+    
+    +responsive(tabletdesktop)
+      flex-flow: row
+  
+  &__item
+    +responsive(mobiletablet)
+      margin-bottom: 20px
+    
+    +responsive(tabletdesktop)
+      padding: 0 10px
+      width: 33%
+      box-sizing: border-box
+
+  &__item-name
+    +responsive(mobiletablet)
+      height: 48px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 0 20px
+
+    +responsive(tabletdesktop)
+      display: none
+
+  &__item-select
+
+    +responsive(mobiletablet)
+      width: 100%
+
+    select
+      +responsive(mobiletablet)
+        width: 100%
+
+      +responsive(tabletdesktop)
+        min-width: 200px
+        +radius()
+
+    option
+      width: 100%
+      height: 48px
+
+  &__buttons
+    display: flex
+
+    +responsive(mobiletablet)
+      flex-flow: column
+
+    +responsive(tabletdesktop)
+      margin-top: 20px
+      display: flex
+      flex-flow: row
+    
+    .ds-btn
+      +responsive(mobiletablet)
+        margin: 10px 0
+
+      +responsive(tabletdesktop)
+        margin: 0 10px
+      
+      &:first-child
+        +responsive(mobiletablet)
+          margin-top: 0
+
+.ds-catalog-slider
+  
+  +responsive(tabletdesktop)
+    +radius()
+    overflow: hidden
+    max-height: 260px
+
+  &--banners
+    +responsive(tabletdesktop)
+      max-height: 780px
+    
+    
+  img
+    max-width: 100%
+  
+  &__item
+    display: flex !important
+    box-sizing: border-box
+  
+    +responsive(mobiletablet)
+      flex-flow: column
+
+  &__text
+    box-sizing: border-box
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+  
+    +responsive(mobiletablet)
+      padding: 20px 32px
+  
+    +responsive(tabletdesktop)
+      width: 50%
+      box-sizing: border-box
+      padding: 20px 0 32px 60px
+  
+    h2,
+    p
+      color: $neutral-0
+    
+    h2
+      +rem(46)
+      line-height: 1.1
+    
+    p
+      +rem(22)
+      margin: 0
+     
+  &__banner
+    .banner-mobile
+      +responsive(tabletdesktop)
+        display: none
+    
+    .banner-desktop
+      +responsive(mobiletablet)
+        display: none
+
+  &__img
+
+    +responsive(tabletdesktop)
+      width: 50%
+      display: flex
+      box-sizing: border-box
+      justify-content: flex-end
+
+    +responsive(tablet)
+      padding-right: 5%
+
+    +responsive(desktop)
+      padding-right: 10%
+
+    img
+      max-width: 100%
+      +responsive(mobiletablet)
+        margin: 0 auto
+
+  &__counter
+    position: absolute
+    right: 20px
+    bottom: 20px
+    background-color: rgba($neutral-600, .6)
+    +radius(20px)
+    padding: 4px 8px
+    line-height: 1
+    color: $neutral-0
+
+.ds-catalog-slider-arrows
+  
+  +responsive(mobiletablet)
+    display: none
+
+  +responsive(tabletdesktop)
+    width: 32px
+    height: 32px
+    position: absolute
+    z-index: 9
+    cursor: pointer
+    background-color: rgba($neutral-600, .3)
+    border-radius: 50%
+    top: 50%
+    transform: translateY(-50%)
+    +transition()
+    
+    &:before
+      content: ''
+      position: absolute
+      width: 20px
+      height: 20px
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      transition: all 0.3s ease-in-out
+
+  &:hover
+    background-color: rgba($neutral-600, .6)
+
+  &.prev
+    left: 20px
+    
+    &:before
+      background: url(../../images/svg/arrow-left-white.svg) 50% 50% no-repeat
+
+  &.next
+    right: 20px
+    
+    &:before
+      background: url(../../images/svg/arrow-right-white.svg) 50% 50% no-repeat
+
+
+.show-more-btn
+  width: 100%
+  display: flex
+  justify-content: center
+  margin-top: 32px
+
+.ds-catalog-item
+  border-top: 1px solid $neutral-200
+  box-sizing: border-box
+  +radius(0 0 8px 8px)
+  display: flex
+  flex-flow: column
+  justify-content: space-between
+  +transition()
+  
+  &:hover
+    box-shadow: 0 0 5px $neutral-200
+    border-top-color: transparent
+  
+  +responsive(mobile)
+    width: calc(50% - 12px)
+  
+  +responsive(tablet)
+    width: calc(33.33333% - 12px)
+    
+  +responsive(device)
+    margin: 20px 6px 0
+  
+  +responsive(desktop)
+    width: calc(25% - 20px)
+    margin: 24px 10px 0
+  
+  &__header
+    display: flex
+    flex-flow: row wrap
+
+    +responsive(device)
+      padding: 16px 12px
+
+    +responsive(desktop)
+      padding: 16px 20px
+  
+  &__status
+    span
+      +rem(14)
+  
+      &.hurry-up
+        color: $blue-400
+
+      &.new
+        color: $green-400
+  
+      &.cheaper
+        color: $red-500
+
+      &.pre-order
+        color: $yellow-400
+      
+      &.discount
+        color: $red-500
+
+  &__vendor
+    +rem(14)
+  
+  &__img
+    margin: auto 0 16px
+
+    img
+      max-width: 100%
+
+  &__favorite
+    margin-left: auto
+    width: 24px
+    height: 24px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    button
+      border: 0
+      background-color: transparent
+      cursor: pointer
+
+      &:focus,
+      &:active
+        outline: none
+      
+      &.added
+        &:before
+          background: url(../../images/svg/favorite_on.svg) 50% 50% no-repeat
+
+
+  &__name
+    width: 100%
+    color: $neutral-800
+
+    &:hover
+      color: $neutral-800
+
+    +responsive(mbpro)
+      +rem(18)
+
+  &__footer
+    background-color: $neutral-50
+    +radius(0 0 8px 8px)
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: flex-end
+
+    +responsive(device)
+      padding: 12px 12px 16px
+    
+    +responsive(desktop)
+      padding: 12px 20px 16px
+
+  &__add-info
+    min-height: 22px
+
+    span
+      +rem(14)
+      padding-right: 8px
+      margin-bottom: 2px
+      display: inline-block
+
+  &__price
+
+    span
+      color: $neutral-800
+
+      &.ds-price
+        +rem(24)
+        font-weight: 600
+
+    &.price-discount
+      span
+        color: $red-500
+
+  &__cart
+    width: 24px
+    height: 24px
+    margin-left: auto
+    margin-top: auto
+    padding-bottom: 4px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    button
+      border: 0
+      background-color: transparent
+      cursor: pointer
+
+      &:focus,
+      &:active
+        outline: none
+
+
+.bx-ui-slider-pricebar-v
+  background-color: $blue-400 !important
+  
+.bx-ui-slider-pricebar-vn
+  background-color: $neutral-200 !important
+
+.bx-ui-slider-part
+  background: transparent !important
+
+.bx-ui-slider-handle
+  background: $blue-400 !important
+  width: 24px !important
+  height: 18px !important
+  margin-top: -10px !important
+  z-index: 70 !important
+  
+  &:after,
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    border-top: 9px solid transparent
+    border-bottom: 9px solid transparent
+  
+  &.left
+    +radius(4px 0 0 4px)
+    margin-left: 0 !important
+  
+    &:after
+      border-left: 9px solid $blue-400
+      right: -9px
+
+  &.right
+    +radius(0 4px 4px 0)
+    
+    &:before
+      border-right: 9px solid $blue-400
+      left: -9px
+
+
+.ds-filter-name
+  display: flex
+  align-items: center
+  
+  +responsive(device)
+    height: 48px
+    
+  +responsive(desktop)
+    margin: 12px 0
+    +rem(13)
+    font-weight: 500
+    line-height: 1.54
+
+  span
+    color: $neutral-800
+    font-weight: 500
+
+
+.ds-filter-price
+  display: flex
+  justify-content: space-between
+  
+  +responsive(desktop)
+    margin: 0 -4px
+  
+  &__item
+    box-sizing: border-box
+    width: 50%
+    
+    +responsive(desktop)
+      padding: 0 4px
+      
+    span
+      color: $neutral-800
+      display: block
+      margin-bottom: 4px
+
+    input
+      width: 100%
+
+
+.ds-show-result-btn
+  position: fixed
+  bottom: 0
+  width: 100%
+  box-shadow: 0 0 2px 0 rgba($neutral-800, .6)
+  padding: 4px 12px
+  box-sizing: border-box
+  
+  +responsive(desktop)
+    display: none
+
+
+.ds-catalog-sorting
+  position: relative
+  
+  +responsive(device)
+    +rem(13)
+  
+  &.opened
+    .ds-catalog-sorting__list
+      display: block
+  
+  &__chosen
+    height: 40px
+    display: inline-flex
+    align-items: center
+  
+    +responsive(desktop)
+      cursor: pointer
+      background-color: $neutral-50
+      +radius()
+      box-sizing: border-box
+      border: 1px solid rgba($neutral-800, .12)
+      padding: 0 44px 0 20px
+
+  &__list
+    position: absolute
+    z-index: 99
+    display: none
+    background-color: $neutral-0
+    +radius()
+    overflow: hidden
+    margin-top: 8px
+    box-shadow: 0 20px 40px 0 rgba($neutral-800, .3), 0 0 1px 0 rgba($neutral-800, .4)
+
+  &__item
+    min-height: 40px
+    display: flex
+    align-items: center
+    padding: 0 12px
+    box-sizing: border-box
+    cursor: pointer
+
+    &:hover,
+    &.item-opened
+      background-color: $neutral-50
+
+
+.catalog-lnk
+  +responsive(device)
+    display: none
+  
+  +responsive(desktop)
+    +rem(13)
+
+
+.ds-catalog-info
+  background-color: $neutral-50
+  
+  +responsive(mobiletablet)
+    padding: 40px 0
+
+  +responsive(tabletdesktop)
+    padding: 60px 0
+  
+  &__inner
+    margin: 0 auto
+    max-width: 760px
+    box-sizing: border-box
+    
+    +responsive(mobiletablet)
+      padding: 0 8px
+    
+    +responsive(tabletdesktop)
+      padding: 0 24px
+
+  h5
+    margin-top: 32px
+  
+  p
+    margin-bottom: 16px
+
+
+.ds-catalog-menu
+  margin: 20px 0 0
+  position: relative
+  overflow: hidden
+
+  &__list
+    display: flex !important
+  
+  &__item
+    padding: 16px 0 8px
+    border: 1px solid $neutral-200
+    max-width: 140px
+    min-width: 140px
+    height: 188px
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    margin-left: 20px
+    +radius()
+    +transition()
+
+    &:hover,
+    &.current
+      border-color: $blue-500
+
+      p
+        color: $blue-500
+
+  &__arrow
+    @extend .ds-catalog-slider-arrows
+
+    &.disabled
+      opacity: 0
+
+  p
+    margin-bottom: 0
+    padding: 0 12px
+    color: $neutral-600
+    text-align: center
+    overflow: hidden
+    text-overflow: ellipsis
+
+  img
+    max-width: 100%
+    height: auto
+    
+
+.desktop
+  .ds-select
+    select
+      visibility: hidden

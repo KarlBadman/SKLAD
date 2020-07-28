@@ -1,0 +1,46 @@
+=rem($size: 16)
+  font-size: ($size/16)+rem
+
+=mb($size)
+  margin-bottom: ($size*4)+px
+
+=transition($option: all)
+  transition: $option .3s ease-in-out
+
+=radius($radius: 8px)
+  border-radius: $radius
+
+
+$defaultFF: -apple-system,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue","Lucida Grande",sans-serif
+
+$x-small: 320px
+$small: 414px
+$middle: 768px
+$desktop: 1024px
+$mbpro: 1440px
+
+=responsive($media)
+  @if $media == tiny
+    @media only  screen and (max-width: $small - 1) // -413
+      @content
+  @else if $media == mobile
+    @media only screen and (min-width: $small) and (max-width: $middle - 1) // 414 - 767
+      @content
+  @else if $media == tablet
+    @media only screen and (min-width: $middle) and (max-width: $desktop - 1) // 768 - 1023
+      @content
+  @else if $media == device
+    @media only screen and (max-width: $desktop - 1) // -1023
+      @content
+  @else if $media == mobiletablet
+    @media only screen and (max-width: $middle - 1) // -767
+      @content
+  @else if $media == tabletdesktop
+    @media only screen and (min-width: $middle) // +768
+      @content
+  @else if $media == desktop
+    @media only screen and (min-width: $desktop) // +1024
+      @content
+  @else if $media == mbpro
+    @media only screen and (min-width: $mbpro) // +1440
+      @content

@@ -1,0 +1,18 @@
+{
+
+    "require": {
+        "fabpot/goutte": "^3.2",
+        "monolog/monolog": "^1.23",
+        "smalot/pdfparser": "^0.11.0",
+        "xthiago/pdf-version-converter": "^1.0",
+        "wrseward/pdf-parser": "^0.1.0",
+        "swiftmailer/swiftmailer": "^6.1",
+        "google/apiclient": "^2.0",
+        "pecee/simple-router": "^3.7",
+        "arrilot/bitrix-migrations": "^2.5",
+        "php-instagram-api/php-instagram-api": "dev-master",
+        "sinergi/browser-detector": "^6.1",
+        "yandex-money/yandex-checkout-sdk-php": "^1.2",
+        "piwik/device-detector" : "^3.12"
+    }
+}

@@ -1,0 +1,311 @@
+.ds-checkout-form
+
+	.ds-checkout-form__item
+		.ds-checkout-form__header
+			h4 Основное
+			span.pseudo-btn.js-taxpayer Заказать как юр.лицо
+
+		if (!isAuthorized)
+			.ds-checkout-form__content
+				.form-group
+					label(for="tel") Номер телефона
+					span#phone-number
+						input(type="tel" id="tel" required name="tel" placeholder="+7 916 123-45-67" class="inp-big" data-parsley-error-message="Сначала введите телефон" data-parsley-errors-container="#phone-number")
+					span.inp-info Вам будет отправлен код подтверждения
+				.form-group.hidden.js-taxpayer-input
+					label(for="taxpayer-number") ИНН
+					input(type="number" id="taxpayer-number" class="inp-big")
+				.form-group.form-group--mt-20
+					span(class="ds-btn ds-btn--default js-checkout-modal" data-target="phone-code" data-ds-modal-width="396") Войти в личный кабинет
+
+		else
+			// если пользователь авторизован
+			.ds-checkout-form__content.js-authoriz
+				.form-group
+					label(for="tel") Номер телефона
+					span.inp-success
+						input(type="tel" id="tel" data-parsley-type="tel" placeholder="+7 916 123-45-67" class="inp-big" name="tel" disabled)
+					a(href="checkout.html").pseudo-btn Авторизоваться с другим номером
+				.form-group.hidden.js-taxpayer-input
+					label(for="taxpayer-number") ИНН
+					input(type="number" id="taxpayer-number" class="inp-big" name="taxpayer-number")
+				.form-group
+					label(for="user-name") Имя и фамилия
+					input(type="text" id="user-name" class="inp-big" placeholder="" value="Константин Константинопольский")
+				.form-group
+					label(for="user-email") эл. почта
+					input(type="email" id="user-email" class="inp-big" placeholder="" value="mail@domain.ru")
+				.form-group
+					input(type="checkbox" class="sub-agreed" id="sub-agreed" checked)
+					label(for="sub-agreed") Хочу получать персональную рассылку
+				.reciever-content
+
+					.reciever-content__btn.js-reciever
+						span.pseudo-btn Получатель другое лицо?
+						span.small-text Добавьте данные человека, который непосредственно будет принимать заказ.
+
+					.reciever-content__info.hidden.js-reciever-block
+						.reciever-content__info-header
+							h5 Получатель заказа
+							span.icon-svg.ic-close.js-reciever-block-close
+							span.subheader Только указанный ниже человек сможет получить заказ
+						.form-group
+							label(for="reciever-tel") Телефон получателя
+							input(type="tel" id="reciever-tel" placeholder="+7 916 123-45-67" class="inp-big")
+						.form-group
+							label(for="reciever-user-name") Имя и фамилия
+							input(type="text" id="reciever-user-name" class="inp-big")
+			// конец если пользователь авторизован
+
+
+
+
+	.ds-checkout-form__item#checkout-delivery
+		.ds-checkout-form__header
+			h4 Доставка
+
+		.delivery-info
+			.delivery-info__item
+				.delivery-info__header.js-checkout-modal(data-target="point-delivery" data-ds-modal-width="814")
+					input(type="radio" name="checkout-delivery" id="station" required class="js-delivery-radio" data-parsley-errors-messages-disabled data-parsley-errors-container="#checkout-delivery")
+					label(for="station")
+						span.header
+							| До пункта выдачи
+							span.ds-price.hidden 1000
+						span.subheader Можно забрать из 256 пунктов
+						span.subheader Примерный срок доставки:
+							strong  3-5 дней
+				.delivery-info-result.hidden
+					span.delivery-result-header Выбранный пункт выдачи:
+					span.delivery-result-address Санкт-Петербург, ул. Александра Невского, 3
+					.delivery-result-add-info
+						span Будни: 11:00 - 19:30
+						span Сб.: 09:30 - 17:00
+						span Вс.: выходной
+					span.ds-btn.ds-btn--default.js-delivery-change Выбрать другой
+
+			.delivery-info__item
+				.delivery-info__header.js-checkout-modal(data-target="courier-delivery" data-ds-modal-width="412")
+					input(type="radio" name="checkout-delivery" id="courier" required class="js-delivery-radio")
+					label(for="courier")
+						span.header
+							| Курьером
+							span.ds-price.hidden 2000
+						span.subheader Заказ приедет по выбранному адресу
+						span.subheader Примерный срок доставки:
+							strong  3-5 дней
+				.delivery-info-result.hidden
+					span.delivery-result-header Заказ приедет по адресу:
+					span.delivery-result-address Москва, Ленина 16, кв. 154
+					.delivery-result-add-info
+						span.header Дополнительные услуги:
+						span Доставка в вечернее время,  Доставка в выходной день, Подъем на этаж
+					span.ds-btn.ds-btn--default.js-delivery-change Изменить
+			.delivery-info__item
+				.delivery-info__header
+					input(type="radio" name="checkout-delivery" id="storage" required class="js-delivery-radio")
+					label(for="storage")
+						span.header Самовывоз со склада
+						span.subheader Самовывоз со склада в Санкт-Петербурге
+				.delivery-info__result.hidden
+					| Какая-то инфа
+
+	.ds-checkout-form__item
+		label Комментарий к заказу
+		textarea(class="inp-big" placeholder="Особые требования к заказу или доставке...")
+		.form-group
+			input(type="checkbox" id="confirm-called" checked)
+			label(for="confirm-called") Не звонить для подтверждения заказа
+
+	.ds-checkout-form__item
+		.ds-checkout-form__header
+			h4 Оплата
+		.form-group
+			label(for="promo") Промокод
+			// если промокод успешный, то нужно добавлять .active, если value не пустой, то добавится атрибут disabled на кнопку применить
+			.form-group__row.promo-info.active
+				.promo-info-input
+					input(type="text" id="promo" class="inp-big js-promo" value="Promocode2019")
+				button(type="submit" class="ds-btn ds-btn--default") Применить
+
+		.delivery-option
+			span.hidden // .hidden нужно убирать, если способ доставки не выбран
+				a(href="#checkout-delivery") Выберите способ доставки,
+				| &nbsp;чтобы увидеть доступные варианты оплаты
+
+		.payment-info
+			.payment-info__item.js-payment
+				.payment-info__icon
+					span.icon-svg.ic-apple
+				.payment-info__info
+					span.header Apple Pay
+					span.subheader
+						span.green-400 Скидка 1 208.−
+			.payment-info__item.js-payment
+				.payment-info__icon
+					span.icon-svg.ic-card
+				.payment-info__info
+					span.header Оплата по карте
+					span.subheader
+						span.green-400 Скидка 1 208.−
+						| Visa, MasterCard, Мир, Google Pay
+			.payment-info__item.payment-info__item--person.js-payment
+				.payment-info__icon
+					span.icon-svg.ic-yandex_installments
+				.payment-info__info
+					span.header Купить в рассрочку
+					span.subheader
+						span.green-400 1 208.− в месяц
+						| Услуга предоставлена Яндекс Кассой
+			.payment-info__item.payment-info__item--person.js-payment
+				.payment-info__icon
+					span.icon-svg.ic-cash
+				.payment-info__info
+					span.header При получении
+					span.subheader Оплатить курьеру или в пункте выдачи
+			//.all-pay-btn Показать все способы
+			.payment-info__item.payment-info__item--person.js-payment
+				.payment-info__icon
+					span.icon-svg.ic-pays_another
+				.payment-info__info
+					span.header Счёт оплатит другой человек
+					span.subheader Укажите телефон или эл.почту, на которую будет отправлена ссылка для оплаты заказа
+					.payment-info__other-person
+						.form-group
+							label телефон получателя:
+							input(type="tel" placeholder="+7 916 123-45-67" class="inp-big")
+						.form-group
+							label эл.почта получателя счёта:
+							input(type="email" placeholder="mail@domain.ru" class="inp-big")
+			.payment-info__item.payment-info__item--legal.hidden.js-payment
+				.payment-info__icon
+					span.icon-svg.ic-bank
+				.payment-info__info
+					span.header Банковским переводом
+					span.subheader Счёт на оплату будет выслан на эл. почту
+
+	.ds-checkout-consist
+		h5 Состав заказа
+		p 7 коробок
+			span.total-weight Общий вес: 64 кг.
+		p Макс. вес коробки: 12 кг.
+
+		.ds-checkout-slider-arrows.js-slider-arrows
+		.ds-checkout-slider.js-slider-checkout
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-2.jpg" alt="")
+				span 2 шт
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-3.jpg" alt="")
+				span
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-4.jpg" alt="")
+				span 1 шт
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-5.jpg" alt="")
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-6.jpg" alt="")
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-1.jpg" alt="")
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-2.jpg" alt="")
+				span 2 шт
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-3.jpg" alt="")
+				span
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-4.jpg" alt="")
+				span 1 шт
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-5.jpg" alt="")
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-6.jpg" alt="")
+			.ds-checkout-slider__item
+				img(src="images/temp/basket-1.jpg" alt="")
+
+
+
+
+	.ds-modal-overlay.closed
+	#phone-code.ds-modal.closed
+		span.icon-svg.ic-close.ds-modal-close.js-ds-modal-close
+		.ds-modal__inner
+			.ds-modal__body
+				.ds-modal-phone
+					h4 Введите код
+					// Если проверка усешная, добавляется .success, если нет - .error
+					//.ds-modal-phone__code.success
+					//.ds-modal-phone__code.error
+					.ds-modal-phone__code
+						input(type="text" value="3" class="ds-modal-phone__code-item" maxlength="1")
+						input(type="text" value="2" class="ds-modal-phone__code-item" maxlength="1")
+						input(type="text" value="2" class="ds-modal-phone__code-item" maxlength="1")
+						input(type="text" value="0" class="ds-modal-phone__code-item" maxlength="1")
+					p Код выслан на
+						strong  +7 916 123 45 67
+					p Получить новый код можно <br> через 03:00
+					// Когда ошибка, нужно предложить выслать код повторно
+					//p
+						a(href="") Выслать код повторно
+					.ds-modal-phone__comment При входе или регистрации вы соглашаетесь с
+						a(href="#")  Условиями
+
+	#point-delivery.ds-modal.closed
+		span.icon-svg.ic-close.ds-modal-close.js-ds-modal-close
+		.ds-modal__inner
+			.ds-modal__header
+				h5 Пункты самовывоза
+			.ds-modal__body
+				.delivery-modal-map
+					.delivery-modal-map__point(style="margin: 50px 0 0 150px")
+						.delivery-info-result
+							span.delivery-result-header Пункт выдачи ТК DPD
+							span.delivery-result-address ул. Александра Невского, 3
+							span.delivery-result-price Стоимость доставки:
+								span.ds-price  900
+							.delivery-result-add-info
+								span Будни: 11:00 - 19:30
+								span Сб.: 09:30 - 17:00
+								span Вс.: выходной
+							span(class="ds-btn ds-btn--default ds-btn--full js-delivery-here") Заберу отсюда
+
+					// вместо картинки нужно перенести текущую карту
+					img(src="../images/temp/map.jpg")
+
+	#courier-delivery.ds-modal.closed
+		span.icon-svg.ic-close.ds-modal-close.js-ds-modal-close
+		.ds-modal__inner
+			.ds-modal__header
+				h5 Курьерская доставка
+			.ds-modal__body
+				.form-group
+					label(for="courier-delivery-address") Адрес доставки
+					input(id="courier-delivery-address" type="text" class="inp-big" placeholder="Напишите улицу и номер дома")
+				.form-group.form-group--mt-20
+					label(for="courier-delivery-office") Квартира / офис
+					input(id="courier-delivery-office" type="number" placeholder="Например, 145" class="inp-small")
+
+				.courier-services
+					h5 Услуги
+					.courier-services__item
+						p Подъём на этаж
+						span.small-text Получите заказ у дверей своей квартиры.
+						span.small-text  Услуга доступна только при наличии исправного лифта.
+						.courier-services__price-btn
+							span.ds-price 1 500
+							span.ds-btn.ds-btn--light.js-courier-delivery-add Добавить
+					.courier-services__item
+						p Доставка в выходной день
+						span.small-text Получайте заказ в выходной или праздничный день.
+						span.small-text  День доставки будет согласован с предствителем транспортной компании после оформления заказа.
+						.courier-services__price-btn
+							span.ds-price 500
+							span.ds-btn.ds-btn--light.js-courier-delivery-add Добавить
+					.courier-services__item
+						p Доставка в вечернее время
+						span.small-text Получайте заказ после 18:00 в будние дни.
+						.courier-services__price-btn
+							span.ds-price 500
+							span.ds-btn.ds-btn--light.js-courier-delivery-add Добавить
+
+				span(class="ds-btn ds-btn--default ds-btn--full js-delivery-here") Привезти сюда

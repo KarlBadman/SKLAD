@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.19 538.93">
+  <title>Victoria Ghost</title>
+  <g id="3cf26459-c380-4c24-8def-ca839dda78c3" data-name="Layer 2">
+    <g id="5520a1ea-bf06-4593-a8d6-1331ccb5823e" data-name="Layer 12">
+      <path d="M34.35,227.66a2.35,2.35,0,0,0-2,1.22c-2.43,4.26-6.53,10.92-10.06,14.33-6.81,6.58-15,14.73-18.85,18.44A1.39,1.39,0,0,0,4.27,264H207.72a1.42,1.42,0,0,0,.93-2.31l-3-3.41c-7.19-8-14.13-17.69-16.83-28.06a2.53,2.53,0,0,0-2.4-1.94Z" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10;fill-rule: evenodd"/>
+      <ellipse cx="107.83" cy="106.52" rx="78" ry="99.64" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10;stroke-width: 0.5px"/>
+      <ellipse cx="107.83" cy="106.52" rx="83" ry="106.02" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10"/>
+      <g>
+        <path d="M23.85,241.18l0-9a64.77,64.77,0,0,1,.67-9.67L34.15,156" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10;fill-rule: evenodd"/>
+        <path d="M24.64,101.8,6.81,216.32a62.93,62.93,0,0,0-.86,9.75V259.5" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10;fill-rule: evenodd"/>
+      </g>
+      <path d="M191.95,239.5v-7.32a67.21,67.21,0,0,0-.75-9.67l-9.63-66.57" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10;fill-rule: evenodd"/>
+      <path d="M190.64,103.58l17.64,114.77a66,66,0,0,1,.67,10V262.5" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10;fill-rule: evenodd"/>
+      <g>
+        <polygon points="3.41 264 0.51 533.81 15.68 534.15 24.83 264 3.41 264" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10"/>
+        <polyline points="37.32 264.35 21.91 530.57 16.22 534.31" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10"/>
+      </g>
+      <g>
+        <polygon points="208.78 264 211.69 533.81 196.51 534.15 187.36 264 208.78 264" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10"/>
+        <polyline points="174.87 264.35 190.29 530.57 195.97 534.31" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10"/>
+      </g>
+      <line x1="188.45" y1="304" x2="23.45" y2="304" style="fill: none;stroke: #221f1f;stroke-miterlimit: 10"/>
+      <g>
+        <rect x="0.45" y="534.5" width="16" height="4" style="fill: #221f1f"/>
+        <polygon points="16.45 538.92 22.45 533.91 22.45 530.84 16.45 534.68 16.45 538.92" style="fill: #221f1f"/>
+      </g>
+      <g>
+        <rect x="196.45" y="534.5" width="15" height="4" transform="translate(407.9 1073) rotate(180)" style="fill: #221f1f"/>
+        <polygon points="196.45 538.92 190.45 533.91 190.45 530.46 196.45 534.31 196.45 538.92" style="fill: #221f1f"/>
+      </g>
+    </g>
+  </g>
+</svg>

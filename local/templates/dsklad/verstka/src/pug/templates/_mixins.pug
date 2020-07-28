@@ -1,0 +1,31 @@
+mixin rating(rate, label)
+  .ds-rating-stars(data-rate= rate)
+    span
+    span
+    span
+    span
+    span
+  .ds-rating-label= label
+
+mixin miniGoodsList()
+  each item in miniGoodsList
+    .mini-goods__item
+      .mini-goods__img
+        img(src= item.img alt="")
+      .mini-goods__content
+        p= item.title
+        .mini-goods__info
+          span.mini-goods__quantity= item.quantity
+          span.ds-price= item.price
+      .mini-goods__remove
+        span.mini-goods-remove
+
+mixin searchGoodsList()
+  each item in miniGoodsList.slice(0,5)
+    a(href="").mini-goods__item
+      .mini-goods__img
+        img(src= item.img alt="")
+      .mini-goods__content
+        p= item.title
+        .mini-goods__info
+          span.ds-price= item.price

@@ -1,0 +1,25 @@
+.quick-order-modal
+	.quick-order-modal__header
+		h5 Разместить заказ
+	.quick-order-modal__body
+		form(action="#")
+			.form-group
+				label(for="tel") Номер телефона
+				input(type="tel" id="tel" pattern="^[0-9-+s()]*$" required)
+				span.inp-info Вам будет отправлен код подтверждения
+			.form-group
+				label(for="name") Имя и фамилия
+				input(type="text" id="name" required)
+
+			.quick-order-modal__text Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с
+				a(href="#")  Условиями
+				| , а также с
+				a(href="#")  Условиями продажи
+				| .
+
+			button.ds-btn.ds-btn--big Подтвердить заказ
+
+			.quick-order-modal__info
+				a(href="tel: 8 800 777-12-74") 8 800 777-12-74
+				span Справочная служба (с 9 до 21)
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="6px" viewBox="0 0 8 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols_Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M1.70710678,2.29289322 C1.31658249,1.90236893 0.683417511,1.90236893 0.292893219,2.29289322 C-0.0976310729,2.68341751 -0.0976310729,3.31658249 0.292893219,3.70710678 L2.29289322,5.70710678 C2.68341751,6.09763107 3.31658249,6.09763107 3.70710678,5.70710678 L7.70710678,1.70710678 C8.09763107,1.31658249 8.09763107,0.683417511 7.70710678,0.292893219 C7.31658249,-0.0976310729 6.68341751,-0.0976310729 6.29289322,0.292893219 L3,3.58578644 L1.70710678,2.29289322 Z" id="check" fill="#FFFFFF"></path>
+    </g>
+</svg>

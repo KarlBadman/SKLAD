@@ -1,0 +1,46 @@
+extends templates/layout
+
+block csslibs
+	link(rel="stylesheet" href="https://www.dsklad.ru/local/assets/css/purepopup.css")
+	link(rel="stylesheet" href="css/promo/style.css")
+
+block content
+	.ds-promo
+		form(action="#" class="ds-form-promo")
+			.ds-promo__content
+				.ds-promo-content
+					h1 Получите скидку 500 руб. <br>на покупки в Dsklad.ru
+
+					.ds-promo__form
+						.ds-promo__form-tel
+							.form-group
+								label(for="tel") телефон
+								input(type="tel" id="tel" placeholder="+7 916 123-45-67" class="inp-big")
+								span.inp-info Вам будет отправлен код подтверждения
+
+						.ds-promo__form-btn
+							button.ds-btn.ds-btn--middle.js-ds-modal(data-href="templates/incl-phone-code.html" data-ds-modal-width="412") Получить!
+
+
+
+					p После подтверждения номера телефона, вам будет отправлено смс с промокодом.
+					p Промокод действителен в течении 20 дней с момента получения.
+					p Промокод может быть применен только единожды на заказы суммой от 1500 руб.
+					p На каждый номер телефона выдается только один промокод.
+
+				.ds-promo-result(hidden)
+					h4 Ваш промокод:
+					.ds-promocode DKSLDPC
+					span Нажмите, чтобы скопировать
+					a(href="" class="ds-link") Перейти в магазин
+
+	// этот блок есть в футере сайта, его переносить не нужно
+	.ds-modal-overlay.closed
+	.ds-modal.closed
+		span.icon-svg.ic-close.ds-modal-close.js-ds-modal-close
+		.ds-modal__inner
+
+
+
+	// этот скрипт есть на основном сайте
+	script(src="https://www.dsklad.ru/local/assets/js/purepopup.js")

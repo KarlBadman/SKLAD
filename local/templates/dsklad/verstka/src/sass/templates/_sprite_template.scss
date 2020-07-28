@@ -1,0 +1,14 @@
+{{#shapes}}
+.ic-{{base}} {
+    min-width: {{width.inner}}px;
+    height: {{height.inner}}px;
+}
+
+.ic-{{base}}:before {
+    content: '';
+    position: absolute;
+    background: url(../images/svg/sprite.svg?20191005) {{position.absolute.xy}} no-repeat;
+    width: {{width.inner}}px;
+    height: {{height.inner}}px;
+}
+{{/shapes}}

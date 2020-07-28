@@ -1,0 +1,17 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+
+.icon-svg
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	
+	&.ic-basket-remove
+		&:before
+			transition: opacity .4s ease-in-out
+			opacity: .4
+			
+			+responsive(desktop)
+				opacity: 1
+

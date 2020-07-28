@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/libs/slick.css">
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/dsklad-styles.css">
+    <link rel="stylesheet" href="css/checkout/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!--стоит его использовать вместо isMobile.min.js, т.к. больше возможностей-->
+    <script src="js/libs/device.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
+    <script src="js/dsklad-scripts.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('sw.js')
+            .then(function (registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              },
+              function (err) {
+                console.log('ServiceWorker registration failed: ', err);
+              });
+        });
+      }
+      
+      
+    </script>
+    <script src="js/libs/parsley.min.js"></script>
+    <script src="js/parsley-ru.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="ds-header">
+        <div class="ds-header__menu js-header-menu"><span class="ds-header-notification"></span><span class="header-icon header-icon--menu"></span><span class="catalog-btn">Каталог</span></div>
+        <div class="ds-header__logo"><a href="/"><img src="images/logo-header.svg" alt="Дизайн Склад"></a></div>
+        <div class="ds-header__phone has-popup"><span class="header-icon header-icon--phone"></span>
+          <div class="ds-header-popup ds-header-popup--phones">
+            <div class="ds-header-phones">
+              <p>Ежедневно с 9 до 21</p><a class="main-phone" href="tel:88007771274">8 800 777-12-74</a><span class="or">- или -</span>
+              <div class="phones-list"><a class="phones-list__item" href="tg://resolve?domain=nikname"><span class="icon-svg ic-telegram"></span><span class="phones-list__title">Telegram</span></a><a class="phones-list__item" href="whatsapp://send?phone=+120345678910"><span class="icon-svg ic-whatsapp"></span><span class="phones-list__title">WhatsApp</span></a><a class="phones-list__item" href="viber://add?number=120345678910"><span class="icon-svg ic-viber"></span><span class="phones-list__title">Viber</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ds-header__profile"><span class="ds-header-notification"></span><a class="header-icon header-icon--profile" href="profile.html"></a></div>
+        <div class="ds-header__cart has-popup"><span class="ds-header-notification">120</span><a class="header-icon header-icon--cart" href="basket.html"></a>
+          <div class="ds-header-popup ds-header-popup--minicart">
+            <div class="ds-header-minicart">
+              <div class="ds-header-minicart__content">
+                <div class="mini-goods mini-goods--cart">
+                  <h3>Корзина</h3>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-1.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-2.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-3.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный фыва фыва фыва </p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">5 990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-4.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-5.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Подушка декоративная</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-6.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Eames Daw Patchwork</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">14 990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                </div>
+              </div>
+              <div class="ds-header-minicart__footer"><a class="ds-btn ds-btn--full ds-btn--default" href="basket.html">К корзине<span class="ds-price ds-price--point">21 561</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ds-header__search"><span class="header-icon header-icon--search-m js-search"></span>
+          <div class="header-search header-search--desktop js-search"><span class="icon-svg ic-search-sm"></span>
+            <input class="inp-search" type="text" placeholder="Я хочу купить..."><span class="header-icon header-icon--search-clear js-search-clear"></span>
+          </div>
+          <button class="header-search-cancel js-search-cancel">Отмена</button>
+          <div class="header-search-result">
+            <!-- Этот кусок нужен для мобильных-->
+            <div class="header-search-info">
+              <div class="header-search header-search--mobile"><span class="icon-svg ic-search-sm"></span>
+                <input class="inp-search" type="text" placeholder="Я хочу купить..."><span class="header-icon header-icon--search-clear js-search-clear"></span>
+              </div>
+              <button class="header-search-cancel js-search-mobile-cancel">Отмена</button>
+            </div>
+            <div class="header-search-result__wrapper" hidden>
+              <h4>Популярно сейчас</h4>
+              <div class="header-search-result__list"><a class="header-search-result__item" href="">Eames DSW</a><a class="header-search-result__item" href="">Подушки дизайнерские</a><a class="header-search-result__item" href="">Комплект Avanti Round + Кресло Мартин</a></div>
+            </div>
+            <div class="header-search-result__wrapper" hidden>
+              <h4>Ничего не найдено</h4>
+              <div class="header-search-result__empty">
+                <p>Воспользуйтесь<a href="catalog.html"> каталогом</a> или свяжитесь с нами по телефону<a href="tel:88007771274"> 8 800 777-12-74</a></p>
+              </div>
+            </div>
+            <div class="header-search-result__wrapper">
+              <h4>Разделы</h4>
+              <div class="header-search-result__list"><a class="header-search-result__item" href="">Eames DSW</a><a class="header-search-result__item" href="">Подушки дизайнерские</a><a class="header-search-result__item" href="">Комплект Avanti Round + Кресло Мартин</a></div>
+              <h4>Товары</h4>
+              <div class="header-search-result__list">
+                <div class="mini-goods mini-goods--search"><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-1.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="ds-price">990</span></div>
+                      </div></a><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-2.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="ds-price">990</span></div>
+                      </div></a><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-3.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный фыва фыва фыва </p>
+                        <div class="mini-goods__info"><span class="ds-price">5 990</span></div>
+                      </div></a><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-4.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="ds-price">990</span></div>
+                      </div></a><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-5.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Подушка декоративная</p>
+                        <div class="mini-goods__info"><span class="ds-price">990</span></div>
+                      </div></a>
+                </div>
+              </div>
+              <div class="header-search-result__search-btn"><a class="ds-btn ds-btn--invisible" href="search.html"><span class="icon-svg ic-search-result"></span>Все результаты поиска</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-menu">
+        <div class="header-menu__name">Каталог
+          <div class="header-menu-close js-menu-close"><span class="icon-svg ic-close-white"></span></div>
+        </div>
+        <div class="header-menu__content js-submenu">
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-chairs"></span><span class="menu-item__title">Стулья</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Стулья</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Все стулья</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья в стиле лофт</a>
+                  <div class="sub-menu__offers">
+                    <div class="sub-menu-offer">
+                      <div class="sub-menu-offer__img"><a href="catalog.html"><img src="images/temp/menu-1.jpg" alt=""></a></div>
+                      <div class="sub-menu-offer__title"><a href="catalog.html">Eames Style DSW Brown</a></div>
+                      <div class="sub-menu-offer__price">
+                        <div class="ds-price">6 190</div>
+                      </div>
+                      <div class="sub-menu-offer__btn"><a class="ds-btn ds-btn--light" href="catalog.html">К товару</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Кресла Eames</a>
+                  <div class="sub-menu__offers">
+                    <div class="sub-menu-offer">
+                      <div class="sub-menu-offer__img"><a href="catalog.html"><img src="images/temp/menu-2.jpg" alt=""></a></div>
+                      <div class="sub-menu-offer__title"><a href="catalog.html">Стул Jerry Soft серый</a></div>
+                      <div class="sub-menu-offer__price">
+                        <div class="ds-price">4 990</div>
+                      </div>
+                      <div class="sub-menu-offer__btn"><a class="ds-btn ds-btn--light" href="catalog.html">К товару</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья Eames</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Дизайнерские кресла</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Детские стулья</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Прозрачные стулья</a>
+                  <div class="sub-menu__offers">
+                    <div class="sub-menu-offer">
+                      <div class="sub-menu-offer__img"><a href="catalog.html"><img src="images/temp/menu-3.jpg" alt=""></a></div>
+                      <div class="sub-menu-offer__title"><a href="catalog.html">Стул Chiavari прозрачный</a></div>
+                      <div class="sub-menu-offer__price">
+                        <div class="ds-price">2 990</div>
+                      </div>
+                      <div class="sub-menu-offer__btn"><a class="ds-btn ds-btn--light" href="catalog.html">К товару</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья Patchwork</a>
+                  <div class="sub-menu__offers">
+                    <div class="sub-menu-offer">
+                      <div class="sub-menu-offer__img"><a href="catalog.html"><img src="images/temp/menu-4.jpg" alt=""></a></div>
+                      <div class="sub-menu-offer__title"><a href="catalog.html">Стул-кресло Eames Style DAW Patchwork мультиколор</a></div>
+                      <div class="sub-menu-offer__price">
+                        <div class="ds-price">5 990</div>
+                      </div>
+                      <div class="sub-menu-offer__btn"><a class="ds-btn ds-btn--light" href="catalog.html">К товару</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья Tolix</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья для кафе</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья для ресторанов</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Другие модели</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-tables"></span><span class="menu-item__title">Столы</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Столы</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Все столы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Журнальные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Консоли</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Кофейные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Обеденные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Письменные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Приставные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Сервировочные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Туалетные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Другие модели</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-lamps"></span><span class="menu-item__title">Свет</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Свет</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Весь свет</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Торшеры</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Настольные лампы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Люстры</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Светильники</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Бра</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-decor"></span><span class="menu-item__title">Декор</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Декор</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Весь декор</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Подсвечники</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Статуэтки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Картины и панно</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Фоторамки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Зеркала</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Часы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Вазы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Указатели и таблички</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Предметы декора</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-dishware"></span><span class="menu-item__title">Посуда</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Посуда</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Вся посуда</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Пиалы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Подносы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Подставки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Разделочные доски</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Чайники</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Чашки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Блюдца</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Тарелки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Солонки и перечницы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Банки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Бокалы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Графины</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Кувшины</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стаканы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Столовые приборы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Шейкеры</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-textile"></span><span class="menu-item__title">Текстиль</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Текстиль</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Весь текстиль</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Подушки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Ковры</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Занавески</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Пледы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Скатерти и салфетки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Одеяла</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Полотенца</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Шторы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="order-notification">
+      <div class="ds-wrapper order-notification__content">
+        <p>Ваш заказ&nbsp;<a href="">№81243</a> от 12 июля 2019 ожидает оплаты.</p><a class="ds-btn ds-btn--success" href="">Оплатить</a><span class="order-notification-close js-order-notification-close"></span>
+      </div>
+    </div>
+    <div class="ds-checkout-header">
+      <div class="ds-wrapper ds-checkout-header__content">
+        <div class="ds-checkout-header__logo"><img src="https://www.dsklad.ru/local/templates/dsklad/images/logo.svg" alt=""></div>
+        <div class="ds-checkout-header__phone"><span>Служба поддержки</span>
+          <p>8 800 777-12-74</p>
+        </div>
+      </div>
+    </div>
+    <div class="ds-wrapper">
+      <div class="ds-checkout">
+        <div class="ds-back"><a href="basket.html">В корзину</a></div>
+        <div class="ds-checkout__header">
+          <h1>Оформление заказа</h1>
+        </div>
+        <div class="ds-basket-city">
+          <div class="ds-basket-city__item">Санкт-Петербург</div>
+          <div class="ds-basket-city__btn">Изменить</div>
+          <div class="ds-basket-city__text">Доступность способов доставки и оплаты заказа зависит от выбранного города.</div>
+        </div>
+        <form action="#" data-parsley-validate>
+          <div class="ds-checkout__content">
+            <div class="ds-checkout__form">
+              <div class="ds-checkout-form">
+                <div class="ds-checkout-form__item">
+                  <div class="ds-checkout-form__header">
+                    <h4>Основное</h4><span class="pseudo-btn js-taxpayer">Заказать как юр.лицо</span>
+                  </div>
+                  <!-- если пользователь авторизован-->
+                  <div class="ds-checkout-form__content js-authoriz">
+                    <div class="form-group">
+                      <label for="tel">Номер телефона</label><span class="inp-success">
+                        <input class="inp-big" type="tel" id="tel" data-parsley-type="tel" placeholder="+7 916 123-45-67" name="tel" disabled></span><a class="pseudo-btn" href="checkout.html">Авторизоваться с другим номером</a>
+                    </div>
+                    <div class="form-group hidden js-taxpayer-input">
+                      <label for="taxpayer-number">ИНН</label>
+                      <input class="inp-big" type="number" id="taxpayer-number" name="taxpayer-number">
+                    </div>
+                    <div class="form-group">
+                      <label for="user-name">Имя и фамилия</label>
+                      <input class="inp-big" type="text" id="user-name" placeholder="" value="Константин Константинопольский">
+                    </div>
+                    <div class="form-group">
+                      <label for="user-email">эл. почта</label>
+                      <input class="inp-big" type="email" id="user-email" placeholder="" value="mail@domain.ru">
+                    </div>
+                    <div class="form-group">
+                      <input class="sub-agreed" type="checkbox" id="sub-agreed" checked>
+                      <label for="sub-agreed">Хочу получать персональную рассылку</label>
+                    </div>
+                    <div class="reciever-content">
+                      <div class="reciever-content__btn js-reciever"><span class="pseudo-btn">Получатель другое лицо?</span><span class="small-text">Добавьте данные человека, который непосредственно будет принимать заказ.</span></div>
+                      <div class="reciever-content__info hidden js-reciever-block">
+                        <div class="reciever-content__info-header">
+                          <h5>Получатель заказа</h5><span class="icon-svg ic-close js-reciever-block-close"></span><span class="subheader">Только указанный ниже человек сможет получить заказ</span>
+                        </div>
+                        <div class="form-group">
+                          <label for="reciever-tel">Телефон получателя</label>
+                          <input class="inp-big" type="tel" id="reciever-tel" placeholder="+7 916 123-45-67">
+                        </div>
+                        <div class="form-group">
+                          <label for="reciever-user-name">Имя и фамилия</label>
+                          <input class="inp-big" type="text" id="reciever-user-name">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- конец если пользователь авторизован-->
+                </div>
+                <div class="ds-checkout-form__item" id="checkout-delivery">
+                  <div class="ds-checkout-form__header">
+                    <h4>Доставка</h4>
+                  </div>
+                  <div class="delivery-info">
+                    <div class="delivery-info__item">
+                      <div class="delivery-info__header js-checkout-modal" data-target="point-delivery" data-ds-modal-width="814">
+                        <input class="js-delivery-radio" type="radio" name="checkout-delivery" id="station" required data-parsley-errors-messages-disabled data-parsley-errors-container="#checkout-delivery">
+                        <label for="station"><span class="header">До пункта выдачи<span class="ds-price hidden">1000</span></span><span class="subheader">Можно забрать из 256 пунктов</span><span class="subheader">Примерный срок доставки:<strong> 3-5 дней</strong></span></label>
+                      </div>
+                      <div class="delivery-info-result hidden"><span class="delivery-result-header">Выбранный пункт выдачи:</span><span class="delivery-result-address">Санкт-Петербург, ул. Александра Невского, 3</span>
+                        <div class="delivery-result-add-info"><span>Будни: 11:00 - 19:30</span><span>Сб.: 09:30 - 17:00</span><span>Вс.: выходной</span></div><span class="ds-btn ds-btn--default js-delivery-change">Выбрать другой</span>
+                      </div>
+                    </div>
+                    <div class="delivery-info__item">
+                      <div class="delivery-info__header js-checkout-modal" data-target="courier-delivery" data-ds-modal-width="412">
+                        <input class="js-delivery-radio" type="radio" name="checkout-delivery" id="courier" required>
+                        <label for="courier"><span class="header">Курьером<span class="ds-price hidden">2000</span></span><span class="subheader">Заказ приедет по выбранному адресу</span><span class="subheader">Примерный срок доставки:<strong> 3-5 дней</strong></span></label>
+                      </div>
+                      <div class="delivery-info-result hidden"><span class="delivery-result-header">Заказ приедет по адресу:</span><span class="delivery-result-address">Москва, Ленина 16, кв. 154</span>
+                        <div class="delivery-result-add-info"><span class="header">Дополнительные услуги:</span><span>Доставка в вечернее время,  Доставка в выходной день, Подъем на этаж</span></div><span class="ds-btn ds-btn--default js-delivery-change">Изменить</span>
+                      </div>
+                    </div>
+                    <div class="delivery-info__item">
+                      <div class="delivery-info__header">
+                        <input class="js-delivery-radio" type="radio" name="checkout-delivery" id="storage" required>
+                        <label for="storage"><span class="header">Самовывоз со склада</span><span class="subheader">Самовывоз со склада в Санкт-Петербурге</span></label>
+                      </div>
+                      <div class="delivery-info__result hidden">Какая-то инфа</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ds-checkout-form__item">
+                  <label>Комментарий к заказу</label>
+                  <textarea class="inp-big" placeholder="Особые требования к заказу или доставке..."></textarea>
+                  <div class="form-group">
+                    <input type="checkbox" id="confirm-called" checked>
+                    <label for="confirm-called">Не звонить для подтверждения заказа</label>
+                  </div>
+                </div>
+                <div class="ds-checkout-form__item">
+                  <div class="ds-checkout-form__header">
+                    <h4>Оплата</h4>
+                  </div>
+                  <div class="form-group">
+                    <label for="promo">Промокод</label>
+                    <!-- если промокод успешный, то нужно добавлять .active, если value не пустой, то добавится атрибут disabled на кнопку применить-->
+                    <div class="form-group__row promo-info active">
+                      <div class="promo-info-input">
+                        <input class="inp-big js-promo" type="text" id="promo" value="Promocode2019">
+                      </div>
+                      <button class="ds-btn ds-btn--default" type="submit">Применить</button>
+                    </div>
+                  </div>
+                  <div class="delivery-option"><span class="hidden">// .hidden нужно убирать, если способ доставки не выбран<a href="#checkout-delivery">Выберите способ доставки,</a>&nbsp;чтобы увидеть доступные варианты оплаты</span></div>
+                  <div class="payment-info">
+                    <div class="payment-info__item js-payment">
+                      <div class="payment-info__icon"><span class="icon-svg ic-apple"></span></div>
+                      <div class="payment-info__info"><span class="header">Apple Pay</span><span class="subheader"><span class="green-400">Скидка 1 208.−</span></span></div>
+                    </div>
+                    <div class="payment-info__item js-payment">
+                      <div class="payment-info__icon"><span class="icon-svg ic-card"></span></div>
+                      <div class="payment-info__info"><span class="header">Оплата по карте</span><span class="subheader"><span class="green-400">Скидка 1 208.−</span>Visa, MasterCard, Мир, Google Pay</span></div>
+                    </div>
+                    <div class="payment-info__item payment-info__item--person js-payment">
+                      <div class="payment-info__icon"><span class="icon-svg ic-yandex_installments"></span></div>
+                      <div class="payment-info__info"><span class="header">Купить в рассрочку</span><span class="subheader"><span class="green-400">1 208.− в месяц</span>Услуга предоставлена Яндекс Кассой</span></div>
+                    </div>
+                    <div class="payment-info__item payment-info__item--person js-payment">
+                      <div class="payment-info__icon"><span class="icon-svg ic-cash"></span></div>
+                      <div class="payment-info__info"><span class="header">При получении</span><span class="subheader">Оплатить курьеру или в пункте выдачи</span></div>
+                    </div>
+                    <!--.all-pay-btn Показать все способы-->
+                    <div class="payment-info__item payment-info__item--person js-payment">
+                      <div class="payment-info__icon"><span class="icon-svg ic-pays_another"></span></div>
+                      <div class="payment-info__info"><span class="header">Счёт оплатит другой человек</span><span class="subheader">Укажите телефон или эл.почту, на которую будет отправлена ссылка для оплаты заказа</span>
+                        <div class="payment-info__other-person">
+                          <div class="form-group">
+                            <label>телефон получателя:</label>
+                            <input class="inp-big" type="tel" placeholder="+7 916 123-45-67">
+                          </div>
+                          <div class="form-group">
+                            <label>эл.почта получателя счёта:</label>
+                            <input class="inp-big" type="email" placeholder="mail@domain.ru">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-info__item payment-info__item--legal hidden js-payment">
+                      <div class="payment-info__icon"><span class="icon-svg ic-bank"></span></div>
+                      <div class="payment-info__info"><span class="header">Банковским переводом</span><span class="subheader">Счёт на оплату будет выслан на эл. почту</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ds-checkout-consist">
+                  <h5>Состав заказа</h5>
+                  <p>7 коробок<span class="total-weight">Общий вес: 64 кг.</span></p>
+                  <p>Макс. вес коробки: 12 кг.</p>
+                  <div class="ds-checkout-slider-arrows js-slider-arrows"></div>
+                  <div class="ds-checkout-slider js-slider-checkout">
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-2.jpg" alt=""><span>2 шт</span></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-3.jpg" alt=""><span></span></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-4.jpg" alt=""><span>1 шт</span></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-5.jpg" alt=""></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-6.jpg" alt=""></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-1.jpg" alt=""></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-2.jpg" alt=""><span>2 шт</span></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-3.jpg" alt=""><span></span></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-4.jpg" alt=""><span>1 шт</span></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-5.jpg" alt=""></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-6.jpg" alt=""></div>
+                    <div class="ds-checkout-slider__item"><img src="images/temp/basket-1.jpg" alt=""></div>
+                  </div>
+                </div>
+                <div class="ds-modal-overlay closed"></div>
+                <div class="ds-modal closed" id="phone-code"><span class="icon-svg ic-close ds-modal-close js-ds-modal-close"></span>
+                  <div class="ds-modal__inner">
+                    <div class="ds-modal__body">
+                      <div class="ds-modal-phone">
+                        <h4>Введите код</h4>
+                        <!-- Если проверка усешная, добавляется .success, если нет - .error-->
+                        <!--.ds-modal-phone__code.success-->
+                        <!--.ds-modal-phone__code.error-->
+                        <div class="ds-modal-phone__code">
+                          <input class="ds-modal-phone__code-item" type="text" value="3" maxlength="1">
+                          <input class="ds-modal-phone__code-item" type="text" value="2" maxlength="1">
+                          <input class="ds-modal-phone__code-item" type="text" value="2" maxlength="1">
+                          <input class="ds-modal-phone__code-item" type="text" value="0" maxlength="1">
+                        </div>
+                        <p>Код выслан на<strong> +7 916 123 45 67</strong></p>
+                        <p>Получить новый код можно <br> через 03:00</p>
+                        <!-- Когда ошибка, нужно предложить выслать код повторно-->
+                        <!--pa(href="") Выслать код повторно
+                        -->
+                        <div class="ds-modal-phone__comment">При входе или регистрации вы соглашаетесь с<a href="#"> Условиями</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ds-modal closed" id="point-delivery"><span class="icon-svg ic-close ds-modal-close js-ds-modal-close"></span>
+                  <div class="ds-modal__inner">
+                    <div class="ds-modal__header">
+                      <h5>Пункты самовывоза</h5>
+                    </div>
+                    <div class="ds-modal__body">
+                      <div class="delivery-modal-map">
+                        <div class="delivery-modal-map__point" style="margin: 50px 0 0 150px">
+                          <div class="delivery-info-result"><span class="delivery-result-header">Пункт выдачи ТК DPD</span><span class="delivery-result-address">ул. Александра Невского, 3</span><span class="delivery-result-price">Стоимость доставки:<span class="ds-price"> 900</span></span>
+                            <div class="delivery-result-add-info"><span>Будни: 11:00 - 19:30</span><span>Сб.: 09:30 - 17:00</span><span>Вс.: выходной</span></div><span class="ds-btn ds-btn--default ds-btn--full js-delivery-here">Заберу отсюда</span>
+                          </div>
+                        </div>
+                        <!-- вместо картинки нужно перенести текущую карту--><img src="../images/temp/map.jpg">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ds-modal closed" id="courier-delivery"><span class="icon-svg ic-close ds-modal-close js-ds-modal-close"></span>
+                  <div class="ds-modal__inner">
+                    <div class="ds-modal__header">
+                      <h5>Курьерская доставка</h5>
+                    </div>
+                    <div class="ds-modal__body">
+                      <div class="form-group">
+                        <label for="courier-delivery-address">Адрес доставки</label>
+                        <input class="inp-big" id="courier-delivery-address" type="text" placeholder="Напишите улицу и номер дома">
+                      </div>
+                      <div class="form-group form-group--mt-20">
+                        <label for="courier-delivery-office">Квартира / офис</label>
+                        <input class="inp-small" id="courier-delivery-office" type="number" placeholder="Например, 145">
+                      </div>
+                      <div class="courier-services">
+                        <h5>Услуги</h5>
+                        <div class="courier-services__item">
+                          <p>Подъём на этаж</p><span class="small-text">Получите заказ у дверей своей квартиры.</span><span class="small-text"> Услуга доступна только при наличии исправного лифта.</span>
+                          <div class="courier-services__price-btn"><span class="ds-price">1 500</span><span class="ds-btn ds-btn--light js-courier-delivery-add">Добавить</span></div>
+                        </div>
+                        <div class="courier-services__item">
+                          <p>Доставка в выходной день</p><span class="small-text">Получайте заказ в выходной или праздничный день.</span><span class="small-text"> День доставки будет согласован с предствителем транспортной компании после оформления заказа.</span>
+                          <div class="courier-services__price-btn"><span class="ds-price">500</span><span class="ds-btn ds-btn--light js-courier-delivery-add">Добавить</span></div>
+                        </div>
+                        <div class="courier-services__item">
+                          <p>Доставка в вечернее время</p><span class="small-text">Получайте заказ после 18:00 в будние дни.</span>
+                          <div class="courier-services__price-btn"><span class="ds-price">500</span><span class="ds-btn ds-btn--light js-courier-delivery-add">Добавить</span></div>
+                        </div>
+                      </div><span class="ds-btn ds-btn--default ds-btn--full js-delivery-here">Привезти сюда</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ds-checkout__total-price">
+              <div class="total-price total-price--checkout">
+                <div class="total-price__content">
+                  <div class="total-price__row">
+                    <div class="total-price__col">Товары</div>
+                    <div class="total-price__order-detail"><span class="small-text"> 4 шт</span></div>
+                    <div class="total-price__col"><span class="ds-price">174 836</span></div>
+                  </div>
+                  <div class="total-price__row">
+                    <div class="total-price__col">Скидка</div>
+                    <div class="total-price__col"><span class="ds-price">26 025</span></div>
+                  </div>
+                  <div class="total-price__row">
+                    <div class="total-price__col">Гарантия</div>
+                    <div class="total-price__order-detail"><span class="small-text"> 4 шт</span></div>
+                    <div class="total-price__col"><span class="ds-price">15 453</span></div>
+                  </div>
+                  <div class="total-price__row">
+                    <div class="total-price__col">Доставка</div>
+                    <div class="total-price__col"><span class="ds-price">900</span></div>
+                  </div>
+                  <div class="total-price__row total-price__row--summ">
+                    <div class="total-price__col">Итого без доставки</div>
+                    <div class="total-price__col"><span class="ds-price ds-price--total">148 811</span>
+                    </div>
+                  </div>
+                  <div class="total-price__buttons">
+                    <input class="ds-btn ds-btn--big js-checkout-validate" type="submit" value="Оформить заказ">
+                  </div>
+                </div>
+                <div class="total-price__add-info"><span class="small-text">Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с<a href=""> Условиями</a>, а также с<a href=""> Условиями продажи.</a></span></div>
+                <div class="total-price__phone"><a href="tel: 8 800 777-12-74">8 800 777-12-74</a><span>Справочная служба (с 9 до 21)</span></div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- эти два скрипта есть на основном сайте-->
+    <script src="https://www.dsklad.ru/local/templates/dsklad/js/isMobile.min.js"></script>
+    <script src="js/checkout-init.js"></script>
+    <footer class="border">
+      <div class="ds-wrapper">
+        <div class="footer-about">
+          <div class="footer-about__links"><a href="/"><img src="images/logo-footer.svg" alt=""></a>
+            <nav class="about-links"><a href="">О компании</a><a href="">Оптовым покупателям</a><a href="">Контакты</a></nav>
+          </div>
+          <div class="footer-about__phone">
+            <h2><a class="tel" href="tel:88007771274">8 800 777-12-74</a></h2>
+            <p>Ежедневно с 9 до 21</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="ds-wrapper-footer">
+          <div class="footer-info__content">
+            <div class="footer-menu js-footer-menu">
+              <div class="footer-menu__col">
+                <h5>Заказы<span class="arrow-down"></span></h5>
+                <nav class="footer-menu__links"><a href="">Доставка и оплата</a><a href="">Возврат и обмен</a><a href="">Пункты самовывоза</a></nav>
+              </div>
+              <div class="footer-menu__col">
+                <h5>Профиль<span class="arrow-down"></span></h5>
+                <nav class="footer-menu__links"><a href="">Личный кабинет</a><a href="">Избранные товары</a><a href="">Статус заказа</a></nav>
+              </div>
+              <div class="footer-menu__col">
+                <h5>Магазин<span class="arrow-down"></span></h5>
+                <nav class="footer-menu__links"><a href="">Публичная оферта</a><a href="">Наши гарантии</a></nav>
+              </div>
+            </div>
+            <div class="footer-social">
+              <h5>Социальные сети</h5>
+              <div class="social-list">
+                <div class="social-list__item"><a class="icon-svg ic-vk" href=""></a></div>
+                <div class="social-list__item"><a class="icon-svg ic-fb" href=""></a></div>
+                <div class="social-list__item"><a class="icon-svg ic-in" href=""></a></div>
+              </div>
+            </div>
+            <div class="footer-payment">
+              <h5>Способы оплаты</h5>
+              <div class="footer-payment__list"><span class="icon-svg ic-mastercard"></span><span class="icon-svg ic-visa"></span><span class="icon-svg ic-mir"></span></div>
+              <p>Вы можете оплатить покупки наличными при получении, либо выбрать другой<a href=""> способ оплаты</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="border">
+          <div class="ds-wrapper-footer">
+            <div class="footer-copyright-info">
+              <div class="footer-copyright-info__header">
+                <p>Интернет-магазин Dsklad.ru<a href=""> использует файлы «cookie»</a>, с целью повышения удобства пользования веб-сайтом.   </p>
+              </div>
+              <div class="footer-copyright-info__content">
+                <p>Все ресурсы сайта www.dsklad.ru, включая текстовую, графическую и видео информацию, структуру и оформление страниц, защищены российскими и международными законами и соглашениями об охране авторских прав и интеллектуальной собственности (статьи 1259 и 1260 главы 70 «Авторское право» Гражданского Кодекса Российской Федерации от 18 декабря 2006 года N 230-ФЗ).</p>
+                <p>*Все цены на сайте указаны в рублях.</p>
+              </div>
+              <div class="footer-copyright-info__copy">
+                <p>&copy; 2019 «Дизайн Склад» — Интернет-магазин дизайнерской мебели. Все права защищены.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

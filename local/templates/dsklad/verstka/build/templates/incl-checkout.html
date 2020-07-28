@@ -1,0 +1,207 @@
+
+<div class="ds-checkout-form">
+  <div class="ds-checkout-form__item">
+    <div class="ds-checkout-form__header">
+      <h4>Основное</h4><span class="pseudo-btn js-taxpayer">Заказать как юр.лицо</span>
+    </div>
+    <div class="ds-checkout-form__content">
+      <div class="form-group">
+        <label for="tel">Номер телефона</label><span id="phone-number">
+          <input class="inp-big" type="tel" id="tel" required="required" name="tel" placeholder="+7 916 123-45-67" data-parsley-error-message="Сначала введите телефон" data-parsley-errors-container="#phone-number"/></span><span class="inp-info">Вам будет отправлен код подтверждения</span>
+      </div>
+      <div class="form-group hidden js-taxpayer-input">
+        <label for="taxpayer-number">ИНН</label>
+        <input class="inp-big" type="number" id="taxpayer-number"/>
+      </div>
+      <div class="form-group form-group--mt-20"><span class="ds-btn ds-btn--default js-checkout-modal" data-target="phone-code" data-ds-modal-width="396">Войти в личный кабинет</span></div>
+    </div>
+  </div>
+  <div class="ds-checkout-form__item" id="checkout-delivery">
+    <div class="ds-checkout-form__header">
+      <h4>Доставка</h4>
+    </div>
+    <div class="delivery-info">
+      <div class="delivery-info__item">
+        <div class="delivery-info__header js-checkout-modal" data-target="point-delivery" data-ds-modal-width="814">
+          <input class="js-delivery-radio" type="radio" name="checkout-delivery" id="station" required="required" data-parsley-errors-messages-disabled="data-parsley-errors-messages-disabled" data-parsley-errors-container="#checkout-delivery"/>
+          <label for="station"><span class="header">До пункта выдачи<span class="ds-price hidden">1000</span></span><span class="subheader">Можно забрать из 256 пунктов</span><span class="subheader">Примерный срок доставки:<strong> 3-5 дней</strong></span></label>
+        </div>
+        <div class="delivery-info-result hidden"><span class="delivery-result-header">Выбранный пункт выдачи:</span><span class="delivery-result-address">Санкт-Петербург, ул. Александра Невского, 3</span>
+          <div class="delivery-result-add-info"><span>Будни: 11:00 - 19:30</span><span>Сб.: 09:30 - 17:00</span><span>Вс.: выходной</span></div><span class="ds-btn ds-btn--default js-delivery-change">Выбрать другой</span>
+        </div>
+      </div>
+      <div class="delivery-info__item">
+        <div class="delivery-info__header js-checkout-modal" data-target="courier-delivery" data-ds-modal-width="412">
+          <input class="js-delivery-radio" type="radio" name="checkout-delivery" id="courier" required="required"/>
+          <label for="courier"><span class="header">Курьером<span class="ds-price hidden">2000</span></span><span class="subheader">Заказ приедет по выбранному адресу</span><span class="subheader">Примерный срок доставки:<strong> 3-5 дней</strong></span></label>
+        </div>
+        <div class="delivery-info-result hidden"><span class="delivery-result-header">Заказ приедет по адресу:</span><span class="delivery-result-address">Москва, Ленина 16, кв. 154</span>
+          <div class="delivery-result-add-info"><span class="header">Дополнительные услуги:</span><span>Доставка в вечернее время,  Доставка в выходной день, Подъем на этаж</span></div><span class="ds-btn ds-btn--default js-delivery-change">Изменить</span>
+        </div>
+      </div>
+      <div class="delivery-info__item">
+        <div class="delivery-info__header">
+          <input class="js-delivery-radio" type="radio" name="checkout-delivery" id="storage" required="required"/>
+          <label for="storage"><span class="header">Самовывоз со склада</span><span class="subheader">Самовывоз со склада в Санкт-Петербурге</span></label>
+        </div>
+        <div class="delivery-info__result hidden">Какая-то инфа</div>
+      </div>
+    </div>
+  </div>
+  <div class="ds-checkout-form__item">
+    <label>Комментарий к заказу</label>
+    <textarea class="inp-big" placeholder="Особые требования к заказу или доставке..."></textarea>
+    <div class="form-group">
+      <input type="checkbox" id="confirm-called" checked="checked"/>
+      <label for="confirm-called">Не звонить для подтверждения заказа</label>
+    </div>
+  </div>
+  <div class="ds-checkout-form__item">
+    <div class="ds-checkout-form__header">
+      <h4>Оплата</h4>
+    </div>
+    <div class="form-group">
+      <label for="promo">Промокод</label>
+      <!-- если промокод успешный, то нужно добавлять .active, если value не пустой, то добавится атрибут disabled на кнопку применить-->
+      <div class="form-group__row promo-info active">
+        <div class="promo-info-input">
+          <input class="inp-big js-promo" type="text" id="promo" value="Promocode2019"/>
+        </div>
+        <button class="ds-btn ds-btn--default" type="submit">Применить</button>
+      </div>
+    </div>
+    <div class="delivery-option"><span class="hidden">// .hidden нужно убирать, если способ доставки не выбран<a href="#checkout-delivery">Выберите способ доставки,</a>&nbsp;чтобы увидеть доступные варианты оплаты</span></div>
+    <div class="payment-info">
+      <div class="payment-info__item js-payment">
+        <div class="payment-info__icon"><span class="icon-svg ic-apple"></span></div>
+        <div class="payment-info__info"><span class="header">Apple Pay</span><span class="subheader"><span class="green-400">Скидка 1 208.−</span></span></div>
+      </div>
+      <div class="payment-info__item js-payment">
+        <div class="payment-info__icon"><span class="icon-svg ic-card"></span></div>
+        <div class="payment-info__info"><span class="header">Оплата по карте</span><span class="subheader"><span class="green-400">Скидка 1 208.−</span>Visa, MasterCard, Мир, Google Pay</span></div>
+      </div>
+      <div class="payment-info__item payment-info__item--person js-payment">
+        <div class="payment-info__icon"><span class="icon-svg ic-yandex_installments"></span></div>
+        <div class="payment-info__info"><span class="header">Купить в рассрочку</span><span class="subheader"><span class="green-400">1 208.− в месяц</span>Услуга предоставлена Яндекс Кассой</span></div>
+      </div>
+      <div class="payment-info__item payment-info__item--person js-payment">
+        <div class="payment-info__icon"><span class="icon-svg ic-cash"></span></div>
+        <div class="payment-info__info"><span class="header">При получении</span><span class="subheader">Оплатить курьеру или в пункте выдачи</span></div>
+      </div>
+      <!--.all-pay-btn Показать все способы-->
+      <div class="payment-info__item payment-info__item--person js-payment">
+        <div class="payment-info__icon"><span class="icon-svg ic-pays_another"></span></div>
+        <div class="payment-info__info"><span class="header">Счёт оплатит другой человек</span><span class="subheader">Укажите телефон или эл.почту, на которую будет отправлена ссылка для оплаты заказа</span>
+          <div class="payment-info__other-person">
+            <div class="form-group">
+              <label>телефон получателя:</label>
+              <input class="inp-big" type="tel" placeholder="+7 916 123-45-67"/>
+            </div>
+            <div class="form-group">
+              <label>эл.почта получателя счёта:</label>
+              <input class="inp-big" type="email" placeholder="mail@domain.ru"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="payment-info__item payment-info__item--legal hidden js-payment">
+        <div class="payment-info__icon"><span class="icon-svg ic-bank"></span></div>
+        <div class="payment-info__info"><span class="header">Банковским переводом</span><span class="subheader">Счёт на оплату будет выслан на эл. почту</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="ds-checkout-consist">
+    <h5>Состав заказа</h5>
+    <p>7 коробок<span class="total-weight">Общий вес: 64 кг.</span></p>
+    <p>Макс. вес коробки: 12 кг.</p>
+    <div class="ds-checkout-slider-arrows js-slider-arrows"></div>
+    <div class="ds-checkout-slider js-slider-checkout">
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-2.jpg" alt=""/><span>2 шт</span></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-3.jpg" alt=""/><span></span></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-4.jpg" alt=""/><span>1 шт</span></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-5.jpg" alt=""/></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-6.jpg" alt=""/></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-1.jpg" alt=""/></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-2.jpg" alt=""/><span>2 шт</span></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-3.jpg" alt=""/><span></span></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-4.jpg" alt=""/><span>1 шт</span></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-5.jpg" alt=""/></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-6.jpg" alt=""/></div>
+      <div class="ds-checkout-slider__item"><img src="images/temp/basket-1.jpg" alt=""/></div>
+    </div>
+  </div>
+  <div class="ds-modal-overlay closed"></div>
+  <div class="ds-modal closed" id="phone-code"><span class="icon-svg ic-close ds-modal-close js-ds-modal-close"></span>
+    <div class="ds-modal__inner">
+      <div class="ds-modal__body">
+        <div class="ds-modal-phone">
+          <h4>Введите код</h4>
+          <!-- Если проверка усешная, добавляется .success, если нет - .error-->
+          <!--.ds-modal-phone__code.success-->
+          <!--.ds-modal-phone__code.error-->
+          <div class="ds-modal-phone__code">
+            <input class="ds-modal-phone__code-item" type="text" value="3" maxlength="1"/>
+            <input class="ds-modal-phone__code-item" type="text" value="2" maxlength="1"/>
+            <input class="ds-modal-phone__code-item" type="text" value="2" maxlength="1"/>
+            <input class="ds-modal-phone__code-item" type="text" value="0" maxlength="1"/>
+          </div>
+          <p>Код выслан на<strong> +7 916 123 45 67</strong></p>
+          <p>Получить новый код можно <br> через 03:00</p>
+          <!-- Когда ошибка, нужно предложить выслать код повторно-->
+          <!--pa(href="") Выслать код повторно
+          -->
+          <div class="ds-modal-phone__comment">При входе или регистрации вы соглашаетесь с<a href="#"> Условиями</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ds-modal closed" id="point-delivery"><span class="icon-svg ic-close ds-modal-close js-ds-modal-close"></span>
+    <div class="ds-modal__inner">
+      <div class="ds-modal__header">
+        <h5>Пункты самовывоза</h5>
+      </div>
+      <div class="ds-modal__body">
+        <div class="delivery-modal-map">
+          <div class="delivery-modal-map__point" style="margin: 50px 0 0 150px">
+            <div class="delivery-info-result"><span class="delivery-result-header">Пункт выдачи ТК DPD</span><span class="delivery-result-address">ул. Александра Невского, 3</span><span class="delivery-result-price">Стоимость доставки:<span class="ds-price"> 900</span></span>
+              <div class="delivery-result-add-info"><span>Будни: 11:00 - 19:30</span><span>Сб.: 09:30 - 17:00</span><span>Вс.: выходной</span></div><span class="ds-btn ds-btn--default ds-btn--full js-delivery-here">Заберу отсюда</span>
+            </div>
+          </div>
+          <!-- вместо картинки нужно перенести текущую карту--><img src="../images/temp/map.jpg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ds-modal closed" id="courier-delivery"><span class="icon-svg ic-close ds-modal-close js-ds-modal-close"></span>
+    <div class="ds-modal__inner">
+      <div class="ds-modal__header">
+        <h5>Курьерская доставка</h5>
+      </div>
+      <div class="ds-modal__body">
+        <div class="form-group">
+          <label for="courier-delivery-address">Адрес доставки</label>
+          <input class="inp-big" id="courier-delivery-address" type="text" placeholder="Напишите улицу и номер дома"/>
+        </div>
+        <div class="form-group form-group--mt-20">
+          <label for="courier-delivery-office">Квартира / офис</label>
+          <input class="inp-small" id="courier-delivery-office" type="number" placeholder="Например, 145"/>
+        </div>
+        <div class="courier-services">
+          <h5>Услуги</h5>
+          <div class="courier-services__item">
+            <p>Подъём на этаж</p><span class="small-text">Получите заказ у дверей своей квартиры.</span><span class="small-text"> Услуга доступна только при наличии исправного лифта.</span>
+            <div class="courier-services__price-btn"><span class="ds-price">1 500</span><span class="ds-btn ds-btn--light js-courier-delivery-add">Добавить</span></div>
+          </div>
+          <div class="courier-services__item">
+            <p>Доставка в выходной день</p><span class="small-text">Получайте заказ в выходной или праздничный день.</span><span class="small-text"> День доставки будет согласован с предствителем транспортной компании после оформления заказа.</span>
+            <div class="courier-services__price-btn"><span class="ds-price">500</span><span class="ds-btn ds-btn--light js-courier-delivery-add">Добавить</span></div>
+          </div>
+          <div class="courier-services__item">
+            <p>Доставка в вечернее время</p><span class="small-text">Получайте заказ после 18:00 в будние дни.</span>
+            <div class="courier-services__price-btn"><span class="ds-price">500</span><span class="ds-btn ds-btn--light js-courier-delivery-add">Добавить</span></div>
+          </div>
+        </div><span class="ds-btn ds-btn--default ds-btn--full js-delivery-here">Привезти сюда</span>
+      </div>
+    </div>
+  </div>
+</div>

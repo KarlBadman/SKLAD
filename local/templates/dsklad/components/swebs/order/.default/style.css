@@ -1,0 +1,108 @@
+.terminal_address {
+    display: none;
+}
+.terminal_address:first-of-type {
+    display: block;
+}
+button.proc{
+	opacity:0.4;
+}
+#input-about-address + .suggestions-wrapper {
+	display: block;
+}
+.obreshetka_inner {position: relative;}
+.obrerror {
+	font-size: 14px;
+    color: #0b0a08;
+    position: absolute;
+    left: -45px;
+    bottom: calc( 100% + 14px );
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    line-height: 20px;
+    width: 450px;
+    box-sizing: border-box;
+    padding: 11px 17px 27px 22px;
+    z-index: 2;
+    box-shadow: 0px 13px 22px 7px rgba(0,0,0,0.13);
+    display: none;
+}
+.obrerror_after {
+	width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: calc( 100% + 5px );
+    margin-left: -2px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    border-right: 1px solid #d9d9d9;
+    z-index: 2;
+    border-bottom: 1px solid #d9d9d9;
+    display: none;
+}
+.basket__page section.order .info .fields fieldset.payment .options label input:disabled ~ span svg, .basket__page section.order .info .fields fieldset.payment .options label input:disabled ~ b {
+	fill: #000!important;
+	color: #000!important;
+	opacity: 0.3;
+}
+label[disabled="disabled"],
+label.super-disabled,
+label.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+label[disabled="disabled"]:after,
+label.super-disabled:after,
+label.disabled:after {
+    /*content: "Недоступно при сумме более 100 000 руб.";*/
+    position: absolute;
+    font-size: 11px;
+    bottom: -20px;
+    left: 0;
+    width: 80%;
+}
+
+.tabs-handler li b {
+    display: inline-flex !important;
+    align-items: center;
+}
+
+.basket__page section.order .info .fields fieldset.total .digits .promo .promo-form {
+    display: none;
+    position: relative;
+}
+
+.basket__page section.order .info .fields fieldset.total .digits .promo .promo-text {
+    font-size: 13px;
+    border-bottom: 1px dashed;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.basket__page input[name="subscrible"] ~ u,
+.basket__page input[name="not-call"] ~ u {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 0 0 1px;
+}
+
+.label__widget.agreement_field .square {
+    display:-webkit-box;
+    display: table;
+}
+
+.label__widget.agreement_field .border-link {
+    font-size: 14px;
+}
+
+.sum-order__popup {
+    display: none;
+    max-width: 500px;
+    height: 100%;
+    padding: 35px 20px 20px 20px;
+}
+
+.sum-order__popup .no-wrap {
+    white-space: nowrap;
+}

@@ -1,0 +1,252 @@
+.terminal_address {
+	display: none;
+}
+.terminal_address:first-of-type {
+	display: block;
+}
+button.proc{
+	opacity:0.4;
+}
+#input-about-address + .suggestions-wrapper {
+	display: block;
+}
+.obreshetka_inner {position: relative;}
+.obrerror {
+	font-size: 14px;
+	color: #0b0a08;
+	position: absolute;
+	left: -45px;
+	bottom: calc( 100% + 14px );
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	line-height: 20px;
+	width: 450px;
+	box-sizing: border-box;
+	padding: 11px 17px 27px 22px;
+	z-index: 2;
+	box-shadow: 0px 13px 22px 7px rgba(0,0,0,0.13);
+	display: none;
+}
+.obrerror_after {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	bottom: calc( 100% + 5px );
+	margin-left: -2px;
+	transform: rotate(45deg);
+	background-color: #fff;
+	border-right: 1px solid #d9d9d9;
+	z-index: 2;
+	border-bottom: 1px solid #d9d9d9;
+	display: none;
+}
+.basket__page section.order .info .fields fieldset.payment .options label input:disabled ~ span svg, .basket__page section.order .info .fields fieldset.payment .options label input:disabled ~ b {
+	fill: #000!important;
+	color: #000!important;
+	opacity: 0.3;
+}
+label[disabled="disabled"],
+label.super-disabled,
+label.disabled {
+	opacity: 0.4;
+	pointer-events: none;
+}
+label[disabled="disabled"]:after,
+label.super-disabled:after,
+label.disabled:after {
+	/*content: "Недоступно при сумме более 100 000 руб.";*/
+	position: absolute;
+	font-size: 11px;
+	bottom: -20px;
+	left: 0;
+	width: 80%;
+}
+
+.tabs-handler li b {
+	display: inline-flex !important;
+	align-items: center;
+}
+
+.basket__page section.order .info .fields fieldset.total .digits .promo .promo-form {
+	display: none;
+	position: relative;
+}
+
+.basket__page section.order .info .fields fieldset.total .digits .promo .promo-text {
+	font-size: 13px;
+	border-bottom: 1px dashed;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.basket__page input[name="subscrible"] ~ u,
+.basket__page input[name="not-call"] ~ u {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1px 0 0 1px;
+}
+
+.label__widget.agreement_field .square {
+	display:-webkit-box;
+	display: table;
+}
+
+.label__widget.agreement_field .border-link {
+	font-size: 14px;
+}
+
+.sum-order__popup {
+	display: none;
+	max-width: 500px;
+	height: 100%;
+	padding: 35px 20px 20px 20px;
+}
+
+.sum-order__popup .no-wrap {
+	white-space: nowrap;
+}
+
+.close_yurik {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	right: 10px;
+	top: 7px;
+	z-index: 100;
+}
+
+.field__widget {
+	position: relative;
+}
+
+.tab.pickup, .tab.delivery{
+	display: none;
+}
+
+.tab.pickup.active, .tab.active.delivery {
+	display: block;
+}
+
+.map_json {
+	display: none;
+}
+
+.order_fon {
+
+}
+
+.sale-paysystem-wrapper {
+	display: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 48%;
+    float: right;
+    height: 48px;
+}
+
+.sale-paysystem-yandex-button-container .sale-paysystem-yandex-button-descrition,
+.sale-paysystem-wrapper .tablebodytext {
+	display: none;
+}
+
+.sale-paysystem-wrapper .sale-paysystem-yandex-button-container,
+.sale-paysystem-wrapper form {
+	width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+.sale-paysystem-wrapper .sale-paysystem-yandex-button {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 48px;
+	border-radius: 3px;
+}
+
+.sale-paysystem-wrapper .sale-paysystem-yandex-button input {
+    background-color: #1769ff;
+	width: 100%;
+	height: 100%;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sale-paysystem-wrapper .sale-paysystem-yandex-button:hover input {
+	color: #fff;
+	background-color: #3b80ff;
+}
+
+.pay_system  .discript  span {
+	width: 100% !important;
+}
+
+.label_ur {
+    cursor: pointer;
+}
+
+.success_order_custom {
+    display: flex;
+    align-items: center
+}
+.inner_success_order_custom {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+@media (min-width: 640px) {
+    .credit-button {
+        margin-left: 50px;
+    }
+    .number_success_order_custom {
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 639px) {
+    .number_success_order_custom {
+        margin: 10px 0 20px;
+        width: 250px;
+    }
+    .success_order_custom {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    .inner_success_order_custom {
+        flex-flow: column;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 640px) {
+    .link_success_order_custom {
+        margin-left: 30px;
+        width: 100%;
+    }    
+    .inner_success_order_custom {
+        min-width: 350px;
+    }
+}
+@media (max-width: 639px) {
+    .number_success_order_custom, 
+    .link_success_order_custom {
+        min-width: 250px;
+        box-sizing: border-box;
+    }
+}
+
+.success_order_custom {
+    max-width: none;
+}
+
+.link_success_order_custom {
+    padding: 0 20px;
+    box-sizing: border-box;
+}

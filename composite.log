@@ -1,0 +1,3100 @@
+Host: test.dsklad.ru:80
+Date: 2018-09-20 17:24:50
+Module: main
+ MySql Query Error: INSERT INTO bot_webhook_cart(`user_id`, `offer`, `offer_count`) VALUES ('telegram-1438249-dsklad_aimlogyc-1438249-Uac-1893272-75627797', Стул Eames Style DSW Patchwork мультиколор, 20) [[1064] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Eames Style DSW Patchwork мультиколор, 20)' at line 1]
+    CDatabaseMysql::Query < CDatabaseMysql::Insert
+	/home/bitrix/test.dsklad.ru/bitrix/modules/main/classes/mysql/database.php:590
+	/home/bitrix/test.dsklad.ru/local/dbot/delivery/coast/index.php:45
+----------
+Host: test.dsklad.ru:80
+Date: 2018-09-20 17:25:52
+Module: main
+ MySql Query Error: INSERT INTO bot_webhook_cart(`user_id`, `offer`, `offer_count`) VALUES ('telegram-1438249-dsklad_aimlogyc-1438249-Uac-1893272-75627797', Стул Eames Style DSW Patchwork, 10) [[1064] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Eames Style DSW Patchwork, 10)' at line 1]
+    CDatabaseMysql::Query < CDatabaseMysql::Insert
+	/home/bitrix/test.dsklad.ru/bitrix/modules/main/classes/mysql/database.php:590
+	/home/bitrix/test.dsklad.ru/local/dbot/delivery/coast/index.php:45
+----------
+Host: test.dsklad.ru:80
+Date: 2018-09-21 10:49:43
+Module: main
+ MySql Query Error: SELECT offer, offer_count FROM bot_webhook_cart WHERE user_id = telegram-1438249-dsklad_aimlogyc-1438249-Uac-1893272-75627797 [[1054] Unknown column 'telegram' in 'where clause']
+    CDatabaseMysql::Query
+	/home/bitrix/test.dsklad.ru/local/dbot/delivery/coast/index.php:42
+----------
+Host: test.dsklad.ru:80
+Date: 2018-09-21 11:02:36
+Module: main
+ MySql Query Error: SELECT offer, offer_count FROM bot_webhook_cart WHERE user_id = telegram-1438249-dsklad_aimlogyc-1438249-Uac-1893272-75627797 [[1054] Unknown column 'telegram' in 'where clause']
+    CDatabaseMysql::Query
+	/home/bitrix/test.dsklad.ru/local/dbot/delivery/coast/index.php:42
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:05:56
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:07:40
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:07:42
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:07:42
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:07:43
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:07:43
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:07:43
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:07:43
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:07:44
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test1.devtest.local
+Date: 2018-09-28 15:09:25
+Module: main
+File: /home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 's1' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test1.devtest.local/') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1146] Table 'devuser_test_db.b_stop_list' doesn't exist]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require_once
+	/home/devuser/core/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/core/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/core/bitrix/modules/main/include.php:304
+	/home/devuser/core/bitrix/modules/main/include/prolog_before.php:14
+	/home/devuser/core/bitrix/modules/main/include/prolog.php:10
+----------
+Host: test4.devtest.local
+Date: 2018-11-10 11:38:27
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-12 16:22:17
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/stat_graph.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-12 16:22:17
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/admin/traffic_graph.php:3
+----------
+Host: test4.devtest.local
+Date: 2018-11-12 16:23:04
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/stat_graph.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-12 17:44:31
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/admin/traffic_graph.php:3
+----------
+Host: test4.devtest.local
+Date: 2018-11-12 17:45:31
+Module: main
+File: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 'ru' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('http://test4.devtest.local/bitrix/admin/sale_order_view.php?ID=34483&filter=Y&set_filter=Y&lang=ru') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test4.devtest.local/bitrix/admin/user_options.php?p[0][c]=admin_menu&p[0][n]=pos&p[0][v][width]=197&p[0][v][ver]=on&sessid=359b1b9bacf86c0d115ace35fb9ec69f&_=1542033921369') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[2006] MySQL server has gone away]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/interface/user_options.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 09:41:05
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/stat_graph.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 10:51:56
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/admin/traffic_graph.php:3
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 11:58:08
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 12:44:48
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/admin/traffic_graph.php:3
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 15:53:30
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/stat_graph.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 16:15:49
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/stat_graph.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 16:15:49
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/admin/traffic_graph.php:3
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 16:24:36
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/stat_graph.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 17:57:57
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/admin/traffic_graph.php:3
+----------
+Host: test4.devtest.local
+Date: 2018-11-13 18:01:24
+Module: main
+ MySql Query Error: 
+							SELECT CATEGORY, NAME, VALUE, COMMON
+							FROM b_user_option
+							WHERE (USER_ID=1 OR USER_ID=0 AND COMMON='Y')
+								AND CATEGORY='fileman'
+						 [[2006] MySQL server has gone away]
+    CDatabaseMysql::Query < CUserOptions::GetOption < CMedialib::ShowDialogScript < CFileInput::DisplayDialogs < CFileInput::DisplayControl
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:128
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/fileman/classes/general/medialib.php:217
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/fileman/classes/general/file_input.php:433
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/fileman/classes/general/file_input.php:413
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/fileman/classes/general/file_input.php:285
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 11:42:14
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/admin/traffic_graph.php:3
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 12:31:11
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/admin/traffic_graph.php:3
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:02:40
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/perfmon/admin/perfmon_table.php:4
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:02:41
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/perfmon/admin/perfmon_table.php:4
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:02:42
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/perfmon/admin/perfmon_table.php:4
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:16:59
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:17:08
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:17:09
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:18:09
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:18:10
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:18:21
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:19:10
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:19:24
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:19:24
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:19:32
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:19:34
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:19:43
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:20:11
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:20:25
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:20:35
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:20:46
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:20:54
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:21:05
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:21:12
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:21:26
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:21:48
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:21:57
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:22:08
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:22:13
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:22:13
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:22:16
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:22:27
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:22:49
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:23:14
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:23:19
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:23:30
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:23:38
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:23:49
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:23:50
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:24:15
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:24:41
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:24:51
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:25:01
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:25:12
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:25:16
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:25:16
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/perfmon/admin/perfmon_row_edit.php:4
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:25:18
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/perfmon/admin/perfmon_table.php:4
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:25:52
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:26:02
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:26:18
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:26:25
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:26:37
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:26:55
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:27:43
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/perfmon/admin/perfmon_table.php:4
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:27:44
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/perfmon/admin/perfmon_table.php:4
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:27:46
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 13:51:23
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/stat_graph.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 15:54:31
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 15:54:58
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 15:55:11
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 15:55:27
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 15:56:09
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 15:56:26
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 15:57:03
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 16:38:58
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 16:39:08
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 16:39:08
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 16:39:08
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 16:39:08
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 16:39:41
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 16:40:43
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 16:40:44
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 16:40:46
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:05:38
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:05:48
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:05:48
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:05:48
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:05:49
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:06:01
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:06:26
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:06:29
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:06:30
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:06:35
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:06:56
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:06:58
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:08:54
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:10:44
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:12:30
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:14:27
+Module: main
+ MySql Query Error: 
+						SELECT CATEGORY, NAME, VALUE, COMMON
+						FROM b_user_option
+						WHERE (USER_ID=0 OR USER_ID=0 AND COMMON='Y')
+							AND CATEGORY=''
+					 [[] ]
+    CDatabaseMysql::Query < CUserOptions::GetOption < JivoSiteClass::isEditMode < JivoSiteClass::addScriptTag < ExecuteModuleEventEx
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/user_options.php:156
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:57
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/jivosite.jivosite/classes/general/JivoSiteClass.php:9
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:14:37
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/interface/desktop.php:2
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:14:48
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:16:51
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:41:58
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:41:58
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:42:16
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:42:26
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:42:59
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:43:09
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:43:27
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:43:44
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:43:47
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:44:00
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:44:20
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:44:37
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:44:48
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:45:01
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:45:31
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:45:44
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:45:47
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:45:52
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:45:57
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:46:02
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:46:42
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:46:57
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:46:58
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:47:03
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:47:23
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:47:53
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:48:04
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:48:07
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:49:04
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:49:05
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:49:17
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:49:35
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-14 17:49:37
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:44:46
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:45:09
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:45:09
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:45:19
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:45:58
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:46:20
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:46:30
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:46:30
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:47:10
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:47:27
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:47:29
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:47:30
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:47:31
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:47:31
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:47:34
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:47:41
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:47:42
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:48:53
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:49:04
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:49:04
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:49:21
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:49:42
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:50:00
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:50:15
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:50:25
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 12:50:25
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 14:36:17
+Module: main
+File: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/classes/mysql/stoplist.php<br>Line: 222 MySql Query Error: 
+				SELECT
+					ID,
+					MESSAGE,
+					MESSAGE_LID,
+					SAVE_STATISTIC,
+					URL_REDIRECT,
+					TEST
+				FROM
+					b_stop_list
+				WHERE
+					ACTIVE='Y'
+				and TEST='N'
+				and (SITE_ID = 'ru' or SITE_ID is null or length(SITE_ID)<=0)
+				and (DATE_START<=now() or DATE_START is null)
+				and (DATE_END>=now() or DATE_END is null)
+				and	((((MASK_1 & 192)=IP_1 and
+						(MASK_2 & 168)=IP_2 and
+						(MASK_3 & 1)=IP_3 and
+						(MASK_4 & 101)=IP_4)
+							or (IP_1 is null and IP_2 is null and IP_3 is null and IP_4 is null))
+						and (upper('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36') like concat('%',upper(USER_AGENT),'%')
+							or length(USER_AGENT)<=0 or USER_AGENT is null)
+						and (105=0 or USER_AGENT_IS_NULL<>'Y')
+						and (upper('http://test4.devtest.local/bitrix/admin/iblock_edit.php?type=communication&lang=ru&ID=18&admin=Y') like concat('%',upper(URL_FROM),'%')
+							or length(URL_FROM)<=0 or URL_FROM is null)
+						and (upper('http://test4.devtest.local/bitrix/admin/user_options.php?p[0][c]=favorite&p[0][n]=favorite_menu&p[0][v][stick]=N&sessid=407e98c3ea7e41b58cb8cfa3dd41f191&_=1542713775618') like concat('%',upper(URL_TO),'%')
+							or length(URL_TO)<=0 or URL_TO is null)
+					)
+				 [[1053] Server shutdown in progress]
+    CDatabaseMysql::Query < CStoplist::Check < ExecuteModuleEventEx < require_once < require
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/statistic/classes/mysql/stoplist.php:222
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/module.php:490
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:304
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/interface/user_options.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 14:36:17
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/order_payment.php:8
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 14:36:18
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/order_payment.php:8
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 14:36:19
+Module: main
+FILE: /home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php<br> LINE: 4794 MySql Query Error: SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='')  AND (L.ACTIVE='')  ORDER BY L.SORT  [[] ]
+    CDatabaseMysql::Query < CAllLanguage::GetList < CMain::GetLang < require_once < require_once
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/general/main.php:4794
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/main.php:47
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include.php:48
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/include/prolog_admin_before.php:18
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/sale/admin/order.php:12
+----------
+Host: test4.devtest.local
+Date: 2018-11-20 14:36:21
+Module: main
+ MySql Query Error: 
+					SELECT ID, WEIGHT, ROLE_ID, GROUP_ID
+					FROM b_cluster_dbnode
+					WHERE STATUS = 'ONLINE' AND (SELECTABLE is null or SELECTABLE = 'Y')
+					ORDER BY ID
+				 [[] ]
+    CDatabaseMysql::Query < CClusterSlave::GetList < CClusterSlave::GetRandomNode < Bitrix\Main\Data\ConnectionPool::createSlaveConnection < Bitrix\Main\Data\ConnectionPool::getSlaveConnection
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:406
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/cluster/classes/mysql/slave.php:436
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:313
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/lib/data/connectionpool.php:247
+	/home/devuser/web/test4.devtest.local/public_html/bitrix/modules/main/classes/mysql/database.php:126
+----------

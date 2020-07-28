@@ -1,0 +1,50 @@
+.cloud-zoom-lens {
+	border: 4px solid #888;
+	margin:-4px;	/* Set this to minus the border thickness. */
+	background-color:#fff;
+	cursor:move;
+}
+
+/* This is for the title text. */
+.cloud-zoom-title {
+	font-family:Arial, Helvetica, sans-serif;
+	position:absolute !important;
+	background-color:#050505;
+	color:#fff;
+	padding:3px;
+	width:100%;
+	text-align:center;
+	font-weight:bold;
+	font-size:10px;
+	top:0px;
+}
+
+/* This is the zoom window. */
+.cloud-zoom-big {
+	/*border:4px solid #ccc;*/
+	overflow:hidden;
+}
+
+/* This is the loading message. */
+.cloud-zoom-loading {
+	color:white;
+	background:#222;
+	padding:3px;
+	border:1px solid #050505;
+	display: none!important;
+}
+
+.item__page section.item .photos .images .slider .item a img{
+	display: inline-block!important;
+	width: 700px;
+}
+
+.item__page section.item .photos .images .slider .item .mousetrap,
+.item__page section.item .photos .images .slider .item .cloud-zoom-big{
+	left: 50%!important;
+	margin-left: -310px!important;
+}
+
+.item__page section.description .tabs__widget .tab.delivery .calculator .map{
+	height: 260px !important;
+}

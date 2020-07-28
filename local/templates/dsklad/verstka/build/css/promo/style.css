@@ -1,0 +1,140 @@
+.ds-form-promo {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ds-promo {
+  background: url(../../images/promo-bg.jpg) 50% 50%/cover no-repeat;
+  min-height: 100%;
+  padding: 40px 20px 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.ds-promo__content {
+  max-width: 520px;
+}
+
+.ds-promo__content h1 {
+  font-weight: 600;
+  font-size: 33px;
+  color: #000000;
+  line-height: 1.12em;
+  letter-spacing: -.8px;
+}
+
+.ds-promo__content p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: .8175rem;
+  margin-bottom: 10px;
+}
+
+.ds-promo__form {
+  margin: 20px 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ds-promo__form-tel {
+  width: 100%;
+}
+
+.ds-promo__form-tel .inp-info {
+  color: #344563;
+}
+
+.ds-promo__form-btn .ds-btn {
+  margin-top: 20px;
+  min-width: 180px;
+}
+
+.ds-promo-result {
+  width: 310px;
+  text-align: center;
+}
+
+.ds-promo-result h4 {
+  color: rgba(94, 108, 132, 0.5);
+  letter-spacing: -.2px;
+  font-weight: 600;
+}
+
+.ds-promo-result span {
+  color: #999999;
+  font-size: .8175rem;
+  display: block;
+}
+
+.ds-promocode {
+  border: 1px dashed rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 20px 0 4px;
+  padding: 8px 60px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #5e6c84;
+}
+
+.ds-link {
+  display: block;
+  color: #484ed8;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 40px;
+  position: relative;
+}
+
+.ds-link:after {
+  content: '';
+  background: url(../../images/svg/) 0 0 no-repeat;
+}
+
+@media (min-width: 640px) and (min-height: 560px) {
+  .ds-promo:after {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 110px;
+    bottom: 0;
+    right: 5%;
+    background: url(../../images/svg/promo-card.svg) 0 0 no-repeat;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ds-promo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .ds-promo__form-tel {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+  .ds-promo__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+}
+/*# sourceMappingURL=../maps/promo/style.css.map */

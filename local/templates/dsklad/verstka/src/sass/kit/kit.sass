@@ -1,0 +1,141 @@
+@import '../libs/normalize'
+
+
+// mixins and variables for project
+@import "../templates/_variables"
+@import '../templates/_grid-system'
+@import "../templates/_mixins"
+@import "../templates/_typography"
+@import "../templates/_buttons"
+@import "../templates/_icons"
+@import "../templates/_forms"
+@import '../../../build/images/svg/sass/_sprite'
+
+html
+  font-size: 16px
+
+body
+  background-color: #fff
+  color: $neutral-600
+  font-weight: 400
+  font-family: $defaultFF
+  
+  +responsive(mobile)
+    font-size: 15px
+    line-height: 1.4
+  
+  +responsive(desktop)
+    font-size: 16px
+    line-height: 1.45
+
+.menu-fixed
+  position: fixed
+  top: 0
+
+
+.d-system
+  max-width: 1280px
+  margin: 0 auto
+  padding: 0 50px
+
+  &__logo
+    max-width: 200px
+    margin-bottom: 30px
+    margin-top: 30px
+
+  &__menu
+
+    a
+      display: block
+      margin-bottom: 8px
+
+  &__content
+    padding-top: 30px
+
+  &__subitem
+    margin-top: 50px
+
+  &__item
+    padding: 0 0 50px
+    min-height: 400px
+
+  &__typography
+    a,
+    small
+      display: inline-block
+
+.d-system-header
+  border-bottom: 1px solid $neutral-300
+  background-color: $neutral-50
+  padding: 0 8px
+  margin: 0 -8px
+  columns: 2
+  
+  &__item
+    display: flex
+    align-items: center
+    min-height: 40px
+
+    p
+      margin-bottom: 0
+
+  &__name
+    min-width: 130px
+  
+  &__color
+    width: 40px
+  
+  &__hex
+    min-width: 100px
+    padding-left: 30px
+  
+  &__rgba
+    min-width: 100px
+    padding-left: 30px
+
+.d-system-colors
+  margin: 0 -8px
+  columns: 2
+
+  &__item
+    display: inline-flex
+    align-items: center
+    margin: 4px 0
+    width: 100%
+    padding: 4px 8px
+    border-bottom: 1px solid $neutral-400
+
+  p
+    font-size: 14px
+    
+  .class-name
+    min-width: 130px
+
+  .hex-code
+    min-width: 100px
+    padding-left: 30px
+
+  .rgba-code
+    min-width: 100px
+    padding-left: 30px
+
+.bg-color
+  width: 40px
+  height: 40px
+  border: 1px solid #ccc
+  border-radius: 3px
+
+.buttons-list
+  p
+    margin-bottom: 0
+    
+    
+    
+.icon-svg
+  &.ic-pencil-blue
+    &:before
+      background: url(../../images/svg/pencil-blue.svg) 0 0 no-repeat
+  
+  &.ic-pencil-white
+    &:before
+      background: url(../../images/svg/pencil-white.svg) 0 0 no-repeat

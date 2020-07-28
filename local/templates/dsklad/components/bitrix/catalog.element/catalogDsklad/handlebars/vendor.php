@@ -1,0 +1,2 @@
+
+<span itemprop="productID" content="{{OFFERS_ACTIVE.PROPERTIES.CML2_ARTICLE.VALUE}}">Арт.: {{OFFERS_ACTIVE.PROPERTIES.CML2_ARTICLE.VALUE}}</span>

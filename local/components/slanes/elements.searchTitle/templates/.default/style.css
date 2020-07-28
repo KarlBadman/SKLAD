@@ -1,0 +1,4 @@
+/* Fix: для контента подгруженного кнопкой "Показать еше" */
+#wrap-catalog .default .catalog .default {
+	width: 100%;
+}

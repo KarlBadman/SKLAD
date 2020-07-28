@@ -1,0 +1,213 @@
+.pseudo-scrollbar {
+  width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 8px;
+  border-radius: 6px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.pseudo-handle {
+  width: 0;
+  height: 100%;
+  background: #f4f5f7;
+  border-radius: 6px;
+}
+
+@-webkit-keyframes scrollbar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes scrollbar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.actual-offers-bg {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.actual-offers-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.actual-offers {
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.actual-offers--big {
+  max-width: 1020px;
+  height: 642px;
+  margin: 0 auto !important;
+}
+
+.actual-offers--big .actual-offers__frame {
+  height: auto;
+}
+
+.actual-offers--big .actual-offers__content {
+  opacity: .6;
+  border: 0;
+  height: 600px;
+}
+
+.actual-offers--big .actual-offers__content:after {
+  content: none;
+}
+
+.actual-offers--big .actual-offers__item {
+  width: 340px;
+}
+
+.actual-offers--big .actual-offers__item.active .actual-offers__content {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.actual-offers--big .actual-offers__item.active .pseudo-scrollbar {
+  visibility: visible;
+  opacity: 1;
+}
+
+.actual-offers--big .actual-offers__item.active .pseudo-handle {
+  -webkit-animation: scrollbar 5s forwards linear;
+  animation: scrollbar 5s forwards linear;
+}
+
+.actual-offers__frame {
+  width: 100%;
+  padding: 0;
+  margin-top: 12px;
+  overflow: hidden;
+  height: 224px;
+}
+
+.actual-offers__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  overflow: hidden;
+}
+
+.actual-offers__item {
+  margin: 0 8px 0 0;
+  width: 140px;
+}
+
+.actual-offers__content {
+  width: 100%;
+  height: 224px;
+  border-radius: 8px;
+  color: #ffffff;
+  border: 1px solid rgba(9, 30, 66, 0.12);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  -webkit-transform: scale(0.92);
+  transform: scale(0.92);
+  -webkit-transition: -webkit-transform .1s linear;
+  transition: -webkit-transform .1s linear;
+  transition: transform .1s linear;
+  transition: transform .1s linear, -webkit-transform .1s linear;
+}
+
+.actual-offers__content:hover {
+  color: #ffffff;
+}
+
+.actual-offers__content:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 112px;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 7px 7px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+}
+
+.actual-offers__content img {
+  display: block;
+}
+
+.actual-offers__content p {
+  position: absolute;
+  bottom: 0;
+  width: 140px;
+  margin: 0;
+  z-index: 1;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.23;
+  padding: 0 8px 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1024px) {
+  .actual-offers {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px;
+  }
+
+  .actual-offers--big {
+    max-width: 1020px;
+  }
+
+  .actual-offers--big .actual-offers__item {
+    margin-right: 24px !important;
+    margin-left: 24px !important;
+  }
+}
+
+@media only screen and (max-width: 413px) {
+  .actual-offers {
+    margin-left: 8px;
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+  .actual-offers {
+    margin-left: 12px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .actual-offers {
+    margin-left: 20px;
+  }
+}
+/*# sourceMappingURL=../maps/actual-offers/style.css.map */

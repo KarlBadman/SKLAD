@@ -1,0 +1,8 @@
+#sender_subscribe_component {
+    padding: 25px;
+}
+
+#sender_subscribe_component span{
+    color: #050505;
+    font: 600 15px "Open Sans", sans-serif;
+}

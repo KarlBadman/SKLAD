@@ -1,0 +1,142 @@
+extends templates/layout
+
+block csslibs
+  link(rel="stylesheet" href="css/catalog/style.css")
+  link(rel="stylesheet" href="css/libs/selectize.css")
+
+
+block jslibs
+  script(src="js/libs/jquery.easing.min.js")
+  script(src="https://www.dsklad.ru/local/templates/dsklad/js/sly.js")
+  script(src="js/libs/selectize.min.js")
+  script(src="js/catalog-init.js")
+
+
+block content
+  main
+    .ds-wrapper
+      ul(class="ds-breadcrumbs")
+        li
+          a(href="/")
+            meta(itemprop="name" content="Главная")
+            | Главная
+            meta(itemprop="position" content="1")
+        li
+          a(itemprop="item" href="catalog.html")
+            meta(itemprop="name" content="Каталог")
+            | Каталог
+
+
+
+    .ds-wrapper
+      .ds-catalog
+        h1 Стулья
+
+        .ds-catalog__menu
+          .ds-catalog-menu.js-catalog-menu(data-slide="1")
+            .ds-catalog-menu__list
+              each item in headerMenu.slice(0,1)
+                each subitem in item.submenu.slice(1,item.submenu.length)
+                  a(href="catalog-inner.html").ds-catalog-menu__item
+
+                    if (subitem.img)
+                      img(src= subitem.img alt="")
+                    else
+                      img(src="images/no-img.jpg" alt="")
+
+                    p= subitem.title
+
+
+            .ds-catalog-menu__arrow.prev(data-slide="1")
+            .ds-catalog-menu__arrow.next(data-slide="1")
+
+            script(src="js/sly-init.js")
+
+
+        .ds-catalog__slider
+          .ds-catalog-slider.js-catalog-slider(style="background-color: #91D4EB")
+            .ds-catalog-slider__item
+              .ds-catalog-slider__text
+                h2 Чайная церемония
+                p Чайные сервизы со&nbsp;скидками до&nbsp;25% на&nbsp;Dsklad.ru
+              .ds-catalog-slider__img
+                img(src="images/temp/slider-1.png" alt="Чайная церемония")
+            .ds-catalog-slider__item
+              .ds-catalog-slider__text
+                h2 Случайная церемония
+                p Чайные сервизы со&nbsp;скидками до&nbsp;25% на&nbsp;Dsklad.ru
+              .ds-catalog-slider__img
+                img(src="images/temp/slider-1.png" alt="Чайная церемония")
+
+
+        form
+          include templates/incl-catalog-filter.pug
+
+
+        .ds-catalog__list
+          each item in catalogItems
+            .ds-catalog-item
+              .ds-catalog-item__header
+                if (item.statusClass)
+                  .ds-catalog-item__status
+                    span(class= item.statusClass)= item.status
+                .ds-catalog-item__favorite
+                  if (item.favorites === true)
+                    button.icon-svg.ic-favorite_off.js-add-to-favorite.added
+                  else
+                    button.icon-svg.ic-favorite_off.js-add-to-favorite
+                a(href="").ds-catalog-item__name= item.name
+                .ds-catalog-item__vendor
+                  | Арт.:&nbsp;
+                  span= item.vendor
+              a(href="").ds-catalog-item__img
+                img(src= item.img alt= item.name)
+              .ds-catalog-item__footer
+                .ds-catalog-item__add-info
+                  if (item.addInfo !== "1 цвет")
+                    span= item.addInfo
+                if (item.statusClass === "discount")
+                  .ds-catalog-item__price.price-discount
+                    span.ds-price= item.price
+                else if (item.statusClass === "cheaper")
+                  .ds-catalog-item__price.price-discount
+                    span от&nbsp;
+                    span.ds-price= item.price
+                else
+                  .ds-catalog-item__price
+                    span.ds-price= item.price
+
+          .show-more-btn
+            button(class="ds-btn ds-btn--light") Показать ещё
+
+          .ds-pagination
+            a(href="/catalog/?PAGEN_1=2" class="ds-pagination__prev")
+            .ds-pagination__pages
+              a(href="/catalog/?") 1
+              a(href="/catalog/?PAGEN_1=2") 2
+              span(class="modern-page-current") 3
+              a(href="/catalog/?PAGEN_1=6" class="modern-page-dots") ...
+              a(href="/catalog/?PAGEN_1=7") 5
+            a(href="/catalog/?PAGEN_1=4" class="ds-pagination__next")
+
+    .ds-catalog-info
+      .ds-wrapper
+        .ds-catalog-info__inner
+          p Стулья в&nbsp;интерьере играют первостепенную роль. Ведь они выполняют практическую и&nbsp;декоративную функцию. Они нуждаются в&nbsp;тщательном выборе, ведь от&nbsp;них в&nbsp;большей мере будет зависеть тон и&nbsp;настроение, атмосфера помещения.
+          p Чтобы упростить эту задачу, здесь, в&nbsp;нашем интернет-магазине собраны предложения по&nbsp;выгодным ценам. Предлагаем ознакомиться с&nbsp;коллекцией стильных дизайнерских стульев, которые подойдут любому интерьеру, ведь мы&nbsp;позаботились о&nbsp;ассортименте, который подобрали для своих покупателей. Здесь собраны различные предложения, благодаря вариациям материалов и&nbsp;цветов, в&nbsp;которых изготавливаются эти стильные современные стулья. &laquo;Дизайн Склад&raquo;&nbsp;&mdash; ваш лучший путеводитель в&nbsp;мире комфортной и&nbsp;качественной мебели.
+          h5 Широкий ассортимент
+          p Чтобы сделать обстановку уютнее и&nbsp;приятней, необходимо позаботиться о&nbsp;мебели, способной это подчеркнуть. Здесь на&nbsp;помощь вам приходит &laquo;Дизайн Склад&raquo; предлагая купить дизайнерские стулья в&nbsp;этом стильном интернет-магазине, который собрал немало оригинальных и&nbsp;привлекательных товарных позиций, которые можно заказать с&nbsp;доставкой по&nbsp;Санкт-Петербургу и&nbsp;регионам России.
+          p На&nbsp;сайте в&nbsp;наличии разнообразные предложения, которые подойдут не&nbsp;только для украшения жилья, но&nbsp;и&nbsp;для того, чтобы вписаться в&nbsp;интерьеры кафе, баров, ресторанов, любых других помещений, требующих нестандартного подхода. Обратите внимание также на&nbsp;уютные и&nbsp;удобные кресла, которые также можно найти в&nbsp;каталоге товаров с&nbsp;фото и&nbsp;описанием. Мы&nbsp;постарались сделать навигацию по&nbsp;сайту приятной и&nbsp;удобной для своих клиентов.
+          h5 Чем отличаются предложения &laquo;Дизайн Склад&raquo;
+          p Конечно, сегодня подбор и&nbsp;покупка стульев не&nbsp;являет собой особую проблему. В&nbsp;любом мебельном магазине покупателю могут предложить несколько вариантов типовых моделей. Но&nbsp;порой эти решения слишком скучны и&nbsp;однообразны, поэтому мы&nbsp;решили предоставить возможность своим покупателям выбрать действительно оригинальный стул, на&nbsp;котором будет не&nbsp;только комфортно и&nbsp;приятно сидеть, но&nbsp;и&nbsp;эстетически приятно его наблюдать в&nbsp;интерьере. Именно из&nbsp;таких деталей, привлекательных и&nbsp;удобных, складывается уютная обстановка в&nbsp;помещении.
+          p Большинство рыночных предложений, которые встречаются&nbsp;&mdash; монотонны и&nbsp;стандартны. Предлагаем вам другой подход&nbsp;&mdash; купить стильные и&nbsp;эксклюзивные стулья, способные украсить собой быт и&nbsp;создать нечто неповторимое в&nbsp;повседневности. Поэтому каждый клиент, который решил произвести покупку в&nbsp;&laquo;Дизайн Склад&raquo; важен.
+
+          p В&nbsp;работе компания руководствуется следующими принципами:
+            ul
+              li лояльной цены;
+              li гарантий качества;
+              li оперативной доставки заказов;
+              li оплата проходит удобным для покупателей способом;
+
+          p Товар, который представлен на&nbsp;сайте&nbsp;&mdash; оригинальный, пополнение отслеживают наши специалисты.
+          p Наша компания предлагает не&nbsp;медлить, и&nbsp;пополнить интерьер стильными предметами уже сегодня. Благодаря стараниям &laquo;Дизайн Склад&raquo; купить стулья в&nbsp;СПб просто и&nbsp;легко&nbsp;&mdash; позвоните и&nbsp;сделайте заказ.

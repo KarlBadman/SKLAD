@@ -1,0 +1,108 @@
+IMPORT Complete:
+Array
+(
+    [Дата] => 06.09.2018 00:10:04
+    [Сообщение] => 
+        Time start: 2018.09.06 00:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1547 cities
+        Deleted: 1547 cities,
+        Added: 1546 cities
+        Time end: 2018.09.04 00:10:04
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+IMPORT Complete:
+Array
+(
+    [Дата] => 06.09.2018 04:10:05
+    [Сообщение] => 
+        Time start: 2018.09.06 04:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1546 cities
+        Deleted: 1546 cities,
+        Added: 1546 cities
+        Time end: 2018.09.05 04:10:05
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+IMPORT Complete:
+Array
+(
+    [Дата] => 06.09.2018 08:10:05
+    [Сообщение] => 
+        Time start: 2018.09.06 08:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1546 cities
+        Deleted: 1546 cities,
+        Added: 1546 cities
+        Time end: 2018.09.05 08:10:05
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+IMPORT Complete:
+Array
+(
+    [Дата] => 06.09.2018 12:10:05
+    [Сообщение] => 
+        Time start: 2018.09.06 12:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1550 cities
+        Deleted: 1550 cities,
+        Added: 1546 cities
+        Time end: 2018.09.05 12:10:05
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+IMPORT Complete:
+Array
+(
+    [Дата] => 06.09.2018 16:10:04
+    [Сообщение] => 
+        Time start: 2018.09.06 16:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1548 cities
+        Deleted: 1548 cities,
+        Added: 1546 cities
+        Time end: 2018.09.04 16:10:04
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+IMPORT Complete:
+Array
+(
+    [Дата] => 06.09.2018 20:10:04
+    [Сообщение] => 
+        Time start: 2018.09.06 20:10:01
+        Taked : 1546 cities,
+        Loaded from Database: 1547 cities
+        Deleted: 1547 cities,
+        Added: 1546 cities
+        Time end: 2018.09.04 20:10:04
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+

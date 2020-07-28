@@ -1,0 +1,19 @@
+.ds-modal__body
+	.ds-modal-phone
+		h4 Введите код
+		// Если проверка усешная, добавляется .success, если нет - .error
+		//.ds-modal-phone__code.success
+		//.ds-modal-phone__code.error
+		.ds-modal-phone__code
+			input(type="text" value="3" class="ds-modal-phone__code-item" maxlength="1")
+			input(type="text" value="2" class="ds-modal-phone__code-item" maxlength="1")
+			input(type="text" value="2" class="ds-modal-phone__code-item" maxlength="1")
+			input(type="text" value="0" class="ds-modal-phone__code-item" maxlength="1")
+		p Код выслан на
+			strong  +7 916 123 45 67
+		p Получить новый код можно <br> через 03:00
+		// Когда ошибка, нужно предложить выслать код повторно
+		//p
+			a(href="") Выслать код повторно
+		.ds-modal-phone__comment При входе или регистрации вы соглашаетесь с
+			a(href="#")  Условиями

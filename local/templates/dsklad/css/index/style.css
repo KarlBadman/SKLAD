@@ -1,0 +1,484 @@
+.pseudo-scrollbar {
+  width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 8px;
+  border-radius: 6px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.pseudo-handle {
+  width: 0;
+  height: 100%;
+  background: #f4f5f7;
+  border-radius: 6px;
+}
+
+@-webkit-keyframes scrollbar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes scrollbar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.actual-offers-bg {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.actual-offers-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.actual-offers {
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.actual-offers--big {
+  max-width: 1020px;
+  height: 642px;
+  margin: 0 auto !important;
+}
+
+.actual-offers--big .actual-offers__frame {
+  height: auto;
+}
+
+.actual-offers--big .actual-offers__content {
+  opacity: .6;
+  border: 0;
+  height: 600px;
+}
+
+.actual-offers--big .actual-offers__content:after {
+  content: none;
+}
+
+.actual-offers--big .actual-offers__item {
+  width: 340px;
+}
+
+.actual-offers--big .actual-offers__item.active .actual-offers__content {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.actual-offers--big .actual-offers__item.active .pseudo-scrollbar {
+  visibility: visible;
+  opacity: 1;
+}
+
+.actual-offers--big .actual-offers__item.active .pseudo-handle {
+  -webkit-animation: scrollbar 5s forwards linear;
+  animation: scrollbar 5s forwards linear;
+}
+
+.actual-offers__frame {
+  width: 100%;
+  padding: 0;
+  margin-top: 12px;
+  overflow: hidden;
+  height: 224px;
+}
+
+.actual-offers__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  overflow: hidden;
+}
+
+.actual-offers__item {
+  margin: 0 8px 0 0;
+  width: 140px;
+}
+
+.actual-offers__content {
+  width: 100%;
+  height: 224px;
+  border-radius: 8px;
+  color: #ffffff;
+  border: 1px solid rgba(9, 30, 66, 0.12);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  -webkit-transform: scale(0.92);
+  transform: scale(0.92);
+  -webkit-transition: -webkit-transform .1s linear;
+  transition: -webkit-transform .1s linear;
+  transition: transform .1s linear;
+  transition: transform .1s linear, -webkit-transform .1s linear;
+}
+
+.actual-offers__content:hover {
+  color: #ffffff;
+}
+
+.actual-offers__content:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 112px;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 7px 7px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+}
+
+.actual-offers__content img {
+  display: block;
+}
+
+.actual-offers__content p {
+  position: absolute;
+  bottom: 0;
+  width: 140px;
+  margin: 0;
+  z-index: 1;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.23;
+  padding: 0 8px 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-banner {
+  padding-top: 16px;
+}
+
+.main-banner + .furniture-list {
+  padding: 24px 0 40px;
+}
+
+.furniture-list {
+  padding: 40px 0;
+}
+
+.furniture-list h1 {
+  margin: 0 0 8px;
+}
+
+.furniture-list p {
+  margin-bottom: 16px;
+}
+
+.furniture-list__content {
+  display: grid;
+}
+
+.furniture-item {
+  border-radius: 8px;
+  background-color: #f4f5f7;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  overflow: hidden;
+  border: 0;
+}
+
+.furniture-item:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(9, 30, 66, 0.12);
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.furniture-item h3 {
+  margin: 0;
+}
+
+.furniture-item__header {
+  position: absolute;
+  width: 100%;
+  padding: 12px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  top: 0;
+}
+
+.furniture-item__header p {
+  color: #091e42;
+}
+
+.furniture-item picture,
+.furniture-item img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+}
+
+.furniture-item--tables {
+  grid-area: tables;
+}
+
+.furniture-item--chairs {
+  grid-area: chairs;
+}
+
+.furniture-item--lamps {
+  grid-area: lamps;
+}
+
+.furniture-item--decor {
+  grid-area: decor;
+}
+
+.furniture-item--sale {
+  grid-area: sale;
+}
+
+.furniture-item--dishes {
+  grid-area: dishes;
+}
+
+.furniture-item--textile {
+  grid-area: textile;
+}
+
+.furniture-item--sale-big {
+  grid-area: saleBig;
+}
+
+.furniture-item--sale-sm {
+  grid-area: saleSm;
+}
+
+.advantage-list {
+  padding: 0 0 40px;
+}
+
+.advantage-list__header h2 {
+  margin: 0;
+}
+
+.advantage-list__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  margin: 0 -16px;
+}
+
+.advantage-item {
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.advantage-item p {
+  margin-bottom: 0;
+}
+
+.advantage-item h4 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.advantage-item__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.advantage-item__icon--list {
+  background-color: #53c27e;
+}
+
+.advantage-item__icon--price {
+  background-color: #f06989;
+}
+
+.advantage-item__icon--payment {
+  background-color: #ffae42;
+}
+
+.advantage-item__icon--quality {
+  background-color: #1184f0;
+}
+
+@media only screen and (min-width: 768px) {
+  .furniture-list__content {
+    grid-template-areas: "tables chairs sale" "lamps chairs decor" "lamps textile dishes";
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 -10px;
+  }
+
+  .furniture-item {
+    margin: 10px;
+  }
+
+  .furniture-item picture.img-mobile,
+  .furniture-item img.img-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .actual-offers {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px;
+  }
+
+  .actual-offers--big {
+    max-width: 1020px;
+  }
+
+  .actual-offers--big .actual-offers__item {
+    margin-right: 24px !important;
+    margin-left: 24px !important;
+  }
+
+  .furniture-item {
+    min-height: 300px;
+  }
+
+  .furniture-item h3 {
+    font-size: 1.75rem;
+  }
+
+  .advantage-item {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .furniture-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .furniture-item__header p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .furniture-list__content {
+    margin: 0 -6px;
+    grid-template-areas: "tables chairs" "sale chairs" "lamps textile" "lamps decor" "dishes saleBig";
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .furniture-item {
+    margin: 6px;
+  }
+
+  .furniture-item picture.img-desktop,
+  .furniture-item img.img-desktop {
+    display: none;
+  }
+
+  .advantage-list {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 413px) {
+  .actual-offers {
+    margin-left: 8px;
+  }
+
+  .furniture-item {
+    min-height: 144px;
+  }
+
+  .furniture-item--sale-sm {
+    max-height: 144px;
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+  .actual-offers {
+    margin-left: 12px;
+  }
+
+  .furniture-item {
+    min-height: 190px;
+  }
+
+  .furniture-item--sale-sm {
+    max-height: 190px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .actual-offers {
+    margin-left: 20px;
+  }
+
+  .furniture-item {
+    min-height: 230px;
+  }
+
+  .advantage-item {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=../maps/index/style.css.map */

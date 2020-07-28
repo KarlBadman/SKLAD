@@ -1,0 +1,16 @@
+.pickup__page #input-about-city {
+    border-radius: 3px;
+    border: 1px solid #d9d9d9;
+    height: 30px;
+    display: block;
+    text-decoration: none;
+    line-height: 28px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+}
+.pickup_link {
+    float:right;
+    color:#1769ff;
+    margin-bottom:10px;
+}

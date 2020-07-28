@@ -1,0 +1,274 @@
+doctype
+html(lang="ru")
+  block nav
+  head
+    meta(charset="UTF-8")
+    block title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png")
+    link(rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png")
+    link(rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png")
+    link(rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png")
+    link(rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png")
+    link(rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png")
+    link(rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png")
+    link(rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png")
+    link(rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png")
+    link(rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+    link(rel="manifest" href="/manifest.json")
+    meta(name="msapplication-TileColor" content="#ffffff")
+    meta(name="msapplication-TileImage" content="/ms-icon-144x144.png")
+    meta(name="theme-color" content="#ffffff")
+
+    link(rel="stylesheet" href="css/libs/slick.css")
+    link(rel="stylesheet" href="css/libs/normalize.css")
+    link(rel="stylesheet" href="css/dsklad-styles.css")
+
+    block csslibs
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js")
+    //стоит его использовать вместо isMobile.min.js, т.к. больше возможностей
+    script(src="js/libs/device.min.js")
+
+    script(src="js/libs/slick.min.js")
+    script(src="js/dsklad-scripts.js")
+
+    script.
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('sw.js')
+            .then(function (registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              },
+              function (err) {
+                console.log('ServiceWorker registration failed: ', err);
+              });
+        });
+      }
+
+
+    block jslibs
+
+  include _mixins
+  body
+    header
+      .ds-header
+        .ds-header__menu.js-header-menu
+          span.ds-header-notification
+          span.header-icon.header-icon--menu
+          span.catalog-btn Каталог
+        .ds-header__logo
+          a(href="/")
+            img(src="images/logo-header.svg" alt="Дизайн Склад")
+        .ds-header__phone.has-popup
+          span.header-icon.header-icon--phone
+          .ds-header-popup.ds-header-popup--phones
+            .ds-header-phones
+              p Ежедневно с 9 до 21
+              a(href="tel:88007771274" class="main-phone") 8 800 777-12-74
+              span.or - или -
+              .phones-list
+                a(href="tg://resolve?domain=nikname").phones-list__item
+                  span.icon-svg.ic-telegram
+                  span.phones-list__title Telegram
+                a(href="whatsapp://send?phone=+120345678910").phones-list__item
+                  span.icon-svg.ic-whatsapp
+                  span.phones-list__title WhatsApp
+                a(href="viber://add?number=120345678910").phones-list__item
+                  span.icon-svg.ic-viber
+                  span.phones-list__title Viber
+
+        .ds-header__profile
+          span.ds-header-notification
+          a(href="profile.html").header-icon.header-icon--profile
+
+        .ds-header__cart.has-popup
+          span.ds-header-notification 120
+          a(href="basket.html").header-icon.header-icon--cart
+          .ds-header-popup.ds-header-popup--minicart
+            .ds-header-minicart
+              .ds-header-minicart__content
+                .mini-goods.mini-goods--cart
+                  h3 Корзина
+                  +miniGoodsList()
+
+              .ds-header-minicart__footer
+                a(href="basket.html" class="ds-btn ds-btn--full ds-btn--default")
+                  | К корзине
+                  span.ds-price.ds-price--point 21 561
+
+
+
+        .ds-header__search
+
+          span.header-icon.header-icon--search-m.js-search
+          .header-search.header-search--desktop.js-search
+            span.icon-svg.ic-search-sm
+            input(type="text" placeholder="Я хочу купить..." class="inp-search")
+            span.header-icon.header-icon--search-clear.js-search-clear
+          button(class="header-search-cancel js-search-cancel") Отмена
+
+          .header-search-result
+
+            // Этот кусок нужен для мобильных
+            .header-search-info
+              .header-search.header-search--mobile
+                span.icon-svg.ic-search-sm
+                input(type="text" placeholder="Я хочу купить..." class="inp-search")
+                span.header-icon.header-icon--search-clear.js-search-clear
+              button(class="header-search-cancel js-search-mobile-cancel") Отмена
+
+            .header-search-result__wrapper(hidden)
+              h4 Популярно сейчас
+              .header-search-result__list
+                a(href="").header-search-result__item Eames DSW
+                a(href="").header-search-result__item Подушки дизайнерские
+                a(href="").header-search-result__item Комплект Avanti Round + Кресло Мартин
+
+            .header-search-result__wrapper(hidden)
+              h4 Ничего не найдено
+              .header-search-result__empty
+                p Воспользуйтесь
+                  a(href="catalog.html")  каталогом
+                  |  или свяжитесь с нами по телефону
+                  a(href="tel:88007771274")  8 800 777-12-74
+
+            .header-search-result__wrapper
+              h4 Разделы
+              .header-search-result__list
+                a(href="").header-search-result__item Eames DSW
+                a(href="").header-search-result__item Подушки дизайнерские
+                a(href="").header-search-result__item Комплект Avanti Round + Кресло Мартин
+              h4 Товары
+              .header-search-result__list
+                .mini-goods.mini-goods--search
+                  +searchGoodsList()
+              .header-search-result__search-btn
+                a(href="search.html" class="ds-btn ds-btn--invisible")
+                  span.icon-svg.ic-search-result
+                  | Все результаты поиска
+
+
+
+      .header-menu
+        .header-menu__name
+          | Каталог
+          .header-menu-close.js-menu-close
+            span.icon-svg.ic-close-white
+        .header-menu__content.js-submenu
+          each item in headerMenu
+            .header-menu__item
+              if(item.submenu)
+                a(href="catalog.html").menu-item.has-submenu
+                  span(class="icon-svg ic-" + item.icon)
+                  span(class="menu-item__title")= item.title
+                nav.sub-menu
+                  ul
+                    li
+                      h3= item.title
+                    each submenu in item.submenu
+                      li
+                        a(href="catalog.html" class="submenu-title")= submenu.title
+                        if (submenu.offers === true)
+                          .sub-menu__offers
+                            .sub-menu-offer
+                              .sub-menu-offer__img
+                                a(href="catalog.html")
+                                  img(src=submenu.img alt="")
+                              .sub-menu-offer__title
+                                a(href="catalog.html")= submenu.link
+                              .sub-menu-offer__price
+                                .ds-price= submenu.price
+                              .sub-menu-offer__btn
+                                a(href="catalog.html").ds-btn.ds-btn--light К товару
+
+              else
+                a(href="catalog.html").menu-item
+                  span(class="icon-svg ic-" + item.icon)
+                  span(class="menu-item__title")= item.title
+
+    .order-notification
+      .ds-wrapper.order-notification__content
+        p Ваш заказ&nbsp;
+          a(href="") №81243
+          |  от 12 июля 2019 ожидает оплаты.
+        a(href="" class="ds-btn ds-btn--success") Оплатить
+
+        span.order-notification-close.js-order-notification-close
+
+    block content
+
+    footer.border
+      .ds-wrapper
+        .footer-about
+          .footer-about__links
+            a(href="/")
+              img(src="images/logo-footer.svg" alt="")
+            nav.about-links
+              a(href="") О компании
+              a(href="") Оптовым покупателям
+              a(href="") Контакты
+          .footer-about__phone
+            h2
+              a(href="tel:88007771274" class="tel") 8 800 777-12-74
+            p Ежедневно с 9 до 21
+
+      .footer-info
+        .ds-wrapper-footer
+          .footer-info__content
+            .footer-menu.js-footer-menu
+              .footer-menu__col
+                h5 Заказы
+                  span.arrow-down
+                nav.footer-menu__links
+                  a(href="") Доставка и оплата
+                  a(href="") Возврат и обмен
+                  a(href="") Пункты самовывоза
+              .footer-menu__col
+                h5 Профиль
+                  span.arrow-down
+                nav.footer-menu__links
+                  a(href="") Личный кабинет
+                  a(href="") Избранные товары
+                  a(href="") Статус заказа
+              .footer-menu__col
+                h5 Магазин
+                  span.arrow-down
+                nav.footer-menu__links
+                  a(href="") Публичная оферта
+                  a(href="") Наши гарантии
+            .footer-social
+              h5 Социальные сети
+              .social-list
+                .social-list__item
+                  a(href="" class="icon-svg ic-vk")
+                .social-list__item
+                  a(href="" class="icon-svg ic-fb")
+                .social-list__item
+                  a(href="" class="icon-svg ic-in")
+
+            .footer-payment
+              h5 Способы оплаты
+              .footer-payment__list
+                span.icon-svg.ic-mastercard
+                span.icon-svg.ic-visa
+                span.icon-svg.ic-mir
+              p Вы можете оплатить покупки наличными при получении, либо выбрать другой
+                a(href="")  способ оплаты
+
+
+        .border
+          .ds-wrapper-footer
+            .footer-copyright-info
+              .footer-copyright-info__header
+                p Интернет-магазин Dsklad.ru
+                  a(href="")  использует файлы «cookie»
+                  | , с целью повышения удобства пользования веб-сайтом.   
+              .footer-copyright-info__content
+                p Все ресурсы сайта www.dsklad.ru, включая текстовую, графическую и видео информацию, структуру и оформление страниц, защищены российскими и международными законами и соглашениями об охране авторских прав и интеллектуальной собственности (статьи 1259 и 1260 главы 70 «Авторское право» Гражданского Кодекса Российской Федерации от 18 декабря 2006 года N 230-ФЗ).
+                p *Все цены на сайте указаны в рублях.
+              .footer-copyright-info__copy
+                p &copy; 2019 «Дизайн Склад» — Интернет-магазин дизайнерской мебели. Все права защищены.

@@ -1,0 +1,137 @@
+<div class="signup__popup" id="fastbuy-conteiner">
+    <h2>Быстрый заказ</h2>
+    <span class="icon-svg ic-close ds-modal-close js-ds-modal-close" onclick="purepopup.closePopup();"></span>
+    <p class="align-center">Оставьте телефон и наш менеджер свяжется с вами для уточнения деталей заказа.</p>
+    <form action="" novalidate="novalidate" method="get" data-ga-analys-btn="one-click-form">
+        <input type="hidden" autocomplete="off" name="action" value="fastbuy"/>
+        <input type="hidden" id="fastbuy-product-id" autocomplete="off" name="productID" value="0"/>
+        <input type="hidden" id="fastbuy-product-cnt" autocomplete="off" name="productCNT" value="0"/>
+        <div class="field__widget type-block field-name">
+            <label for="input-fastbuy-name" class="label">Имя:</label>
+            <div class="field">
+                <div class="input">
+                    <input class="js-fastbuy-name" type="text" id="input-fastbuy-name" autocomplete="off" name="name"/>
+                </div>
+            </div>
+        </div>
+        <div class="field__widget type-block field-phone">
+            <label for="input-fastbuy-phone" class="label">Телефон:</label>
+            <div class="field">
+                <div class="input">
+                    <input class="js-fastbuy-phone" type="tel" value="7" id="input-fastbuy-phone" autocomplete="off" name="phone"/>
+                </div>
+            </div>
+        </div>
+        <div class="field__widget type-block field-email">
+            <label for="input-fastbuy-email" class="label">Электронная почта:</label>
+            <div class="field">
+                <div class="input">
+                    <input class="js-fastbuy-email" type="email" id="input-fastbuy-email" autocomplete="off" name="email"/>
+                </div>
+            </div>
+        </div>
+        <div class="fastbuy-addit-info">
+            Я принимаю условия <a class="border-link" href="/public_offer/">публичной оферты</a> и соглашаюсь на условия обработки <a class="border-link" href="/public_offer/">персональных данных</a>.
+        </div>
+        <div class="field__widget type-block field-submit align-right">
+            <div class="field">
+                <button type="button" class="button type-blue fill size-41 js-fastbuy-submit link_success_order_custom">Отправить</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<style>
+    .field-error {
+        border: 1px solid #d43f3f;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $('[type="tel"]').inputmasks(maskOpts);
+
+        var fastbuyProdID = $('#preorder-good-id').val();
+        $('#fastbuy-product-id').val(fastbuyProdID);
+
+        var fastbuyProdCNT = $('#product_id-' + fastbuyProdID).attr('value');
+        $('#fastbuy-product-cnt').val(fastbuyProdCNT);
+
+        $('.js-fastbuy-submit').on('click',function(e) {
+            var btn = $(this);
+            var form = btn.closest('form');
+            var nameField = $('.js-fastbuy-name');
+            var phoneField = $('.js-fastbuy-phone');
+            var emailField = $('.js-fastbuy-email');
+
+            if (nameField.val().length>0 && phoneField.val().length > 0 && phoneField.inputmask('isComplete') && emailField.val().length > 0) {
+                var data = form.serialize();
+                var email = emailField.val();
+                $.ajax({
+                    type: 'POST',
+                    url: '/local/templates/dsklad/ajax/fastbuyproc.php',
+                    data: data,
+                    dataType: 'json',
+                    success: function (dataIn) {
+                        if ('status' in dataIn) {
+                            nameField.closest('.input').removeClass('field-error');
+                            phoneField.closest('.input').removeClass('field-error');
+                            emailField.closest('.input').removeClass('field-error');
+                            switch (dataIn.status) {
+                                case 'success':
+                                    try {
+                                        ym(26291919, 'reachGoal', 'buyoneclick');
+                                        window.fastbuy = {
+                                            id : dataIn.fields.idzakaza,
+                                        };
+                                        window.analyticSystem.settings.email = email;
+                                        window.analyticSystem.settings.orderID = dataIn.fields.idzakaza;
+                                        $(document).trigger('ga.ecommerce.oneclickformsuccess');
+                                    } catch(e){}
+                                    purepopup.closePopup();
+                                    $('.success_popup_send_txt').removeClass('active');
+                                    $('.success_popup_send_txt').find('.desc_popup_send_txt').find('span').html('Ваша заявка принята. Ожидайте звонок');
+                                    $('.success_popup_send_txt').addClass('active');
+
+                                    setTimeout(function () {
+                                        $('.success_popup_send_txt').removeClass('active');
+                                    }, 3000);
+                                    break;
+                                case 'error':
+                                    if ('fields' in dataIn) {
+                                        for (var field in dataIn.fields) {
+                                            $('.' + field).closest('.input').addClass('field-error');
+                                        }
+                                    }
+                                    break;
+                            }
+                        }
+                    },
+                    error: function () {
+                        purepopup.closePopup();
+                        alert('Произошла ошибка. Попробуйте ещё раз. Спасибо');
+                    }
+                });
+            } else {
+                if (nameField.val().length < 2) {
+                    nameField.closest('.input').addClass('field-error');
+                } else {
+                    nameField.closest('.input').removeClass('field-error');
+                }
+                
+                if (!phoneField.inputmask('isComplete')){
+                    phoneField.closest('.input').addClass('field-error');
+                } else {
+                    phoneField.closest('.input').removeClass('field-error');
+                }
+                
+                if (emailField.val().length < 6) {
+                    emailField.closest('.input').addClass('field-error');
+                } else {
+                    emailField.closest('.input').removeClass('field-error');
+                }
+            }
+            e.preventDefault();
+        });
+    });
+</script>

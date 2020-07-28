@@ -1,0 +1,94 @@
+@import "_variables"
+@import "_mixins"
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: $neutral-800
+  margin: 0
+  font-weight: 500
+
+h1
+  //font-weight: 300
+  line-height: 1.2
+
+  +responsive(tiny)
+    +rem(24)
+
+  +responsive(mobile)
+    +rem(28)
+
+  +responsive(desktop)
+    +rem(32)
+
+h2
+  line-height: 1.25
+  margin-bottom: 20px
+
+  +responsive(tiny)
+    +rem(22)
+
+  +responsive(mobiletablet)
+    +rem(24)
+
+  +responsive(tabletdesktop)
+    +rem(28)
+
+h3
+  +responsive(tiny)
+    +rem(20)
+
+  +responsive(mobiletablet)
+    +rem(22)
+
+  +responsive(tabletdesktop)
+    +rem(22)
+
+h4
+  +rem(18)
+
+h5
+  +rem(18)
+  margin-bottom: 16px
+
+h6
+  +rem()
+
+p
+  +rem()
+  margin: 0 0 1.5rem
+  line-height: 1.25
+
+a
+  color: $blue-400
+  text-decoration: none
+  //border-bottom: 1px solid rgba($blue-400, .25)
+
+  &:hover
+    color: $blue-500
+  
+  &.tel
+    color: $neutral-800
+    border-bottom: 0
+
+
+.qoute
+  color: $neutral-500
+  font-size: 1.14rem
+
+.small-text
+  color: $neutral-400
+  line-height: 1.43312
+  +rem(14)
+
+.pseudo-btn
+  color: $blue-400
+  cursor: pointer
+  text-decoration: none
+  
+  &:hover
+    color: $blue-500
+

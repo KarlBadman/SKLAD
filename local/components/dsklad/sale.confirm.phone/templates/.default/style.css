@@ -1,0 +1,80 @@
+.field-confirm-code {
+    display: none;
+    margin-top: 10px;
+}
+
+.field-confirm-code .label {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.field-confirm-code .label .error {
+    display: none;
+    color: #f06989;
+}
+
+.field-confirm-code .wait {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.confirm-phone-button {
+    color: #f06989;
+    display: none;
+    position: absolute;
+    right: 6px;
+    top: 1px;
+    background-color: #FFFFFF;
+    z-index: 5;
+    cursor: pointer;
+    border-bottom: 1px dashed #f06989;
+}
+
+.confirm-phone-button.confirmed {
+    cursor: default;
+    color: #40a160;
+    top: 3px;
+    border-bottom: none;
+}
+
+.confirm-phone-button.send {
+    font-size: 0;
+    top: 3px;
+    width: 21px;
+    height: 21px;
+    background-image: url('/local/templates/dsklad/images/loader.svg');
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-bottom: none;
+}
+
+.error .confirm-phone-button {
+    color: #f06989;
+}
+
+.field-confirm-code .input.send:after {
+    content: '';
+    position: absolute;
+    display: block;
+    right: 6px;
+    top: 3px;
+    width: 21px;
+    height: 21px;
+    background-image: url('/local/templates/dsklad/images/loader.svg');
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.error-text {
+    display: block;
+    position: absolute;
+    width: 300px;
+    right: 0;
+    bottom: -25px;
+    text-align: right;
+    color: #f06989;
+    font-size: 10px;
+    height: 20px;
+}
+

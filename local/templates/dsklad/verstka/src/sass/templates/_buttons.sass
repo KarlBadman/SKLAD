@@ -1,0 +1,160 @@
+@import "../templates/_mixins"
+@import "../templates/_variables"
+
+.ds-btn,
+.button
+  line-height: 1
+  text-align: center
+  box-sizing: border-box
+  +radius()
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 4px 0
+  +transition(background-color)
+  border: 1px solid rgba($neutral-800, .12)
+  text-decoration: none !important
+  color: $neutral-0
+
+  +responsive(mobiletablet)
+    padding: 12px 20px
+
+  +responsive(tabletdesktop)
+    padding: 10px 20px 12px
+
+  &:not(:disabled)
+    cursor: pointer
+
+  &:focus
+    outline: none
+
+  &:hover
+    color: $neutral-0
+
+  .icon-svg
+    margin-left: -8px
+    +responsive(mobiletablet)
+      margin-right: 8px
+
+    +responsive(tabletdesktop)
+      margin-right: 4px
+
+  &--full
+    width: 100%
+    justify-content: center
+
+  &--default,
+  &.type-blue,
+  &--default-big
+    border-color: rgba($neutral-800, .12)
+    background-color: $blue-400
+    color: $neutral-0
+
+    &:hover,
+    &:focus
+      color: $neutral-0
+      background-color: $blue-500
+
+  &:disabled
+    background-color: $blue-300
+
+  &--default-big
+    padding: 12px 16px
+    text-transform: none
+
+  &--light,
+  &.close
+    background-color: $neutral-0
+    color: $neutral-800 !important
+
+    &:hover,
+    &:focus
+      background-color: $neutral-50
+
+    &:disabled
+      background-color: $neutral-0
+      color: $neutral-200
+      border-color: rgba($neutral-800, .12)
+
+  &--success
+    background-color: $green-400
+
+    &:hover
+      background-color: $green-500
+
+    &:disabled
+      background-color: $green-300
+
+
+  &--warning
+    background-color: $yellow-400
+    
+    &:hover
+      background-color: $yellow-500
+
+    &:disabled
+      background-color: $yellow-300
+
+  &--danger
+    background-color: $red-400
+
+    &:hover
+      background-color: $red-500
+
+    &:disabled
+      background-color: $red-300
+
+  &--info
+    background-color: $sky-blue-400
+
+    &:hover
+      background-color: $sky-blue-500
+
+    &:disabled
+      background-color: $sky-blue-300
+
+  &--invisible
+    border: 0
+    background-color: transparent
+    color: $blue-400
+
+    &:hover,
+    &:focus
+      color: $blue-400
+      background-color: $neutral-50
+
+    &:disabled
+      background-color: transparent
+      color: $blue-400
+      opacity: .3
+
+  &--mobile
+    +responsive(device)
+      width: 100%
+      justify-content: center
+    
+    +responsive(desktop)
+      display: inline-flex
+
+
+html
+  &.desktop
+    .ds-btn
+      &--default
+        &:active
+          background-color: $blue-500
+      
+      &--light
+        &:active
+          background-color: $neutral-50
+
+
+.subtotal
+  .button
+    +responsive(tiny)
+      width: 100%
+
+    +responsive(mobile)
+      width: 45%
+      margin: 0 2%
+      display: inline-flex

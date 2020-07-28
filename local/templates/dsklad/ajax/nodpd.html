@@ -1,0 +1,10 @@
+<div class="signup__popup delivery-info__popup">
+  <p class="align-center" style="color:#000;padding-top:15px;"> Расчет стоимости доставки недоступен <br> Стоимость доставки уточняйте у менеджеров <a class="tel_fan_link" href="tel:88007771274" class="tel">8 800 777-12-74</a><br/>или</p>
+  <div style="text-align:center;"><button type="button" class="button type-blue size-30 font-12" id="changeDpdCity">Выбрать другой город</button></div>
+</div>
+<script>
+	$('#changeDpdCity').on('click', function(){
+      purepopup.closePopup();
+		$('#autocomplete').focus();
+	});
+</script>

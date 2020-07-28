@@ -1,0 +1,9 @@
+.terminal_address {
+    display: none;
+}
+.terminal_address:first-child {
+    display: block;
+}
+button.proc{
+	opacity:0.4;
+}

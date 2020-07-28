@@ -1,0 +1,36 @@
+doctype
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		block UI-kit
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans:400,700&amp;subset=cyrillic")
+		link(rel="stylesheet" href="../css/kit/kit.css")
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js")
+		block jslibs
+
+	body
+
+		.d-system
+			.grid
+				.grid__col-3
+					.menu-fixed
+						.d-system__logo
+							a(href="kit.html")
+								img(src="https://www.dsklad.ru/local/templates/dsklad/images/logo.svg" alt="Дизайн Склад")
+
+						.d-system__menu
+							a(href="kit-typo.html") Типографика
+							a(href="kit-colors.html") Цветовая палитра
+							a(href="kit-buttons.html") Кнопки
+							a(href="kit-forms.html") Элементы форм
+							a(href="kit-grid.html") Сетка
+							<br>
+							a(href="kit-components.html") Компоненты
+
+				.grid__col-9
+					.d-system__content
+
+						block content
+
+

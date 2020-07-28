@@ -1,0 +1,122 @@
+.p4v__popup {
+    display: none;
+    max-width: 714px;
+    height: 100%;
+    padding: 35px 20px 0 20px;
+}
+
+.p4v__popup .title {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.p4v__popup .sub-title {
+    margin-top: 10px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.p4v__popup .description {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.p4v__popup .promocode {
+    margin-top: 20px;
+    font-size: 36px;
+    text-align: center;
+    color: #2c6bf6;
+    font-weight: bold;
+}
+
+.p4v__popup .benefits__widget {
+    text-align: justify;
+    background-color: #707070;
+    color: #fff;
+    margin: 25px -21px -1px;
+    padding: 6px 29px 9px;
+    font-size: 0;
+}
+
+.p4v__popup .benefits__widget li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.p4v__popup .benefits__widget li .icon {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.p4v__popup .benefits__widget li .icon .icon__guarantee {
+    width: 19px;
+    height: 30px;
+}
+
+.p4v__popup .benefits__widget li .icon .icon__box {
+    width: 24px;
+    height: 27px;
+}
+
+.p4v__popup .benefits__widget li .icon .icon__card {
+    width: 27px;
+    height: 16px;
+}
+
+.p4v__popup .benefits__widget li .icon svg {
+    fill: #fff;
+}
+
+.p4v__popup .benefits__widget li .icon:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.p4v__popup .benefits__widget li p {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 13px;
+    font-size: 12px;
+    line-height: 13px;
+}
+
+.p4v__popup .benefits__widget li p b {
+    text-transform: uppercase;
+    display: block;
+    padding-top: 2px;
+}
+
+.p4v__popup .benefits__widget:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .p4v__popup {
+        padding: 15px;
+    }
+
+    .p4v__popup .promocode {
+        margin-bottom: 10px;
+    }
+
+    .p4v__popup .benefits__widget {
+        margin: 25px -16px -16px;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .p4v__popup .hidden-s {
+        display: none;
+    }
+}

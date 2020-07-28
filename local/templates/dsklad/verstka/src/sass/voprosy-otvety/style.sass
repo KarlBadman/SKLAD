@@ -1,0 +1,117 @@
+@import "../templates/_variables"
+@import "../templates/_mixins"
+
+
+.question-page
+  
+  &__header
+    padding: 24px 0 16px
+
+  &__content
+    padding-bottom: 40px
+
+    +responsive(desktop)
+      display: flex
+      padding-bottom: 60px
+    
+  &__tags
+    +responsive(device)
+      display: none
+    
+    +responsive(desktop)
+      width: 300px
+      margin-right: 32px
+      position: relative
+  
+  &__tags-sticky
+    position: sticky
+    top: 12px
+
+  &__tab
+    +radius()
+    font-weight: 400
+    
+    .arrow-down
+      transform: rotate(-90deg)
+
+    a
+      color: $neutral-800
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 12px 8px
+      line-height: 1
+    
+    &.opened
+      background-color: $neutral-50
+      
+      
+  &__list-chapter
+    padding-top: 24px
+    margin-bottom: 12px
+  
+    &.opened
+      .question-page__inner
+        +responsive(device)
+          display: block
+          
+      .arrow-down
+        transform: rotate(180deg)
+    
+    .arrow-down
+      +responsive(desktop)
+        display: none
+    
+    h4
+      +responsive(desktop)
+        +rem(22)
+
+  &__list
+
+    +responsive(desktop)
+      width: calc(100% - 332px)
+      margin-top: -32px
+  
+  &__inner
+    +responsive(device)
+      display: none
+
+  &__list-item
+    background-color: $neutral-50
+    +radius()
+    border: 1px solid $neutral-100
+    margin-top: 24px
+    padding: 16px
+    
+    h5
+      display: flex
+      align-items: center
+      justify-content: space-between
+      
+      +responsive(device)
+        +rem()
+    
+    p
+      margin-top: 8px
+      
+    img
+      margin-top: 16px
+      max-width: 100%
+
+  .arrow-down
+    position: relative
+    width: 24px
+    height: 24px
+    float: right
+    z-index: 1
+    
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      right: 12px
+      width: 12px
+      height: 12px
+      background: url(/local/assets/css/../images/svg/arrow-common.svg) 50% 50% no-repeat

@@ -1,0 +1,90 @@
+extends templates/layout
+
+block csslibs
+  link(rel="stylesheet" href="css/index/style.css")
+
+
+block jslibs
+  script(src="js/libs/jquery.easing.min.js")
+  script(src="https://www.dsklad.ru/local/templates/dsklad/js/sly.js")
+
+
+block content
+  main
+    .actual-offers
+      h4 Актуальные предложения
+      .actual-offers__frame#basic
+        .actual-offers__list
+          each item in actualOffers
+            .actual-offers__item
+              a(href="actual-offers.html").actual-offers__content
+                img(src= item.img alt="")
+                // обрезать текст на бэке, 30 символов
+                p= item.title
+
+      script(src="js/sly-init.js")
+
+    .border
+      .ds-wrapper
+        .furniture-list
+          .furniture-list__header
+            h1 Выбирайте мебель по душе
+            p Начните выбор своего нового интерьера, просто выбрав нужную вам категорию товара.
+
+          .furniture-list__content
+            a(href="" class="furniture-item furniture-item--tables")
+              .furniture-item__header
+                h3 Столы
+              img(src="images/table.jpg" class="" alt="Столы")
+            a(href="" class="furniture-item furniture-item--chairs")
+              .furniture-item__header
+                h3 Стулья
+                p Легендарные стулья по выгодным ценам
+              img(src="images/chair.jpg" class="" alt="Стулья")
+            a(href="" class="furniture-item furniture-item--lamps")
+              .furniture-item__header
+                h3 Свет
+                p Светильники и торшеры
+              img(src="images/lamps.jpg" class="" alt="Свет")
+            a(href="" class="furniture-item furniture-item--decor")
+              .furniture-item__header
+                h3 Декор
+              img(src="images/decore.jpg" class="" alt="Декор")
+            a(href="" class="furniture-item furniture-item--accessories")
+              .furniture-item__header
+                h3 Аксессуары
+              img(src="images/accessories.jpg" class="" alt="Аксессуары")
+            a(href="" class="furniture-item furniture-item--dishes")
+              .furniture-item__header
+                h3 Посуда
+              img(src="images/dishes.jpg" class="" alt="Посуда")
+            a(href="" class="furniture-item furniture-item--textile")
+              .furniture-item__header
+                h3 Текстиль
+              img(src="images/textile.jpg" class="" alt="Текстиль")
+
+
+        .advantage-list
+          .advantage-list__header
+            h2 Наши преимущества
+          .advantage-list__content
+            .advantage-item
+              .advantage-item__icon.advantage-item__icon--time
+                span.icon-svg.ic-time
+              h4 Экономия времени
+              p Не тратьте личное время на походы по мебельным магазинам. Изучите каталог нашего сайта, ознакомившись с описанием, фото современной мебели, и закажите то, что вам подходит.
+            .advantage-item
+              .advantage-item__icon.advantage-item__icon--price
+                span.icon-svg.ic-price
+              h4 Лояльные цены
+              p Покупайте стильную мебель, которая отвечает вашим ожиданиям и желаниям, воспользовавшись скидками и акциями.
+            .advantage-item
+              .advantage-item__icon.advantage-item__icon--payment
+                span.icon-svg.ic-payment
+              h4 Удобство оплаты
+              p Покупайте стильную мебель, которая отвечает вашим ожиданиям и желаниям, одним из более чем 5 способов, включая рассрочку.
+            .advantage-item
+              .advantage-item__icon.advantage-item__icon--quality
+                span.icon-svg.ic-quality
+              h4 Высокое качество
+              p Мы подтверждаем надежность и долговечность товара сертификатами и другими сопутствующими документами.

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+<order><id>85620</id>
+<state>new</state>
+<date>2019-09-09 13:17:16</date>
+<price>1575</price>
+<lastorderdate>2019-02-22 13:50:07</lastorderdate>
+<coupon></coupon>
+<margin>1890.0000</margin>
+<iscallcenter>0</iscallcenter>
+<ordersource></ordersource>
+<commission></commission>
+<utm_source></utm_source>
+<utm_medium></utm_medium>
+<utm_campaign></utm_campaign>
+<products><product><id>19700</id><category_id>165</category_id><price>1575</price><margin>1890.0000</margin><quantity>1</quantity></product></products>
+</order>
+<order><id>85680</id>
+<state>refuse</state>
+<date>2019-09-25 12:39:10</date>
+<price>2491.67</price>
+<lastorderdate>2019-02-22 13:50:07</lastorderdate>
+<coupon></coupon>
+<margin>2990.0000</margin>
+<iscallcenter>0</iscallcenter>
+<ordersource></ordersource>
+<commission></commission>
+<utm_source></utm_source>
+<utm_medium></utm_medium>
+<utm_campaign></utm_campaign>
+<products><product><id>19643</id><category_id>165</category_id><price>2491.67</price><margin>2990.0000</margin><quantity>1</quantity></product></products>
+</order>
+<order><id>85685</id>
+<state>new</state>
+<date>2019-10-07 13:48:09</date>
+<price>3465</price>
+<lastorderdate>2019-02-22 13:50:07</lastorderdate>
+<coupon></coupon>
+<margin>4158.0000</margin>
+<iscallcenter>0</iscallcenter>
+<ordersource></ordersource>
+<commission></commission>
+<utm_source></utm_source>
+<utm_medium></utm_medium>
+<utm_campaign></utm_campaign>
+<products><product><id>19575</id><category_id>168</category_id><price>1575</price><margin>1890.0000</margin><quantity>2</quantity></product><product><id>14202</id><category_id>175</category_id><price>315</price><margin>378.0000</margin><quantity>1</quantity></product></products>
+</order>
+<order><id>85686</id>
+<state>new</state>
+<date>2019-10-09 14:54:01</date>
+<price>5716.67</price>
+<lastorderdate>2019-02-22 13:50:07</lastorderdate>
+<coupon></coupon>
+<margin>6860.0000</margin>
+<iscallcenter>0</iscallcenter>
+<ordersource></ordersource>
+<commission></commission>
+<utm_source></utm_source>
+<utm_medium></utm_medium>
+<utm_campaign></utm_campaign>
+<products><product><id>19501</id><category_id>165</category_id><price>1325</price><margin>1590.0000</margin><quantity>4</quantity></product></products>
+</order>
+<order><id>85687</id>
+<state>new</state>
+<date>2019-10-09 14:55:02</date>
+<price>5716.67</price>
+<lastorderdate>2019-02-22 13:50:07</lastorderdate>
+<coupon></coupon>
+<margin>6860.0000</margin>
+<iscallcenter>0</iscallcenter>
+<ordersource></ordersource>
+<commission></commission>
+<utm_source></utm_source>
+<utm_medium></utm_medium>
+<utm_campaign></utm_campaign>
+<products><product><id>19501</id><category_id>165</category_id><price>1325</price><margin>1590.0000</margin><quantity>4</quantity></product></products>
+</order>
+<order><id>85688</id>
+<state>new</state>
+<date>2019-10-09 14:56:44</date>
+<price>5716.67</price>
+<lastorderdate>2019-02-22 13:50:07</lastorderdate>
+<coupon></coupon>
+<margin>6860.0000</margin>
+<iscallcenter>0</iscallcenter>
+<ordersource></ordersource>
+<commission></commission>
+<utm_source></utm_source>
+<utm_medium></utm_medium>
+<utm_campaign></utm_campaign>
+<products><product><id>19501</id><category_id>165</category_id><price>1325</price><margin>1590.0000</margin><quantity>4</quantity></product></products>
+</order>
+<order><id>85689</id>
+<state>new</state>
+<date>2019-10-09 15:00:22</date>
+<price>3241.67</price>
+<lastorderdate></lastorderdate>
+<coupon></coupon>
+<margin>3890.0000</margin>
+<iscallcenter>0</iscallcenter>
+<ordersource></ordersource>
+<commission></commission>
+<utm_source></utm_source>
+<utm_medium></utm_medium>
+<utm_campaign></utm_campaign>
+<products><product><id>19647</id><category_id>165</category_id><price>2825</price><margin>3390.0000</margin><quantity>1</quantity></product></products>
+</order>
+</orders>

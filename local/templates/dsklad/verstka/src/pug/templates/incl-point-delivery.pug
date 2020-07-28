@@ -1,0 +1,29 @@
+.ds-modal__header
+	h5 Пункты самовывоза
+.ds-modal__body
+	.form-group
+		label(for="courier-delivery-city") Населенный пункт
+		input(id="courier-delivery-city" type="text" class="inp-middle" placeholder="Напишите город")
+	.form-group.form-group--date
+		span.delivery-date-info Примерная дата доставки:&nbsp;
+			strong.delivery-date 3-6 сентября
+		.add-info Точная дата зависит от загруженности транспортной компании.
+
+	.delivery-modal-map
+		.delivery-modal-map__point(style="margin: 50px 0 0 150px")
+			.delivery-info-result
+				span.delivery-result-header Пункт выдачи ТК DPD
+				span.delivery-result-address ул. Александра Невского, 3
+				span.delivery-result-price Стоимость доставки:
+					span.ds-price  900
+				.delivery-result-add-info
+					span Будни: 11:00 - 19:30
+					span Сб.: 09:30 - 17:00
+					span Вс.: выходной
+				span(class="ds-btn ds-btn--default ds-btn--full js-delivery-here") Заберу отсюда
+
+		// вместо картинки нужно перенести текущую карту
+		img(src="../images/temp/map.jpg")
+
+
+

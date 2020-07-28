@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans:400,700&amp;amp;subset=cyrillic">
+    <link rel="stylesheet" href="../css/kit/kit.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../js/libs/parsley.js"></script>
+    <script src="../js/parsley-ru.js"></script>
+  </head>
+  <body>
+    <div class="d-system">
+      <div class="grid">
+        <div class="grid__col-3">
+          <div class="menu-fixed">
+            <div class="d-system__logo"><a href="kit.html"><img src="https://www.dsklad.ru/local/templates/dsklad/images/logo.svg" alt="Дизайн Склад"></a></div>
+            <div class="d-system__menu"><a href="kit-typo.html">Типографика</a><a href="kit-colors.html">Цветовая палитра</a><a href="kit-buttons.html">Кнопки</a><a href="kit-forms.html">Элементы форм</a><a href="kit-grid.html">Сетка</a><br><a href="kit-components.html">Компоненты</a></div>
+          </div>
+        </div>
+        <div class="grid__col-9">
+          <div class="d-system__content">
+            <section class="d-system__item">
+              <div class="header-page">
+                <h1>Формы</h1>
+              </div>
+              <form action="#">
+                <div class="buttons-list">
+                  <div class="grid">
+                    <div class="grid__col-6">Default</div>
+                    <div class="grid__col-6">Disabled</div>
+                  </div>
+                  <div class="grid">
+                    <div class="grid__col-6">
+                      <div class="form-group" id="form-name">
+                        <label for="user-name">Имя и фамилия</label>
+                        <input class="inp-big" type="text" id="user-name" placeholder="Константин Константинопольский" required data-parsley-errors-container="#form-name">
+                      </div>
+                    </div>
+                    <div class="grid__col-6">
+                      <div class="form-group">
+                        <label for="user-name">Имя и фамилия</label><span class="inp-success">
+                          <input class="inp-big" type="text" id="user-name1" placeholder="Константин Константинопольский" value="Константин Константинопольский" disabled></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid">
+                    <div class="grid__col-6">
+                      <div class="form-group">
+                        <label>эл.почта получателя счёта:</label>
+                        <input class="inp-big" type="email" placeholder="mail@domain.ru">
+                      </div>
+                    </div>
+                    <div class="grid__col-6">
+                      <div class="form-group">
+                        <label>эл.почта получателя счёта:</label>
+                        <input class="inp-big" type="email" placeholder="mail@domain.ru" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid">
+                    <div class="grid__col-6">
+                      <div class="form-group" id="phone-number">
+                        <label for="tel">Номер телефона</label>
+                        <input class="inp-big" type="tel" id="tel" name="tel" placeholder="+7 916 123-45-67" data-parsley-error-message="Сначала введите телефон" data-parsley-errors-container="#phone-number">
+                      </div>
+                    </div>
+                    <div class="grid__col-6">
+                      <div class="form-group">
+                        <label for="tel">Номер телефона</label>
+                        <input class="inp-big" type="tel" id="tel1" name="tel" placeholder="+7 916 123-45-67" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid">
+                    <div class="grid__col-6">
+                      <div class="form-group">
+                        <input type="checkbox" id="confirm-called0">
+                        <label for="confirm-called0">Не звонить для подтверждения заказа</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="checkbox" id="confirm-called" checked>
+                        <label for="confirm-called">Не звонить для подтверждения заказа</label>
+                      </div>
+                    </div>
+                    <div class="grid__col-6">
+                      <div class="form-group">
+                        <input type="checkbox" id="confirm-called2" disabled>
+                        <label for="confirm-called2">Не звонить для подтверждения заказа</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="checkbox" id="confirm-called1" checked disabled>
+                        <label for="confirm-called1">Не звонить для подтверждения заказа</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid">
+                    <div class="grid__col-6">
+                      <div class="form-group">
+                        <input type="radio" name="checkout-delivery" id="station" checked>
+                        <label for="station">Пример радиобаттона checked</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="checkout-delivery" id="station1">
+                        <label for="station1">Пример радиобаттона</label>
+                      </div>
+                    </div>
+                    <div class="grid__col-6">
+                      <div class="form-group">
+                        <input type="radio" name="checkout-delivery1" id="station2" checked disabled>
+                        <label for="station2">Пример радиобаттона checked</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="checkout-delivery1" id="station3" disabled>
+                        <label for="station3">Пример радиобаттона</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid">
+                    <div class="grid__col-6">
+                      <textarea class="inp-big" placeholder="Поле для комментария"></textarea>
+                    </div>
+                    <div class="grid__col-6">
+                      <textarea class="inp-big" placeholder="Поле для комментария" disabled></textarea>
+                    </div>
+                  </div>
+                  <div class="grid">
+                    <div class="grid__col-6">
+                      <input class="ds-btn ds-btn--big" type="submit" value="Оформить заказ">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

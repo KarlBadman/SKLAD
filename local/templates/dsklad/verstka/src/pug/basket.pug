@@ -1,0 +1,157 @@
+extends templates/layout
+
+block csslibs
+	link(rel="stylesheet" href="css/basket/style.css")
+
+block nav
+	-var isCity = false
+
+block content
+
+	.ds-wrapper
+
+		.ds-basket
+			.ds-basket__goods-info
+
+				include templates/incl-basket-city
+
+				.ds-basket__order-btn-top
+					a(class="ds-btn ds-btn--big" href="checkout.html") К оформлению
+
+				.ds-basket__goods-list
+					each item in goodItem
+						.ds-basket-good
+							.ds-basket-good__img
+								img(src= item.img alt="")
+							.ds-basket-good__price-one
+								span.ds-price.ds-price--one= item.priceOne
+							.ds-basket-good__count
+								.ds-basket-count
+									button.icon-svg.ic-count-minus.js-count-minus
+									input(type="number" class="inp-count js-number" min="1" name="quantity" value= item.count)
+									button.icon-svg.ic-count-plus.js-count-plus
+							.ds-basket-good__price
+								if (item.priceDiscount)
+									span.ds-price= item.priceDiscount
+									span.ds-price.ds-price--old= item.priceGood
+								else
+									span.ds-price= item.priceGood
+
+							.ds-basket-good__add-info
+								if (item.count < 2)
+									.ds-basket-add-more.fadein
+										span Добавьте еще 2 шт. и получите скидку
+											span.ds-price  2 890
+								else if (item.count > 2 && item.count < 4)
+									.ds-basket-add-more.fadein
+										span Добавьте еще 1 шт. и получите скидку
+											span.ds-price  2 890
+								else
+									.ds-basket-add-more.fadeout
+										span Добавьте еще 1 шт. и получите скидку
+											span.ds-price  2 890
+							.ds-basket-good__descr
+								a(href="#")= item.title
+							.ds-basket-good__service-info
+								if (item.order)
+									.ds-service-info.quantity-order= item.serviceInfo
+
+								.ds-service-info.warranty-status= item.warranty
+
+								.ds-service-info Арт.:&nbsp;
+									span= item.vendorCode
+								.ds-service-info Цвет:&nbsp;
+									span= item.color
+							.ds-basket-good__del
+								.ds-basket-del.js-basket-remove
+									.icon-svg.ic-basket-remove
+									span Удалить
+
+
+
+				.ds-basket__warranty
+					.warranty-sm
+						.warranty-sm__info
+							h5 Расширенная гарантия на 6 мес.
+							p Бесплатный обмен / возврат товара надлежащего качества в течение 14 дней
+							p Бесплатная замена товара в течение 14 дней при обнаружении любых повреждений
+
+						.warranty-sm__img
+							img(src="images/svg/warranty-gray.svg" alt="")
+
+						button.ds-btn.ds-btn--light.js-add-warranty Добавить гарантию
+							span.ds-price 15 435
+
+
+
+			.ds-basket__total-price
+				.total-price
+					.total-price__content
+						each item in totalPrice
+							if (item.addClass == "hidden")
+								.total-price__row.hidden.js-warranty-total
+									.total-price__col= item.title
+									if (item.quantity)
+										.total-price__order-detail
+											span.small-text= item.quantity
+									.total-price__col
+										span.ds-price= item.price
+							else if (item.totalPrice)
+								.total-price__row.total-price__row--summ
+									.total-price__col= item.title
+									.total-price__col
+										if (item.totalPrice)
+											span.ds-price.ds-price--total= item.price
+										else
+											span.ds-price= item.price
+							else
+								.total-price__row
+									.total-price__col= item.title
+									if (item.quantity)
+										.total-price__order-detail
+											span.small-text= item.quantity
+									.total-price__col
+										span.ds-price= item.price
+
+
+						.total-price__buttons
+							a(class="ds-btn ds-btn--big" href="checkout.html") К оформлению
+							button(class="ds-btn ds-btn--light ds-btn--full js-ds-modal" data-href="templates/incl-quick-order.html" data-ds-modal-width="412") Оформить в 1 клик
+					.total-price__add-info
+						span.small-text Доступные способы и время доставки можно выбрать при оформлении заказа.
+
+
+
+
+
+			.ds-basket__goods-recommend
+				.ds-recommend-wrapper
+					h4 Рекомендуем
+
+					.ds-recommend
+						.ds-basket-slider-arrows.js-slider-recommend-arrows
+						.ds-basket-slider.js-slider-recommend(data-type="arrows")
+							each item in sliderRecommend
+								.ds-basket-slider__item
+									a(href="#")
+										img(src="images/temp/" + item.img alt="")
+									p= item.title
+									.ds-price-sale
+										span.ds-price= item.price
+										span.ds-sale %
+									a(href="#").ds-btn.ds-btn--light В корзину
+
+
+
+		.ds-modal-overlay.closed
+		.ds-modal.closed
+			span.icon-svg.ic-close.ds-modal-close.js-ds-modal-close
+			.ds-modal__inner
+
+
+
+	// эти два скрипта есть на основном сайте
+	script(src="https://www.dsklad.ru/local/assets/js/purepopup.js")
+	script(src="https://www.dsklad.ru/local/assets/js/isMobile.min.js")
+
+	script(src="js/dsklad-init.js")

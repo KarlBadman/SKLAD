@@ -1,0 +1,43 @@
+.ds-recommend-wrapper {
+  margin: 60px auto 0;
+}
+
+.ds-recommend-wrapper h4 {
+  margin: 0 20px;
+  font-size: 1.4rem;
+}
+
+.ds-recommend-wrapper .ds-btn {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 130px;
+}
+
+.ds-recommend {
+  margin: 26px 10px 0;
+}
+
+.ds-basket-slider {
+  overflow: hidden;
+  height: 330px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.ds-basket-slider__item {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ds-basket-slider__item img {
+  margin-bottom: 28px;
+  max-width: 100%;
+}
+
+.ds-basket-slider__item p {
+  margin-bottom: 8px;
+  height: 50px;
+  overflow: hidden;
+}
+/*# sourceMappingURL=../maps/templates/recommend.css.map */

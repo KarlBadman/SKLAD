@@ -1,0 +1,83 @@
+.section-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-login h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-login__btn {
+  margin: 12px 0;
+}
+
+.login-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1.25;
+  margin-top: 16px;
+}
+
+.login-info__item .icon-svg {
+  min-width: 56px;
+  height: 56px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.login-info__item--cart .icon-svg {
+  background-color: #53c27e;
+}
+
+.login-info__item--favorite .icon-svg {
+  background-color: #f06989;
+}
+
+.login-info__item--online .icon-svg {
+  background-color: #ffae42;
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-login {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    padding: 100px 0;
+  }
+
+  .section-login__form {
+    width: 50%;
+    padding: 0 80px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .section-login__info {
+    width: 50%;
+    padding: 0 80px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section-login {
+    padding: 20px 0 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .section-login__info {
+    margin-top: 42px;
+  }
+}
+/*# sourceMappingURL=../maps/login/style.css.map */

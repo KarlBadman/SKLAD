@@ -1,0 +1,7 @@
+[
+  { "mask": "+7 ### ###-##-##", "cc": "RU", "name_en": "Russia", "desc_en": "", "name_ru": "Россия", "desc_ru": "", "order": 1 },
+  { "mask": "+7 6## ###-##-##", "cc": "KZ", "name_en": "Kazakhstan", "desc_en": "", "name_ru": "Казахстан", "desc_ru": "", "order": 2 },
+  { "mask": "+7 7## ###-##-##", "cc": "KZ", "name_en": "Kazakhstan", "desc_en": "", "name_ru": "Казахстан", "desc_ru": "", "order": 3 },
+  { "mask": "+375 ## ###-##-##", "cc": "BY", "name_en": "Belarus", "desc_en": "", "name_ru": "Беларусь (Белоруссия)", "desc_ru": "", "order": 4 },
+  { "mask": "+380 ## ###-##-##", "cc": "UA", "name_en": "Ukraine", "desc_en": "", "name_ru": "Украина (Украина)", "desc_ru": "", "order": 5 }
+]

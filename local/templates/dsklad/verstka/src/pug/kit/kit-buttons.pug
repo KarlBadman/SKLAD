@@ -1,0 +1,65 @@
+extends kit-layout
+
+block content
+
+  section.d-system__item
+    .header-page
+      h1 Кнопки
+
+    .buttons-list
+      .grid
+        .grid__col-6 Default
+        .grid__col-6 Disabled
+      .grid
+        .grid__col-6
+          p button.ds-btn.ds-btn--default
+          button.ds-btn.ds-btn--default Кнопка по умолчанию
+        .grid__col-6
+          p button.ds-btn.ds-btn--default(disabled)
+          button.ds-btn.ds-btn--default(disabled) Кнопка по умолчанию
+      .grid
+        .grid__col-6
+          p button.ds-btn.ds-btn--info
+          button.ds-btn.ds-btn--info Кнопка-инфо
+        .grid__col-6
+          p button.ds-btn.ds-btn--info(disabled)
+          button.ds-btn.ds-btn--info(disabled) Кнопка-инфо
+      .grid
+        .grid__col-6
+          p button.ds-btn.ds-btn--success
+          button.ds-btn.ds-btn--success Кнопка-успех
+        .grid__col-6
+          p button.ds-btn.ds-btn--success(disabled)
+          button.ds-btn.ds-btn--success(disabled) Кнопка-успех
+      .grid
+        .grid__col-6
+          p button.ds-btn.ds-btn--danger
+          button.ds-btn.ds-btn--danger Кнопка-опасность
+        .grid__col-6
+          p button.ds-btn.ds-btn--danger(disabled)
+          button.ds-btn.ds-btn--danger(disabled) Кнопка-опасность
+      .grid
+        .grid__col-6
+          p button.ds-btn.ds-btn--warning
+          button.ds-btn.ds-btn--warning Кнопка-предупреждение
+        .grid__col-6
+          p button.ds-btn.ds-btn--warning(disabled)
+          button.ds-btn.ds-btn--warning(disabled) Кнопка-предупреждение
+      .grid
+        .grid__col-6
+          p button.ds-btn.ds-btn--light
+          button.ds-btn.ds-btn--light Кнопка-бордер
+        .grid__col-6
+          p button.ds-btn.ds-btn--light(disabled)
+          button.ds-btn.ds-btn--light(disabled) Кнопка-бордер
+      .grid
+        .grid__col-6
+          p button.ds-btn.ds-btn--invisible
+          button.ds-btn.ds-btn--invisible
+            span.icon-svg.ic-search-result
+            | Кнопка-невидимка
+        .grid__col-6
+          p button.ds-btn.ds-btn--invisible(disabled)
+          button.ds-btn.ds-btn--invisible(disabled)
+            span.icon-svg.ic-search-result
+            | Кнопка-невидимка

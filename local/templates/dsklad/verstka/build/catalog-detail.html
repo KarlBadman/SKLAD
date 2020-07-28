@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/libs/slick.css">
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/dsklad-styles.css">
+    <link rel="stylesheet" href="https://www.dsklad.ru/local/assets/css/purepopup.css">
+    <link rel="stylesheet" href="css/catalog-detail/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!--стоит его использовать вместо isMobile.min.js, т.к. больше возможностей-->
+    <script src="js/libs/device.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
+    <script src="js/dsklad-scripts.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('sw.js')
+            .then(function (registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              },
+              function (err) {
+                console.log('ServiceWorker registration failed: ', err);
+              });
+        });
+      }
+      
+      
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="ds-header">
+        <div class="ds-header__menu js-header-menu"><span class="ds-header-notification"></span><span class="header-icon header-icon--menu"></span><span class="catalog-btn">Каталог</span></div>
+        <div class="ds-header__logo"><a href="/"><img src="images/logo-header.svg" alt="Дизайн Склад"></a></div>
+        <div class="ds-header__phone has-popup"><span class="header-icon header-icon--phone"></span>
+          <div class="ds-header-popup ds-header-popup--phones">
+            <div class="ds-header-phones">
+              <p>Ежедневно с 9 до 21</p><a class="main-phone" href="tel:88007771274">8 800 777-12-74</a><span class="or">- или -</span>
+              <div class="phones-list"><a class="phones-list__item" href="tg://resolve?domain=nikname"><span class="icon-svg ic-telegram"></span><span class="phones-list__title">Telegram</span></a><a class="phones-list__item" href="whatsapp://send?phone=+120345678910"><span class="icon-svg ic-whatsapp"></span><span class="phones-list__title">WhatsApp</span></a><a class="phones-list__item" href="viber://add?number=120345678910"><span class="icon-svg ic-viber"></span><span class="phones-list__title">Viber</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ds-header__profile"><span class="ds-header-notification"></span><a class="header-icon header-icon--profile" href="profile.html"></a></div>
+        <div class="ds-header__cart has-popup"><span class="ds-header-notification">120</span><a class="header-icon header-icon--cart" href="basket.html"></a>
+          <div class="ds-header-popup ds-header-popup--minicart">
+            <div class="ds-header-minicart">
+              <div class="ds-header-minicart__content">
+                <div class="mini-goods mini-goods--cart">
+                  <h3>Корзина</h3>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-1.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-2.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-3.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный фыва фыва фыва </p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">5 990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-4.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-5.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Подушка декоративная</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                    <div class="mini-goods__item">
+                      <div class="mini-goods__img"><img src="images/temp/basket-6.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Eames Daw Patchwork</p>
+                        <div class="mini-goods__info"><span class="mini-goods__quantity">1 шт.</span><span class="ds-price">14 990</span></div>
+                      </div>
+                      <div class="mini-goods__remove"><span class="mini-goods-remove"></span></div>
+                    </div>
+                </div>
+              </div>
+              <div class="ds-header-minicart__footer"><a class="ds-btn ds-btn--full ds-btn--default" href="basket.html">К корзине<span class="ds-price ds-price--point">21 561</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ds-header__search"><span class="header-icon header-icon--search-m js-search"></span>
+          <div class="header-search header-search--desktop js-search"><span class="icon-svg ic-search-sm"></span>
+            <input class="inp-search" type="text" placeholder="Я хочу купить..."><span class="header-icon header-icon--search-clear js-search-clear"></span>
+          </div>
+          <button class="header-search-cancel js-search-cancel">Отмена</button>
+          <div class="header-search-result">
+            <!-- Этот кусок нужен для мобильных-->
+            <div class="header-search-info">
+              <div class="header-search header-search--mobile"><span class="icon-svg ic-search-sm"></span>
+                <input class="inp-search" type="text" placeholder="Я хочу купить..."><span class="header-icon header-icon--search-clear js-search-clear"></span>
+              </div>
+              <button class="header-search-cancel js-search-mobile-cancel">Отмена</button>
+            </div>
+            <div class="header-search-result__wrapper" hidden>
+              <h4>Популярно сейчас</h4>
+              <div class="header-search-result__list"><a class="header-search-result__item" href="">Eames DSW</a><a class="header-search-result__item" href="">Подушки дизайнерские</a><a class="header-search-result__item" href="">Комплект Avanti Round + Кресло Мартин</a></div>
+            </div>
+            <div class="header-search-result__wrapper" hidden>
+              <h4>Ничего не найдено</h4>
+              <div class="header-search-result__empty">
+                <p>Воспользуйтесь<a href="catalog.html"> каталогом</a> или свяжитесь с нами по телефону<a href="tel:88007771274"> 8 800 777-12-74</a></p>
+              </div>
+            </div>
+            <div class="header-search-result__wrapper">
+              <h4>Разделы</h4>
+              <div class="header-search-result__list"><a class="header-search-result__item" href="">Eames DSW</a><a class="header-search-result__item" href="">Подушки дизайнерские</a><a class="header-search-result__item" href="">Комплект Avanti Round + Кресло Мартин</a></div>
+              <h4>Товары</h4>
+              <div class="header-search-result__list">
+                <div class="mini-goods mini-goods--search"><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-1.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="ds-price">990</span></div>
+                      </div></a><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-2.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="ds-price">990</span></div>
+                      </div></a><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-3.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный фыва фыва фыва </p>
+                        <div class="mini-goods__info"><span class="ds-price">5 990</span></div>
+                      </div></a><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-4.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Стул Wire Bertoia черный</p>
+                        <div class="mini-goods__info"><span class="ds-price">990</span></div>
+                      </div></a><a class="mini-goods__item" href="">
+                      <div class="mini-goods__img"><img src="images/temp/basket-5.jpg" alt=""></div>
+                      <div class="mini-goods__content">
+                        <p>Подушка декоративная</p>
+                        <div class="mini-goods__info"><span class="ds-price">990</span></div>
+                      </div></a>
+                </div>
+              </div>
+              <div class="header-search-result__search-btn"><a class="ds-btn ds-btn--invisible" href="search.html"><span class="icon-svg ic-search-result"></span>Все результаты поиска</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-menu">
+        <div class="header-menu__name">Каталог
+          <div class="header-menu-close js-menu-close"><span class="icon-svg ic-close-white"></span></div>
+        </div>
+        <div class="header-menu__content js-submenu">
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-chairs"></span><span class="menu-item__title">Стулья</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Стулья</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Все стулья</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья в стиле лофт</a>
+                  <div class="sub-menu__offers">
+                    <div class="sub-menu-offer">
+                      <div class="sub-menu-offer__img"><a href="catalog.html"><img src="images/temp/menu-1.jpg" alt=""></a></div>
+                      <div class="sub-menu-offer__title"><a href="catalog.html">Eames Style DSW Brown</a></div>
+                      <div class="sub-menu-offer__price">
+                        <div class="ds-price">6 190</div>
+                      </div>
+                      <div class="sub-menu-offer__btn"><a class="ds-btn ds-btn--light" href="catalog.html">К товару</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Кресла Eames</a>
+                  <div class="sub-menu__offers">
+                    <div class="sub-menu-offer">
+                      <div class="sub-menu-offer__img"><a href="catalog.html"><img src="images/temp/menu-2.jpg" alt=""></a></div>
+                      <div class="sub-menu-offer__title"><a href="catalog.html">Стул Jerry Soft серый</a></div>
+                      <div class="sub-menu-offer__price">
+                        <div class="ds-price">4 990</div>
+                      </div>
+                      <div class="sub-menu-offer__btn"><a class="ds-btn ds-btn--light" href="catalog.html">К товару</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья Eames</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Дизайнерские кресла</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Детские стулья</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Прозрачные стулья</a>
+                  <div class="sub-menu__offers">
+                    <div class="sub-menu-offer">
+                      <div class="sub-menu-offer__img"><a href="catalog.html"><img src="images/temp/menu-3.jpg" alt=""></a></div>
+                      <div class="sub-menu-offer__title"><a href="catalog.html">Стул Chiavari прозрачный</a></div>
+                      <div class="sub-menu-offer__price">
+                        <div class="ds-price">2 990</div>
+                      </div>
+                      <div class="sub-menu-offer__btn"><a class="ds-btn ds-btn--light" href="catalog.html">К товару</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья Patchwork</a>
+                  <div class="sub-menu__offers">
+                    <div class="sub-menu-offer">
+                      <div class="sub-menu-offer__img"><a href="catalog.html"><img src="images/temp/menu-4.jpg" alt=""></a></div>
+                      <div class="sub-menu-offer__title"><a href="catalog.html">Стул-кресло Eames Style DAW Patchwork мультиколор</a></div>
+                      <div class="sub-menu-offer__price">
+                        <div class="ds-price">5 990</div>
+                      </div>
+                      <div class="sub-menu-offer__btn"><a class="ds-btn ds-btn--light" href="catalog.html">К товару</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья Tolix</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья для кафе</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стулья для ресторанов</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Другие модели</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-tables"></span><span class="menu-item__title">Столы</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Столы</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Все столы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Журнальные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Консоли</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Кофейные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Обеденные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Письменные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Приставные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Сервировочные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Туалетные</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Другие модели</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-lamps"></span><span class="menu-item__title">Свет</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Свет</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Весь свет</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Торшеры</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Настольные лампы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Люстры</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Светильники</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Бра</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-decor"></span><span class="menu-item__title">Декор</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Декор</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Весь декор</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Подсвечники</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Статуэтки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Картины и панно</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Фоторамки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Зеркала</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Часы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Вазы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Указатели и таблички</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Предметы декора</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-dishware"></span><span class="menu-item__title">Посуда</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Посуда</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Вся посуда</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Пиалы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Подносы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Подставки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Разделочные доски</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Чайники</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Чашки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Блюдца</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Тарелки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Солонки и перечницы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Банки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Бокалы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Графины</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Кувшины</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Стаканы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Столовые приборы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Шейкеры</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu__item"><a class="menu-item has-submenu" href="catalog.html"><span class="icon-svg ic-textile"></span><span class="menu-item__title">Текстиль</span></a>
+            <nav class="sub-menu">
+              <ul>
+                <li>
+                  <h3>Текстиль</h3>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Весь текстиль</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Подушки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Ковры</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Занавески</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Пледы</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Скатерти и салфетки</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Одеяла</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Полотенца</a>
+                </li>
+                <li><a class="submenu-title" href="catalog.html">Шторы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="order-notification">
+      <div class="ds-wrapper order-notification__content">
+        <p>Ваш заказ&nbsp;<a href="">№81243</a> от 12 июля 2019 ожидает оплаты.</p><a class="ds-btn ds-btn--success" href="">Оплатить</a><span class="order-notification-close js-order-notification-close"></span>
+      </div>
+    </div>
+    <div class="ds-wrapper">
+      <div class="ds-catalog-detail">
+        <div class="ds-catalog-detail__header">
+          <h1>Комплект Avanti Round + Кресло Мартин Крутящееся 4&nbsp;шт</h1>
+          <div class="header-rating-vendor">
+                <div class="ds-rating-stars" data-rate="4"><span></span><span></span><span></span><span></span><span></span></div>
+                <div class="ds-rating-label">на Я.Маркете</div>
+            <div class="header-vendor">Арт.: 0338</div>
+          </div>
+        </div>
+        <div class="ds-catalog-detail__slider">
+          <div class="ds-double-slider-for-arrows js-double-slider-for-arrows"></div>
+          <div class="ds-double-slider-for js-double-slider-for">
+            <div class="ds-double-slider-for__item"><img src="images/temp/catalog-detail-1.jpg" alt=""></div>
+            <div class="ds-double-slider-for__item"><img data-lazy="images/temp/catalog-detail-2.jpg" alt=""></div>
+            <div class="ds-double-slider-for__item"><img data-lazy="images/temp/catalog-detail-3.jpg" alt=""></div>
+            <div class="ds-double-slider-for__item"><img data-lazy="images/temp/catalog-detail-4.jpg" alt=""></div>
+            <div class="ds-double-slider-for__item"><img data-lazy="images/temp/catalog-detail-5.jpg" alt=""></div>
+            <div class="ds-double-slider-for__item"><img data-lazy="images/temp/catalog-detail-1.jpg" alt=""></div>
+            <div class="ds-double-slider-for__item"><img data-lazy="images/temp/catalog-detail-2.jpg" alt=""></div>
+            <div class="ds-double-slider-for__item"><img data-lazy="images/temp/catalog-detail-3.jpg" alt=""></div>
+            <div class="ds-double-slider-for__item"><img data-lazy="images/temp/catalog-detail-4.jpg" alt=""></div>
+            <div class="ds-double-slider-for__item"><img data-lazy="images/temp/catalog-detail-5.jpg" alt=""></div>
+          </div>
+          <div class="ds-double-slider-nav-arrows js-double-slider-nav-arrows"></div>
+          <div class="ds-double-slider-nav js-double-slider-nav">
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-1.jpg" alt=""></div>
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-2.jpg" alt=""></div>
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-3.jpg" alt=""></div>
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-4.jpg" alt=""></div>
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-5.jpg" alt=""></div>
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-1.jpg" alt=""></div>
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-2.jpg" alt=""></div>
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-3.jpg" alt=""></div>
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-4.jpg" alt=""></div>
+            <div class="ds-double-slider-nav__item"><img src="images/temp/catalog-detail-5.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="ds-catalog-detail__good-info">
+          <div class="good-info">
+            <div class="good-info__scroll">
+              <div class="good-info__item good-info--price">
+                <div class="ds-price">2 590</div>
+                <div class="ds-price ds-price--old">3 200</div>
+              </div>
+              <div class="good-info__item good-info--availability">В наличии —&nbsp;<span class="many">Много</span><span class="few" hidden>Мало</span></div>
+              <div class="good-info__item good-info--count"><span class="count-title-sale success" hidden>
+                  <div class="count-title-sale__icon"></div><span>Скидка на 4 шт. применена</span></span>
+                <div class="count-title-sale">
+                  <div class="count-title-sale__icon"></div><span>Скидка при заказе <br>кратном 4 шт.</span>
+                </div>
+                <div class="ds-count">
+                  <button class="icon-svg ic-count-minus js-count-minus"></button>
+                  <input class="inp-count js-number" type="number" min="1" name="quantity" value="2">
+                  <button class="icon-svg ic-count-plus js-count-plus"></button>
+                </div>
+              </div>
+              <div class="good-info__item good-info--btn">
+                <div class="ds-info-btn">
+                  <button class="ds-btn ds-btn--default-big ds-btn--full js-add-to-basket">В корзину</button>
+                  <div class="icon-svg ic-favorite_off ds-favorite-btn js-add-to-favorite"></div>
+                </div>
+                <button class="ds-btn ds-btn--light ds-btn--full">В рассрочку от&nbsp;<span class="ds-price ds-price--month">230</span></button>
+              </div>
+              <div class="good-info__item good-info--color">
+                <div class="good-info__title">Цвет:&nbsp;<span>белый</span></div>
+                <div class="goods-color js-color">
+                  <div class="goods-color__item" data-color="белый"><img src="images/temp/catalog-detail-1.jpg" alt=""></div>
+                  <div class="goods-color__item" data-color="синий"><img src="images/temp/catalog-detail-2.jpg" alt=""></div>
+                  <div class="goods-color__item" data-color="черный"><img src="images/temp/catalog-detail-3.jpg" alt=""></div>
+                  <div class="goods-color__item" data-color="зеленый"><img src="images/temp/catalog-detail-4.jpg" alt=""></div>
+                  <div class="goods-color__item" data-color="красный"><img src="images/temp/catalog-detail-5.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="good-info__item good-info--border good-info--size">
+                <div class="good-info__title good-info__title--size">размер:&nbsp;<span>70</span></div>
+                <div class="goods-size js-size"><span class="goods-size__item" data-size="60">60</span><span class="goods-size__item active" data-size="70">70</span><span class="goods-size__item" data-size="90">90</span><span class="goods-size__item" data-size="100">100</span><span class="goods-size__item" data-size="120">120</span></div>
+              </div>
+              <div class="good-info__item good-info--border good-info--sort">
+                <div class="good-info__title">вид:&nbsp;<span>B</span></div>
+                <div class="goods-sort js-sort"><span class="goods-sort__item" data-size="A">A</span><span class="goods-sort__item active" data-size="B">B</span></div>
+              </div>
+              <div class="good-info__item good-info--border good-info--specification">
+                <div class="good-info__title"><span>Характеристики</span></div>
+                <div class="goods-specification">
+                  <div class="goods-specification__row">
+                    <div class="goods-specification__key">Вес</div>
+                    <div class="goods-specification__value">3,3 кг</div>
+                  </div>
+                  <div class="goods-specification__row">
+                    <div class="goods-specification__key">Размер (Ш х Г х В)</div>
+                    <div class="goods-specification__value">460 х 530 х 800 мм</div>
+                  </div>
+                  <div class="goods-specification__row">
+                    <div class="goods-specification__key">Страна изготовлен.</div>
+                    <div class="goods-specification__value">Китай</div>
+                  </div>
+                  <div class="goods-specification__row">
+                    <div class="goods-specification__key">Артикул</div>
+                    <div class="goods-specification__value">0338</div>
+                  </div>
+                  <div class="goods-specification__row">
+                    <div class="goods-specification__key">Цвет ножек</div>
+                    <div class="goods-specification__value">натуральный</div>
+                  </div>
+                  <div class="goods-specification__row">
+                    <div class="goods-specification__key">Материал седла</div>
+                    <div class="goods-specification__value">полипропилен</div>
+                  </div>
+                  <div class="goods-specification__row">
+                    <div class="goods-specification__key">Материал ножек</div>
+                    <div class="goods-specification__value">массив бука; сталь</div>
+                  </div>
+                  <div class="goods-specification__row">
+                    <div class="goods-specification__key">Макс. нагрузка</div>
+                    <div class="goods-specification__value">140 кг</div>
+                  </div>
+                  <div class="goods-specification__row">
+                    <div class="goods-specification__key">Высота до сиденья</div>
+                    <div class="goods-specification__value">450 мм</div>
+                  </div>
+                </div>
+              </div>
+              <div class="good-info__item good-info--instagram">
+                <div class="good-info__title"><span>фото покупателей</span><a class="good-info__title-link" href="https://www.instagram.com/design.sklad/" target="_blank"> @design.sklad</a></div>
+                <div class="goods-insta js-ds-modal" data-href="templates/incl-insta-modal.html" data-ds-modal-width="1100">
+                  <div class="goods-insta__content">
+                    <div class="goods-insta__item"><img src="images/temp/insta-1.jpg" alt=""></div>
+                    <div class="goods-insta__item"><img src="images/temp/insta-2.jpg" alt=""></div>
+                    <div class="goods-insta__item"><img src="images/temp/insta-3.jpg" alt=""></div>
+                    <div class="goods-insta__item"><img src="images/temp/insta-1.jpg" alt=""></div>
+                  </div>
+                  <div class="goods-insta__content-last">
+                    <div class="goods-insta__item goods-insta__item--last"><span class="quantity">Ещё</span><img src="images/temp/insta-2.jpg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="good-info__item good-info--share">
+                <div class="good-info__title"><span> Поделиться</span></div>
+                <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                <script src="//yastatic.net/share2/share.js"></script>
+                <div class="ya-share2 ds-ya-share2" data-services="facebook,vkontakte,twitter,odnoklassniki"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ds-catalog-detail__recommend device-border">
+          <h4>С этим товаром покупают</h4>
+          <div class="ds-catalog-recommend">
+            <div class="ds-catalog-recommend__item"><a href="#"><img src="images/temp/basket-7.jpg" alt="">
+                <p>Носки для стульев Santa красный</p>
+                <div class="ds-price-sale"><span class="ds-price">190</span><span class="ds-sale">%</span></div></a></div>
+            <div class="ds-catalog-recommend__item"><a href="#"><img src="images/temp/basket-6.jpg" alt="">
+                <p>Подвесной Светильник Delta...</p>
+                <div class="ds-price-sale"><span class="ds-price">4 290</span><span class="ds-sale">%</span></div></a></div>
+            <div class="ds-catalog-recommend__item"><a href="#"><img src="images/temp/basket-8.jpg" alt="">
+                <p>Стул Butterfly коричневый</p>
+                <div class="ds-price-sale"><span class="ds-price">5 990</span><span class="ds-sale">%</span></div></a></div>
+            <div class="ds-catalog-recommend__item"><a href="#"><img src="images/temp/basket-9.jpg" alt="">
+                <p>Стул-кресло Double Range</p>
+                <div class="ds-price-sale"><span class="ds-price">3 990</span><span class="ds-sale">%</span></div></a></div>
+            <div class="ds-catalog-recommend__btn">
+              <button class="ds-btn ds-btn--light">Показать ещё</button>
+            </div>
+          </div>
+        </div>
+        <div class="ds-catalog-detail__descr device-border">
+          <h4>Описание</h4>
+          <div class="ds-catalog-descr">
+            <p>Стул Eames Style DSW выполнен в скандинавском стиле и считается абсолютным хитом в мире дизайна, подкупая своей универсальностью с 1948 года. Идеальная форма и комфортная посадка позволяют ему гармонично смотреться как в жилой зоне, на кухне или гостиной, так и в качестве акцента для творческой студии или общественного пространства, кафе и ресторана. Благодаря широкой цветовой палитре подобрать подходящий цвет не составит труда под любой интерьер. Материал — экологичный полипропилен и прочный массив бука, поэтому стул способен выдержать до 140 кг, устойчив к ударам и царапинам. Модель стула DSW — беспроигрышный вариант для вашего интерьера: безупречный внешний вид приравнивает стул к элементу декора, а анатомически правильное сиденье и плавный изгиб спинки делает его удобным для жизни.</p>
+            <p>Стул Eames Style DSW выполнен в скандинавском стиле и считается абсолютным хитом в мире дизайна, подкупая своей универсальностью с 1948 года. Идеальная форма и комфортная посадка позволяют ему гармонично смотреться как в жилой зоне, на кухне или гостиной, так и в качестве акцента для творческой студии или общественного пространства, кафе и ресторана. Благодаря широкой цветовой палитре подобрать подходящий цвет не составит труда под любой интерьер. Материал — экологичный полипропилен и прочный массив бука, поэтому стул способен выдержать до 140 кг, устойчив к ударам и царапинам. Модель стула DSW — беспроигрышный вариант для вашего интерьера: безупречный внешний вид приравнивает стул к элементу декора, а анатомически правильное сиденье и плавный изгиб спинки делает его удобным для жизни.</p>
+          </div>
+          <button class="ds-btn ds-btn--light js-btn-more">Показать ещё</button>
+        </div>
+        <div class="ds-catalog-detail__why device-border">
+          <h4>Почему Дизайн склад?</h4>
+          <div class="ds-catalog-why">
+            <div class="ds-catalog-why__item">
+              <div class="ds-catalog-why__img">1</div>
+              <div class="ds-catalog-why__content">
+                <h4>Гарантия качества</h4>
+                <p>Даём гарантию 18 месяцев на весь ассортимент. При желании вы можете приобрести расширенную гарантию на 24 месяца.</p>
+              </div>
+            </div>
+            <div class="ds-catalog-why__item">
+              <div class="ds-catalog-why__img">1</div>
+              <div class="ds-catalog-why__content">
+                <h4>Оплата при получении</h4>
+                <p>В нашем магазине вы можете оплатить товар не только банковской картой или денежным переводом, но и при получении товара.</p>
+              </div>
+            </div>
+            <div class="ds-catalog-why__item">
+              <div class="ds-catalog-why__img">1</div>
+              <div class="ds-catalog-why__content">
+                <h4>Доступные цены</h4>
+                <p>Мы предлагаем самые лучшие цены на рынке дизайнерской мебели.</p>
+              </div>
+            </div>
+            <div class="ds-catalog-why__item">
+              <div class="ds-catalog-why__img">1</div>
+              <div class="ds-catalog-why__content">
+                <h4>Доставка</h4>
+                <p>Доставляем товар в более 250 городов России, в кратчайшие сроки.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ds-catalog-detail__opinions device-border">
+          <div class="ds-reviews">
+            <div class="ds-reviews__header">
+              <div class="ds-reviews__left">
+                <h4>Отзывы<span class="counter">78</span></h4>
+                <div class="sorting"><span>Сортировать</span><a class="sorting-date desc" href="">по дате</a><a class="sorting-mark" href="">по оценке</a></div>
+              </div>
+              <div class="ds-reviews__right"><a class="ds-btn ds-btn--default" href="https://market.yandex.ru/shop/312282/reviews/add?retpath=https%3A%2F%2Fmarket.yandex.ru%2Fshop--dizain-sklad%2F312282%2Freviews&amp;track=rev_sh" target="_blank">написать отзыв</a></div>
+            </div>
+            <div class="ds-reviews__item">
+              <div class="ds-reviews__person">
+                <div class="ds-reviews__img"><img src="//avatars.mds.yandex.net/get-yapic/47747/enc-40fb5b9bde2490338a1bbc0e1864703ad2e738b049724fcf1ca20c0bc83215c1/islands-retina-middle" alt=""></div>
+                <div class="ds-reviews__name"><strong>Ангелина Т.</strong></div>
+              </div>
+              <div class="ds-reviews__rating">
+                    <div class="ds-rating-stars" data-rate="1"><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="ds-rating-label">ужасный магазин</div>
+              </div>
+              <div class="ds-reviews__text">
+                <div class="ds-reviews__text-item">
+                  <p><strong>Достоинства:</strong></p>
+                  <p>Я в восторге! В нашем городе довольно проблематично приобрести стулья в стиле Eames, а тут заказала на сайте, через 5 дней пришли, муж собрал за 15 минут и вуаля - отличные стулья по отличной цене!</p>
+                </div>
+                <div class="ds-reviews__text-item">
+                  <p><strong>Недостатки:</strong></p>
+                  <p>Нет</p>
+                </div>
+                <div class="ds-reviews__text-item">
+                  <p><strong>Комментарий:</strong></p>
+                  <p>Наш первый опыт приобретения мебели в интернет-магазине. Остались очень довольны сервисом и качеством!</p>
+                </div>
+              </div>
+              <div class="ds-reviews__geo"><span>28 мая, Самара</span></div>
+            </div>
+            <div class="ds-reviews__item">
+              <div class="ds-reviews__person">
+                <div class="ds-reviews__img"><img src="//avatars.mds.yandex.net/get-yapic/47747/enc-40fb5b9bde2490338a1bbc0e1864703ad2e738b049724fcf1ca20c0bc83215c1/islands-retina-middle" alt=""></div>
+                <div class="ds-reviews__name"><strong>Сергей Ж.</strong></div>
+              </div>
+              <div class="ds-reviews__rating">
+                    <div class="ds-rating-stars" data-rate="4"><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="ds-rating-label">хороший магазин</div>
+              </div>
+              <div class="ds-reviews__text">
+                <div class="ds-reviews__text-item">
+                  <p><strong>Достоинства:</strong></p>
+                  <p>Ножка (ножки) от этих стульев из обработанного дерева, качественные , пришли в собранном виде, слава Богу , не надо было собирать каждый элемент, прикрутила к каркасу стула и можно пользоваться! Ключи для болтов шли в комплекте! Стул качественный и стильный) Я заказывала доставку до двери, привезли достаточно большие коробки , так что если самовывоз, имейте в виду, что так как ножки собранные уже , коробы достаточно большие приедут)! Что касается качества, все очень понравилось, пользуемся, подушки заказали к этим стульям, они из кожи, ктстати.</p>
+                </div>
+                <div class="ds-reviews__text-item">
+                  <p><strong>Недостатки:</strong></p>
+                  <p>Не нашла, честно говоря</p>
+                </div>
+                <div class="ds-reviews__text-item">
+                  <p><strong>Комментарий:</strong></p>
+                  <p>При посадке стульчик удобный- там сделано очень правильно: более массивная часть посадочная, и более упругая спинка. Хоть конструкция и монолитная, но она немного пружинит, это оказалось удобно, откинуться можно, расслабиться.</p>
+                </div>
+              </div>
+              <div class="ds-reviews__geo"><span>вчера, Ростов-на-Дону</span></div>
+            </div>
+            <div class="ds-reviews__item">
+              <div class="ds-reviews__person">
+                <div class="ds-reviews__img"><img src="//avatars.mds.yandex.net/get-yapic/47747/enc-40fb5b9bde2490338a1bbc0e1864703ad2e738b049724fcf1ca20c0bc83215c1/islands-retina-middle" alt=""></div>
+                <div class="ds-reviews__name"><strong>Stanislav G.</strong></div>
+              </div>
+              <div class="ds-reviews__rating">
+                    <div class="ds-rating-stars" data-rate="5"><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="ds-rating-label">отличный магазин</div>
+              </div>
+              <div class="ds-reviews__text">
+                <div class="ds-reviews__text-item">
+                  <p><strong>Достоинства:</strong></p>
+                  <p>дизайн и удобство</p>
+                </div>
+                <div class="ds-reviews__text-item">
+                  <p><strong>Недостатки:</strong></p>
+                  <p>не обнаружено</p>
+                </div>
+                <div class="ds-reviews__text-item">
+                  <p><strong>Комментарий:</strong></p>
+                  <p>Отличные стулья! Они не только красивые , но и удобные. Приятный, мягкий пластик, высота стульев то , что надо! Собрали стулья быстро и легко .</p>
+                </div>
+              </div>
+              <div class="ds-reviews__geo"><span>24 мая, Павлодар</span></div>
+            </div>
+            <div class="ds-btn ds-btn--light">показать ещё</div>
+          </div>
+        </div>
+      </div>
+      <!-- это нужно будет отсюда убрать, так как в футере есть этот блок, он общий для всех модалок-->
+      <div class="ds-modal-overlay closed"></div>
+      <div class="ds-modal closed">
+        <div class="ds-modal__inner"></div>
+      </div>
+    </div>
+    <script src="https://www.dsklad.ru/local/assets/js/purepopup.js"></script>
+    <script src="js/catalog-detail-init.js"></script>
+    <footer class="border">
+      <div class="ds-wrapper">
+        <div class="footer-about">
+          <div class="footer-about__links"><a href="/"><img src="images/logo-footer.svg" alt=""></a>
+            <nav class="about-links"><a href="">О компании</a><a href="">Оптовым покупателям</a><a href="">Контакты</a></nav>
+          </div>
+          <div class="footer-about__phone">
+            <h2><a class="tel" href="tel:88007771274">8 800 777-12-74</a></h2>
+            <p>Ежедневно с 9 до 21</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="ds-wrapper-footer">
+          <div class="footer-info__content">
+            <div class="footer-menu js-footer-menu">
+              <div class="footer-menu__col">
+                <h5>Заказы<span class="arrow-down"></span></h5>
+                <nav class="footer-menu__links"><a href="">Доставка и оплата</a><a href="">Возврат и обмен</a><a href="">Пункты самовывоза</a></nav>
+              </div>
+              <div class="footer-menu__col">
+                <h5>Профиль<span class="arrow-down"></span></h5>
+                <nav class="footer-menu__links"><a href="">Личный кабинет</a><a href="">Избранные товары</a><a href="">Статус заказа</a></nav>
+              </div>
+              <div class="footer-menu__col">
+                <h5>Магазин<span class="arrow-down"></span></h5>
+                <nav class="footer-menu__links"><a href="">Публичная оферта</a><a href="">Наши гарантии</a></nav>
+              </div>
+            </div>
+            <div class="footer-social">
+              <h5>Социальные сети</h5>
+              <div class="social-list">
+                <div class="social-list__item"><a class="icon-svg ic-vk" href=""></a></div>
+                <div class="social-list__item"><a class="icon-svg ic-fb" href=""></a></div>
+                <div class="social-list__item"><a class="icon-svg ic-in" href=""></a></div>
+              </div>
+            </div>
+            <div class="footer-payment">
+              <h5>Способы оплаты</h5>
+              <div class="footer-payment__list"><span class="icon-svg ic-mastercard"></span><span class="icon-svg ic-visa"></span><span class="icon-svg ic-mir"></span></div>
+              <p>Вы можете оплатить покупки наличными при получении, либо выбрать другой<a href=""> способ оплаты</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="border">
+          <div class="ds-wrapper-footer">
+            <div class="footer-copyright-info">
+              <div class="footer-copyright-info__header">
+                <p>Интернет-магазин Dsklad.ru<a href=""> использует файлы «cookie»</a>, с целью повышения удобства пользования веб-сайтом.   </p>
+              </div>
+              <div class="footer-copyright-info__content">
+                <p>Все ресурсы сайта www.dsklad.ru, включая текстовую, графическую и видео информацию, структуру и оформление страниц, защищены российскими и международными законами и соглашениями об охране авторских прав и интеллектуальной собственности (статьи 1259 и 1260 главы 70 «Авторское право» Гражданского Кодекса Российской Федерации от 18 декабря 2006 года N 230-ФЗ).</p>
+                <p>*Все цены на сайте указаны в рублях.</p>
+              </div>
+              <div class="footer-copyright-info__copy">
+                <p>&copy; 2019 «Дизайн Склад» — Интернет-магазин дизайнерской мебели. Все права защищены.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

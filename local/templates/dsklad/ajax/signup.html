@@ -1,0 +1,63 @@
+
+<div class="signup__popup">
+  <h2>Регистрация</h2>
+  <form action="" novalidate="novalidate">
+    <div class="field__widget type-block field-name">
+      <label for="input-signup-name" class="label">Ваше имя:</label>
+      <div class="field">
+        <div class="input">
+          <input type="text" id="input-signup-name" autocomplete="off" name="name"/>
+        </div>
+      </div>
+    </div>
+    <div class="field__widget type-block field-email">
+      <label for="input-signup-email" class="label">Эл.почта:</label>
+      <div class="field">
+        <div class="input">
+          <!--<div class="placeholder">name@domain.ru</div>-->
+          <input type="email" id="input-signup-email" autocomplete="off" name="email" placeholder="name@domain.ru"/>
+        </div>
+      </div>
+    </div>
+    <div class="field__widget type-block field-phone">
+      <label for="input-signup-phone" class="label">Телефон:</label>
+      <div class="field">
+        <div class="input">
+          <input type="tel" id="input-signup-phone" autocomplete="off" name="phone" data-phonemask="data-phonemask"/>
+        </div>
+      </div>
+    </div>
+    <div class="field__widget type-block field-password">
+      <label for="input-signup-password" class="label">Пароль:</label>
+      <div class="field">
+        <div class="input">
+          <input type="password" id="input-signup-password" autocomplete="off" name="password"/>
+        </div>
+      </div>
+    </div>
+    <div class="field__widget type-block field-password">
+      <label for="input-signup-password2" class="label">Еще раз:</label>
+      <div class="field">
+        <div class="input">
+          <input type="password" id="input-signup-password2" autocomplete="off" name="password2"/>
+        </div>
+      </div>
+    </div>
+    <div class="field__widget type-block field-openid">
+      <div class="label">Подключите аккаунты <br class="hidden-gt-s"/>соцсетей:</div>
+      <div class="field"><a href=""><span class="icon__share-facebook2">
+            <svg>
+              <use xlink:href="../images/sprite.svg#share-facebook2"></use>
+            </svg></span></a><a href=""><span class="icon__share-vk2">
+            <svg>
+              <use xlink:href="../images/sprite.svg#share-vk2"></use>
+            </svg></span></a></div>
+    </div>
+    <div class="field__widget type-block field-submit">
+      <div class="field">
+        <button type="submit" class="button type-blue fill size-41">Зарегистрироваться</button>
+        <p>Если у вас есть аккаунт, <a href="/bitrix/templates/dsklad/ajax/signin.html" data-fancybox-type="ajax" class="fancybox">Войдите</a></p>
+      </div>
+    </div>
+  </form>
+</div>

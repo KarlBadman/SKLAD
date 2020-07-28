@@ -1,0 +1,585 @@
+TRIGGER Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:00:02
+    [Сообщение] => TRIGGER START
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:00:16
+    [Сообщение] => 
+            Time start: 2018.06.07 07:00:02
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.16 07:00:16
+    [Параметры запуска] => Array
+        (
+            [START] => 0
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:05:31
+    [Сообщение] => 
+            Time start: 2018.06.07 07:05:16
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.31 07:05:31
+    [Параметры запуска] => Array
+        (
+            [START] => 10000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:10:45
+    [Сообщение] => 
+            Time start: 2018.06.07 07:10:31
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.45 07:10:45
+    [Параметры запуска] => Array
+        (
+            [START] => 20000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:15:59
+    [Сообщение] => 
+            Time start: 2018.06.07 07:15:45
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.59 07:15:59
+    [Параметры запуска] => Array
+        (
+            [START] => 30000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:21:12
+    [Сообщение] => 
+            Time start: 2018.06.07 07:20:59
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.12 07:21:12
+    [Параметры запуска] => Array
+        (
+            [START] => 40000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:26:27
+    [Сообщение] => 
+            Time start: 2018.06.07 07:26:12
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.27 07:26:27
+    [Параметры запуска] => Array
+        (
+            [START] => 50000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:31:41
+    [Сообщение] => 
+            Time start: 2018.06.07 07:31:27
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.41 07:31:41
+    [Параметры запуска] => Array
+        (
+            [START] => 60000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:36:55
+    [Сообщение] => 
+            Time start: 2018.06.07 07:36:41
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.55 07:36:55
+    [Параметры запуска] => Array
+        (
+            [START] => 70000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:42:09
+    [Сообщение] => 
+            Time start: 2018.06.07 07:41:55
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.09 07:42:09
+    [Параметры запуска] => Array
+        (
+            [START] => 80000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:47:24
+    [Сообщение] => 
+            Time start: 2018.06.07 07:47:09
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.24 07:47:24
+    [Параметры запуска] => Array
+        (
+            [START] => 90000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:52:38
+    [Сообщение] => 
+            Time start: 2018.06.07 07:52:24
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.38 07:52:38
+    [Параметры запуска] => Array
+        (
+            [START] => 100000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 07:57:52
+    [Сообщение] => 
+            Time start: 2018.06.07 07:57:38
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.52 07:57:52
+    [Параметры запуска] => Array
+        (
+            [START] => 110000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:03:05
+    [Сообщение] => 
+            Time start: 2018.06.07 08:02:52
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.05 08:03:05
+    [Параметры запуска] => Array
+        (
+            [START] => 120000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:08:20
+    [Сообщение] => 
+            Time start: 2018.06.07 08:08:05
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.20 08:08:20
+    [Параметры запуска] => Array
+        (
+            [START] => 130000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:13:34
+    [Сообщение] => 
+            Time start: 2018.06.07 08:13:20
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.34 08:13:34
+    [Параметры запуска] => Array
+        (
+            [START] => 140000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:18:47
+    [Сообщение] => 
+            Time start: 2018.06.07 08:18:34
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.47 08:18:47
+    [Параметры запуска] => Array
+        (
+            [START] => 150000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:24:01
+    [Сообщение] => 
+            Time start: 2018.06.07 08:23:47
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.01 08:24:01
+    [Параметры запуска] => Array
+        (
+            [START] => 160000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:29:15
+    [Сообщение] => 
+            Time start: 2018.06.07 08:29:01
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.15 08:29:15
+    [Параметры запуска] => Array
+        (
+            [START] => 170000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:34:28
+    [Сообщение] => 
+            Time start: 2018.06.07 08:34:15
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.28 08:34:28
+    [Параметры запуска] => Array
+        (
+            [START] => 180000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:39:42
+    [Сообщение] => 
+            Time start: 2018.06.07 08:39:28
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.42 08:39:42
+    [Параметры запуска] => Array
+        (
+            [START] => 190000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:44:57
+    [Сообщение] => 
+            Time start: 2018.06.07 08:44:42
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.57 08:44:57
+    [Параметры запуска] => Array
+        (
+            [START] => 200000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:50:10
+    [Сообщение] => 
+            Time start: 2018.06.07 08:49:57
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.10 08:50:10
+    [Параметры запуска] => Array
+        (
+            [START] => 210000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Step Complete:
+Array
+(
+    [Дата] => 07.06.2018 08:55:24
+    [Сообщение] => 
+            Time start: 2018.06.07 08:55:10
+            Taked : 10000 cities,
+            Loaded from Database: 238483 cities
+            Updated: 10000 cities
+            Added: 0 cities
+            Time end: 2018.06.24 08:55:24
+    [Параметры запуска] => Array
+        (
+            [START] => 220000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+
+PROCESSING Complete:
+Array
+(
+    [Дата] => 07.06.2018 09:00:37
+    [Сообщение] => 
+            Time start: 2018.06.07 09:00:24
+            Taked : 8483 cities,
+            Loaded from Database: 238483 cities
+            Deleted: 0 cities,
+            Updated: 8483 cities
+            Added: 0 cities
+            Time end: 2018.06.37 09:00:37
+    [Параметры запуска] => Array
+        (
+            [START] => 230000
+            [LIMIT] => 10000
+        )
+
+    [Ошибки при выполнении] => Array
+(
+)
+
+)
+
+

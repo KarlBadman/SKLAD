@@ -1,0 +1,199 @@
+var objinsta = {};
+window.addEventListener('resize', function() {
+    objinsta.zapuskresiza();
+});
+
+window.addEventListener('load', function() {
+    objinsta.zapuskresiza();
+    objinsta.kursor();
+    objinsta.blokscenoy();
+    objinsta.vspliv_blok();
+});
+
+objinsta.zapuskresiza = function (){
+
+    [].forEach.call(document.querySelectorAll('.urovni_insta'), function(el) {
+
+        el.style.height = el.getElementsByTagName("div")[0].clientWidth + "px";
+
+        objinsta.viyavlenmin(el);
+
+    });
+
+    if(window.outerWidth <= 700){
+
+        if(!document.getElementsByClassName("swiper-containerinst")[0]){//vstavka slaidera
+            objinsta.zapuskswiper();
+        }
+
+        objinsta.proporc_swip_sl('.swiper-containerinst .swiper-slide');
+    }
+    else{
+        if(document.getElementsByClassName("swiper-containerinst")[0]){
+            document.getElementById("insta_mobile").innerHTML = "";
+        }
+    }
+};
+
+objinsta.viyavlenmin = function (el) {
+    [].forEach.call(el.querySelectorAll('.vstavlenfot_insta'), function(el2) {
+        if(el2.clientHeight < el.clientHeight){
+            el2.style.height = el.clientHeight + "px";
+            el2.style.width = "auto";
+        }
+    });
+};
+
+objinsta.zapuskswiper = function () {
+    objinsta.vspliv_blok();
+    var vstavfoto = "";
+    [].forEach.call(document.querySelectorAll('.big_foto_insta, .foto_vtor_urov'), function(el) {
+        vstavfoto += "<div class='swiper-slide'>"+el.innerHTML+"</div>";
+    });
+
+    var dublslider = "<div class='swiper-containerinst'><div class='sedsl_insta'></div><div class='swiper-wrapper'>"+vstavfoto+"</div></div>";
+    var swchetchik = "<div class='fani_insta_mobile'>"+document.getElementsByClassName("statist_numb_insta")[0].innerHTML + "</div>";
+
+    document.getElementById("insta_mobile").innerHTML = dublslider + swchetchik;
+
+    document.getElementsByClassName("fani_insta_mobile")[0].innerHTML = "<div class='zagol_insta_pocentru'>" + document.getElementsByClassName("zagol_insta_pocentru")[0].innerHTML + "</div>" + document.getElementsByClassName("fani_insta_mobile")[0].innerHTML;
+
+    var swiper = new Swiper('.swiper-containerinst', {
+        navigation: {
+            nextEl: '.sedsl_insta'
+            //prevEl: '.swiper-button-prev'
+        }
+    });
+};
+
+objinsta.proporc_swip_sl = function (b) {
+    [].forEach.call(document.querySelectorAll(b), function(el) {
+        el.style.height = el.clientWidth + "px";
+
+        var foto_insta = el.getElementsByClassName("vstavlenfot_insta")[0];
+        if(foto_insta.clientHeight < el.clientHeight){
+            foto_insta.style.height = el.clientWidth +  "px";
+            foto_insta.style.width = "auto";
+        }
+
+        if(foto_insta.clientHeight >  el.clientHeight && foto_insta.clientWidth > el.clientWidth){
+            foto_insta.style.height = el.clientWidth +  "px";
+        }
+    });
+};
+
+objinsta.kursor = function () {
+
+    var mass_slov = ["#dskladru", "#дизайнсклад", "#dsklad"];
+    var ssilka_insta = ["https://www.instagram.com/explore/tags/dskladru/", "https://www.instagram.com/explore/tags/%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D1%81%D0%BA%D0%BB%D0%B0%D0%B4/", "https://www.instagram.com/explore/tags/dsklad/"];
+
+    function vstavka(b){
+        [].forEach.call( document.querySelectorAll('.zagol_insta_pocentru'), function(el) {
+            el.getElementsByClassName("zagolovo_insta")[0].innerHTML = b;
+        });
+    }
+
+    function zamena_ssilki(b){
+        [].forEach.call(document.querySelectorAll('.zagol_insta_pocentru'), function(el) {
+            el.getElementsByClassName("zagolovo_insta")[0].href = ssilka_insta[b];
+        });
+    }
+
+    var otschet_slova = 0;
+    function obrezka_slov(b, predel){
+        var novpredel = predel - 1;
+        var podrezb = b.substr(0, novpredel);
+
+        vstavka(podrezb);
+
+        if(novpredel == 0){
+            sledslovo();
+            return;
+        }
+
+        setTimeout(obrezka_slov, 100, podrezb, novpredel);
+    }
+
+    function sledslovo(){
+        otschet_slova += 1;
+        if(otschet_slova >= mass_slov.length){
+            otschet_slova = 0;
+        }
+        vistavslov()
+    }
+
+    var otshet_pokaza = -1;
+    function vistavslov(){
+        var slovo = mass_slov[otschet_slova];
+        zamena_ssilki(otschet_slova);//podstanovka ssilki
+
+        otshet_pokaza += 1;
+        if(otshet_pokaza > slovo.length){
+            setTimeout(obrezka_slov, 5000, slovo, slovo.length);
+            otshet_pokaza = 0;
+            return
+        }
+
+        var otkritieslova = slovo.substr(0, otshet_pokaza);
+        vstavka(otkritieslova);
+
+        setTimeout(vistavslov, 100);
+    }
+
+    vistavslov();
+
+    function mig_cursor(b){
+
+        [].forEach.call(document.querySelectorAll('.zagol_insta_pocentru'), function(el) {
+            el.getElementsByClassName("mig_cursor")[0].style.opacity = b;
+        });
+
+        b += 1;
+        if(b > 1){
+            b = 0
+        }
+
+        setTimeout(mig_cursor, 500, b)
+    }
+
+    mig_cursor(0);
+};
+
+objinsta.blokscenoy = function () {
+
+    [].forEach.call(document.querySelectorAll('.oknodannih'), function(el) {
+        var new_sdvig = vich_propor(el);
+        el.style.left = new_sdvig.new_left + "px";
+        el.style.top = new_sdvig.new_top + "px";
+    });
+
+    function vich_propor(el){
+        var ishodn_shir = el.parentElement.getElementsByClassName("vstavlenfot_insta")[0].naturalWidth;
+        var ishodn_vis = el.parentElement.getElementsByClassName("vstavlenfot_insta")[0].naturalHeight;
+
+        var poluch_shir = el.parentElement.getElementsByClassName("vstavlenfot_insta")[0].clientWidth;
+        var poluch_vis = el.parentElement.getElementsByClassName("vstavlenfot_insta")[0].clientHeight;
+
+        var proporc_shir = ishodn_shir / poluch_shir;
+        proporc_shir = 100 / proporc_shir;
+        proporc_shir = 100 - proporc_shir;
+
+        var new_left = el.offsetLeft - (el.offsetLeft * proporc_shir / 100);
+        if(window.innerWidth < 700 && new_left < 40){
+            new_left = 50;
+        }
+
+        var proporc_vis = ishodn_vis / poluch_vis;
+        proporc_vis = 100 / proporc_vis;
+        proporc_vis = 100 - proporc_vis;
+
+        var new_top = el.offsetTop - (el.offsetTop * proporc_vis / 100);
+
+        var obj = {};
+        obj.new_left = new_left;
+        obj.new_top = new_top;
+
+        return obj;
+    }
+
+};

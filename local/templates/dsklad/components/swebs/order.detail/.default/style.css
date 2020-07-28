@@ -1,0 +1,18 @@
+.detail_cabinet_page input[type="checkbox"] + u .icon__check, .detail_cabinet_page input[type="radio"] + u .icon__check {
+	width: 9px;
+	height: 9px;
+	display: inline-block!important;
+}
+ .detail_cabinet_page input[type="checkbox"] + u.square .icon__check svg, .detail_cabinet_page input[type="radio"] + u.square .icon__check svg {
+    stroke: #1769ff;
+}
+ .detail_cabinet_page input[type="checkbox"] + u,  .detail_cabinet_page input[type="radio"] + u {
+	border-color: #1769ff!important;
+	line-height: 12px!important;
+	outline: none!important;
+}
+.detail_cabinet_page input[type="checkbox"] + u:before, .detail_cabinet_page input[type="radio"] + u:before {display: none;}
+.cabinet__page.detail_cabinet_page  section.info .table .delivery table .label__widget {
+    margin-right: 10px;
+    cursor: default;
+}
